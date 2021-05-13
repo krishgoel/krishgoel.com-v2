@@ -5,7 +5,7 @@
 	--pastel-pink: #ff6ef5;
 
 	/* Highlights */
-	--neo-green: #00ff8c;
+	--neo-green: #64ffda;
 
 	/* Glow shades */
 	/* neo-green is already declared*/
@@ -14,7 +14,7 @@
 	--canary-yellow: #ffee00;
 
 	/* Font colours */
-	--text-slate: #ccd6f6;
+	--text-slate: #8892b0;
 	--text-grey: #8892b0;
 	--text-smoke: #2b2b2b;
 }
@@ -134,7 +134,7 @@ h6, h6 a {
 }
 p, p a {
 	font-size: 1rem;
-	line-height: 150%;
+	line-height: 23px;
 	overflow-wrap: break-word;
 }
 p a {
@@ -150,4 +150,20 @@ body, h1, h2, h3, h4, h5, h6, p {
 /* Body styling */
 body {
 	background-color: var(--navy-background);
+}
+
+/* General element styling */
+img {
+	width: 100%;
+	margin-bottom: 20px
+}
+p {
+	margin: 5px 0;
+}
+* a {
+	text-decoration: none;
+}
+p a {
+	color: var(--neo-green);
+	box-shadow: inset 0 -2px 0 0px var(--neo-green);
 }

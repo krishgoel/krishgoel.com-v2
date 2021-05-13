@@ -31,10 +31,10 @@
     .col-3 {
         grid-column: span 6;
     }
-    .col-4, .col-6 {
+    .col-4, .col-2 {
         grid-column: span 12;
     }
-    .col-4 .width-restriction, .col-6 .width-restriction {
+    .col-4 .width-restriction, .col-2 .width-restriction {
         width: 100%
     }
 }
