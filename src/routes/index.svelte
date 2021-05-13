@@ -1,5 +1,5 @@
 <script>
-    import Typewriter from 'svelte-typewriter'
+    import Typewriter from 'svelte-typewriter/lib/Typewriter.svelte'
 </script>
 
 <style>
