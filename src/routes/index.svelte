@@ -1,50 +1,60 @@
 <script>
-	import successkid from 'images/successkid.jpg';
+    import Typewriter from 'svelte-typewriter'
 </script>
 
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
+    .banner {
+        width: 100%;
+        background-image: linear-gradient(90deg, var(--navy-background), #00000000 70%), linear-gradient(0deg, var(--navy-background) 5%, #00000000 20%), url(/images/banner.jpeg);
+        background-position: 60% 20%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 90vh;
+        /* width: 100vw; */
+        display: flex;
+        align-items: center;
+    }
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+    .banner-text-flipping h2 {
+        float: left;
+        overflow-wrap: break-word;
+    }
 </style>
 
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
+<section>
 
-<h1>Great success!</h1>
+    <section class="banner">
+        <div class="width-restriction">
+            <h2>Hi, I'm</h2>
 
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
+            <h1 style="font-size: calc(3rem + 2vw)">Krish</h1>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+            <p class="mono">(short for Krishnamangalrathnamiyer Amanunununununununu)</p>
+            <!-- <Typewriter cascade>
+            </Typewriter> -->
+
+            <br/>
+
+            <div class="banner-text-flipping">
+                <h2>and manz&nbsp;</h2>
+                <Typewriter loop interval={30}>
+                    <!-- <div></div> -->
+                    <h2 class="glow-green">a fan of ya mum jokes</h2>
+                    <h2 class="glow-pink">against the degenerates who price Flaming Hot Cheetos in India</h2>
+                    <h2 class="glow-blue">a web developer</h2>
+                    <h2 class="glow-yellow">a financial literacy enthusiast</h2>
+                </Typewriter>
+            </div>
+
+            <br/><br/><br/>
+
+        </div>
+    </section>
+    
+    <section>
+        <div class="width-restriction">
+            <h3>Test</h3>
+        </div>
+    </section>
+
+</section>

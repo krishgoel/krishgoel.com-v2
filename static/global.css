@@ -1,36 +1,153 @@
-body {
-	margin: 0;
-	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
-	color: #333;
+:root {
+	/* Backgrounds */
+	--navy-background: #070025;
+	--lemon-yellow: #FCFF56;
+	--pastel-pink: #ff6ef5;
+
+	/* Highlights */
+	--neo-green: #00ff8c;
+
+	/* Glow shades */
+	/* neo-green is already declared*/
+	--hot-pink: #ff0062;
+	--royal-blue: #013ad8;
+	--canary-yellow: #ffee00;
+
+	/* Font colours */
+	--text-slate: #ccd6f6;
+	--text-grey: #8892b0;
+	--text-smoke: #2b2b2b;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
+/* Fonts */
+
+/* Head: Gilroy */
+/* Body: Calibre */
+/* Italic: Baskervville Italic
+/* Mono: Space Mono */
+
+/* Gilroy */
+@font-face {
+	font-family: Gilroy;
+	font-weight: 700;
+	src: url(fonts/Gilroy-ExtraBold.woff2);
+}
+.headfont {
+	font-family: "Gilroy";
+}
+/* Calibre */
+@font-face {
+	font-family: Calibre;
 	font-weight: 400;
-	line-height: 1.2;
+	src: url(fonts/Calibre-Regular.woff2);
+}
+@font-face {
+	font-family: Calibre;
+	font-weight: 700;
+	src: url(fonts/Calibre-Bold.woff2);
+}
+.parafont {
+	font-family: "Calibre";
+}
+/* Baskervville Italic */
+@font-face {
+	font-family: Baskervville;
+	font-style: italic;
+	src: url(fonts/Baskervville-Italic.woff2);
+}
+.italic {
+	font-family: "Baskervville";
+	font-style: italic;
+}
+/* Space Mono */
+@font-face {
+	font-family: SpaceMono;
+	font-weight: 400;
+	src: url(fonts/SpaceMono-Regular.woff2);
+}
+.mono {
+	font-family: "SpaceMono";
 }
 
-h1 {
-	font-size: 2em;
+/* Font styling */
+body {
+	font-family: "Calibre";
+	color: var(--text-slate);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Gilroy";
+}
+.greyfont {
+	color: var(--text-grey)
+}
+.smokefont {
+	color: var(--text-smoke)
 }
 
-a {
-	color: inherit;
+/* Glow shades */
+.glow-green {
+	text-shadow: 0 0 10px var(--neo-green);
+}
+.glow-pink {
+	text-shadow: 0 0 10px var(--hot-pink);
+}
+.glow-blue {
+	text-shadow: 0 0 10px var(--royal-blue);
+}
+.glow-yellow {
+	text-shadow: 0 0 10px var(--canary-yellow);
 }
 
-code {
-	font-family: menlo, inconsolata, monospace;
-	font-size: calc(1em - 2px);
-	color: #555;
-	background-color: #f0f0f0;
-	padding: 0.2em 0.4em;
-	border-radius: 2px;
+/* Font sizing */
+h1, h1 a {
+	font-size: calc(1.355rem + 1.26vw);
 }
-
-@media (min-width: 400px) {
-	body {
-		font-size: 16px;
+@media (min-width: 1200px) {
+	h1, h1 a {
+		font-size: 2.3rem;
 	}
+}
+h2, h2 a {
+	font-size: calc(1.295rem + 0.54vw);
+}
+@media (min-width: 1200px) {
+	h2, h2 a {
+		font-size: 1.7rem;
+	}
+}
+h3, h3 a {
+	font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+	h3,	h3 a {
+		font-size: 1.5rem;
+	}
+}
+h4, h4 a {
+	font-size: 1.2rem;
+}
+h5, h5 a {
+	font-size: 0.9rem;
+}
+h6, h6 a {
+	font-size: 1rem;
+}
+p, p a {
+	font-size: 1rem;
+	line-height: 150%;
+	overflow-wrap: break-word;
+}
+p a {
+	font-weight: 600;
+}
+
+/* Margin and padding 0 */
+body, h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0
+}
+
+/* Body styling */
+body {
+	background-color: var(--navy-background);
 }
