@@ -1,11 +1,15 @@
 /* Responsve screen breakpoints */
-/* Small: 0px - 640px */
-/* Medium: 641px - 1000px */
-/* Large: 1001px - ∞ */
+/* Small: 0px - 600px */
+/* Medium: 601px - 800px */
+/* Large: 801px - ∞ */
+
+:root {
+    --width-restriction: 85vw;
+}
 
 /* Width resitriction */
 .width-restriction {
-	width: 90%;
+	width: var(--width-restriction);
 	margin: 0 auto;
 }
 
