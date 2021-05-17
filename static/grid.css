@@ -4,7 +4,7 @@
 /* Large: 801px - ∞ */
 
 :root {
-    --width-restriction: 85vw;
+    --width-restriction: 85%;
 }
 
 /* Width resitriction */
@@ -46,7 +46,7 @@
     .col-3 {
         grid-column: span 12;
     }
-    .col-3 .width-restriction{
+    .col-3 .width-restriction {
         width: 100%;
     }
 }
