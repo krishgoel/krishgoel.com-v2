@@ -7,16 +7,19 @@
 	--dark-text: #2B2B2B;
 	--light-text: #dadada;
 
-	--dark-link-color: #414141;
-	--dark-link-underline: #939393b7;
+	/* Link underline and hover background */
+	--link-underline: inset 0 -8px 0;
+	--link-background: inset 0 -22px 0;
+
+	--dark-link-color: #353535;
+	--dark-link-underline: #93939388;
 	--dark-link-hover-bg: #939393b7;
-	--dark-link-hover: #3a3a3a;
+	--dark-link-hover: #313131;
 
 	--light-link-color: #e2e2e2;
-	--light-link-underline: #818181b7;
+	--light-link-underline: #81818171;
 	--light-link-hover-bg: #666666;
 	--light-link-hover: #f0f0f0;
-	
 }
 
 /* Fonts */
@@ -148,28 +151,58 @@ p a:hover {
 
 .dark p a {
 	color: var(--light-link-color);
-	box-shadow: inset 0 -8px 0 var(--light-link-underline);
+	box-shadow: var(--link-underline) var(--light-link-underline);
 }
 .dark p a:hover {
-	box-shadow: inset 0 -18px 0 var(--light-link-hover-bg);
+	box-shadow: var(--link-background) var(--light-link-hover-bg);
 	color: var(--light-link-hover)
 }
 .light p a {
 	color: var(--dark-link-color);
-	box-shadow: inset 0 -8px 0 var(--dark-link-underline);
+	box-shadow: var(--link-underline) var(--dark-link-underline);
 }
 .light p a:hover {
-	box-shadow: inset 0 -18px 0 var(--dark-link-hover-bg);
+	box-shadow: var(--link-background) var(--dark-link-hover-bg);
 	color: var(--dark-link-hover)
 }
 /* Card desgin */
 .card {
 	width: 95%;
+	padding-bottom: 30px;
 	margin-bottom: 20px;
 }
-
 @media screen and (max-width: 600px) {
 	.card {
 		width: 100%
 	}
+}
+
+.card h3 {
+	line-height: 130%;
+}
+
+.dark .card {
+	background-color: var(--light-background);
+	color: var(--dark-text)
+}
+.dark .card p a {
+	color: var(--dark-link-color);
+	box-shadow: var(--link-underline) var(--dark-link-underline);
+}
+.dark .card p a:hover {
+	box-shadow: var(--link-background) var(--dark-link-hover-bg);
+	color: var(--dark-link-hover)
+}
+
+.light .card {
+	background-color: var(--dark-background);
+	color: var(--light-text)
+}
+.light .card p a {
+	color: var(--light-link-color);
+	box-shadow: var(--link-underline) var(--light-link-underline);
+}
+.light .card p a:hover {
+	box-shadow: var(--link-background) var(--light-link-hover-bg);
+	color: var(--light-link-hover)
 }
