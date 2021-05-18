@@ -41,6 +41,9 @@
     .col-4 .width-restriction, .col-2 .width-restriction {
         width: 100%
     }
+    .card .width-restriction {
+        width: var(--width-restriction)
+    }
 }
 @media screen and (max-width: 600px) {
     .col-3 {
@@ -48,5 +51,8 @@
     }
     .col-3 .width-restriction {
         width: 100%;
+    }
+    .card .width-restriction {
+        width: var(--width-restriction);
     }
 }

@@ -7,10 +7,15 @@
 	--dark-text: #2B2B2B;
 	--light-text: #dadada;
 
-	--dark-link-color: #ffffff;
-	--dark-link-underline: #77777783;
-	--dark-link-hover-bg: #bebebe;
-	--dark-link-hover: #3d3d3d;
+	--dark-link-color: #414141;
+	--dark-link-underline: #939393b7;
+	--dark-link-hover-bg: #939393b7;
+	--dark-link-hover: #3a3a3a;
+
+	--light-link-color: #e2e2e2;
+	--light-link-underline: #818181b7;
+	--light-link-hover-bg: #666666;
+	--light-link-hover: #f0f0f0;
 	
 }
 
@@ -106,70 +111,65 @@ img {
 	margin-bottom: 20px;
 }
 
+iframe {
+	width: 100%;
+}
+
 * a {
 	text-decoration: none;
 }
 p a {
-	font-weight: 700;;
-	color: var(--dark-link-color);
-	box-shadow: inset 0 -8px 0 var(--dark-link-underline);
+	/* font-weight: 700;; */
 	padding: 0px 3px;
 	margin: 0 3px;
 	padding-top: 6px;
 	padding-bottom: 0px;
 	transition: 0.2s;
-	font-family: "Recoleta";
 	cursor: pointer;
 }
 p a:hover {
-	box-shadow: inset 0 -22px 0 var(--dark-link-hover-bg);
-	color: var(--dark-link-hover)
-}
-
-/* Margins n dat */
-h1, h2, h3, p {
-	margin-bottom: 10px;
+	/* box-shadow: inset 0 -22px 0 var(--light-link-hover-bg);
+	color: var(--light-link-hover) */
 }
 
 /* Color scheming */
 .dark, .light {
-	padding-top: 30px;
-	padding-bottom: 20px;
+	padding: 40px 0;
 }
 
+.dark {
+	background-color: var(--dark-background);
+	color: var(--light-text)
+}
 .light {
 	background-color: var(--light-background);
 	color: var(--dark-text)
 }
-.light h1, .light h2, .light h3 {
-	color: var(--blue-text)
-} 
 
+.dark p a {
+	color: var(--light-link-color);
+	box-shadow: inset 0 -8px 0 var(--light-link-underline);
+}
+.dark p a:hover {
+	box-shadow: inset 0 -18px 0 var(--light-link-hover-bg);
+	color: var(--light-link-hover)
+}
+.light p a {
+	color: var(--dark-link-color);
+	box-shadow: inset 0 -8px 0 var(--dark-link-underline);
+}
+.light p a:hover {
+	box-shadow: inset 0 -18px 0 var(--dark-link-hover-bg);
+	color: var(--dark-link-hover)
+}
 /* Card desgin */
 .card {
 	width: 95%;
-	padding-bottom: 25px;
 	margin-bottom: 20px;
 }
-.card h2 {
-	padding-top: 30px;
-}
-.card img {
-	padding: 0;
-	margin-bottom: 0;
-}
+
 @media screen and (max-width: 600px) {
 	.card {
 		width: 100%
 	}
-}
-.dark .card {
-	background-color: var(--light-background);
-	color: var(--dark-text);
-	box-shadow: 0px 0px 7px 2px #1d1d1d;
-}
-.light .card {
-	background-color: var(--dark-background);
-	color: var(--light-text);
-	box-shadow: 0px 0px 7px 2px #797979;
 }
