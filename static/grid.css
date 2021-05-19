@@ -30,6 +30,10 @@
 	grid-column: span 3;
 }
 
+.col-2 .card, .col-3 .card, .col-4 .card {
+	width: 95%;
+}
+
 /* Responsive column and width-restriction sizing */
 @media screen and (max-width:800px) {
     .col-3 {
@@ -44,6 +48,9 @@
     .card .width-restriction {
         width: var(--width-restriction)
     }
+    .col-4 .card, .col-2 .card {
+        width: 100%
+    }
 }
 @media screen and (max-width: 600px) {
     .col-3 {
@@ -54,5 +61,8 @@
     }
     .card .width-restriction {
         width: var(--width-restriction);
+    }
+    .col-3 .card {
+        width: 100%
     }
 }

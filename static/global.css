@@ -20,6 +20,10 @@
 	--light-link-underline: #81818171;
 	--light-link-hover-bg: #666666;
 	--light-link-hover: #f0f0f0;
+
+	/* Card shadows */
+	--light-card-shadow: 7px 7px 21px -10px #000000;
+	--dark-card-shadow: 7px 7px 21px -10px #252525;
 }
 
 /* Fonts */
@@ -167,14 +171,8 @@ p a:hover {
 }
 /* Card desgin */
 .card {
-	width: 95%;
 	padding-bottom: 30px;
 	margin-bottom: 20px;
-}
-@media screen and (max-width: 600px) {
-	.card {
-		width: 100%
-	}
 }
 
 .card h3 {
@@ -183,7 +181,8 @@ p a:hover {
 
 .dark .card {
 	background-color: var(--light-background);
-	color: var(--dark-text)
+	color: var(--dark-text);
+	box-shadow: var(--light-card-shadow);
 }
 .dark .card p a {
 	color: var(--dark-link-color);
@@ -196,7 +195,8 @@ p a:hover {
 
 .light .card {
 	background-color: var(--dark-background);
-	color: var(--light-text)
+	color: var(--light-text);
+	box-shadow: var(--dark-card-shadow)
 }
 .light .card p a {
 	color: var(--light-link-color);
