@@ -1,6 +1,5 @@
 <script>
     import fetch from 'cross-fetch'
-    // import { dataset_dev } from 'svelte/internal'
 
     // const fetchSocials = (async () => {
     //     var response = await fetch('https://potion-api.vercel.app/table?id=fe3fe0e8c9e54061b7412307da4c035f')
@@ -13,8 +12,13 @@
     })()
 
     const liveListening = (async () => {
-        var response = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=KrishSkywalker&api_key=faa73d570313176a337af4dea9827765&format=json&limit=1')
-        return await response.json()
+        try {
+            var response = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=KrishSkywalker&api_key=faa73d570313176a337af4dea9827765&format=json&limit=1')
+            return await response.json()
+        }
+        catch(err){
+            console.log(err)
+        }
     })()
 
 </script>
