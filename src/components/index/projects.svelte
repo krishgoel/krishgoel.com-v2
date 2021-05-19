@@ -5,10 +5,15 @@
     import sortJsonArray from 'sort-json-array'
 
     // const fetchProjects = (async () => {
-    //     var response = await fetch('https://potion-api.vercel.app/table?id=5856546a8a954678937de8e1d91d99d7')
-    //     var responseJSON = await response.json()
-    //     responseJSON = sortJsonArray(responseJSON, "fields.showonindex")
-    //     return responseJSON
+    //     try {
+    //         var response = await fetch('https://potion-api.vercel.app/table?id=5856546a8a954678937de8e1d91d99d7')
+    //         var responseJSON = await response.json()
+    //         responseJSON = sortJsonArray(responseJSON, "fields.showonindex")
+    //         return responseJSON
+    //     }
+    //     catch(err) {
+    //         console.log(err)
+    //     }
     // })()
     
     // Localising JSON for dev
@@ -23,6 +28,7 @@
         <h2>My Projects</h2>
         <br/>
         {#await fetchProjects}
+        <p>Projects loading...</p>
         {:then data}
         <div class="row">
             {#each range(0,3,1) as i, index}

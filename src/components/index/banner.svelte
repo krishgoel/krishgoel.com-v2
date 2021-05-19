@@ -6,7 +6,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-color: var(--dark-background);
-        height: 95vh;
+        height: 100vh;
         display: flex;
         align-items: center;
     }

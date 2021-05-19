@@ -9,7 +9,7 @@
 
 	/* Link underline and hover background */
 	--link-underline: inset 0 -8px 0;
-	--link-background: inset 0 -22px 0;
+	--link-background: inset 0 -20px 0;
 
 	--dark-link-color: #353535;
 	--dark-link-underline: #93939388;

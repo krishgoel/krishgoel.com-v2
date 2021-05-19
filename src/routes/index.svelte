@@ -3,12 +3,15 @@
     let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
     let url = "https://krishgoel-v4.vercel.app";
 
+	import Nav from '../components/Topnav.svelte';
+
     import Intro from '../components/index/intro.svelte'
     import Banner from '../components/index/banner.svelte'
     import YouTube from '../components/index/youtube.svelte'
     import Projects from '../components/index/projects.svelte'
     import Blog from '../components/index/blog.svelte'
     import Reachme from '../components/index/reachme.svelte'
+    import Footer from '../components/Footer.svelte'
 
 </script>
 
@@ -31,6 +34,9 @@
 <section>
 
     <Banner/>
+
+    <Nav/>
+
     <div class="dark">
         <Intro/>
     </div>
@@ -45,6 +51,9 @@
     </div>
     <div class="dark">
         <Reachme/>
+    </div>
+    <div class="light" style="padding: 0">
+        <Footer/>
     </div>
     
 </section>

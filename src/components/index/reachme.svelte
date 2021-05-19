@@ -2,8 +2,13 @@
     import fetch from 'cross-fetch'
 
     // const fetchSocials = (async () => {
-    //     var response = await fetch('https://potion-api.vercel.app/table?id=fe3fe0e8c9e54061b7412307da4c035f')
-    //     return await response.json()
+    //     try {
+    //         var response = await fetch('https://potion-api.vercel.app/table?id=fe3fe0e8c9e54061b7412307da4c035f')
+    //         return await response.json()
+    //     }
+    //     catch(err) {
+    //         console.log(err)
+    //     }
     // })()
     
     // Localising JSON for dev
@@ -20,7 +25,6 @@
             console.log(err)
         }
     })()
-
 </script>
 
 <style>

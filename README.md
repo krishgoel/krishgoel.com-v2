@@ -17,4 +17,8 @@ Before pushing to production, ensure that the meta URLs are changed to krishgoel
 - cross-fetch
 - sort-json-array
 
+## APIs used
+- Potion (with Notion)
+- Audioscrobbler (with Last.fm)
+
 _Don't read this istfg_

@@ -4,17 +4,22 @@
     import fetch from 'cross-fetch'
     import sortJsonArray from 'sort-json-array'
 
-    // const fetchBlogposts = (async () => {
-    //     var response = await fetch('https://potion-api.vercel.app/table?id=c962b6a899d94ea39739998c6690b54b')
-    //     var responseJSON = await response.json()
-    //     responseJSON = sortJsonArray(responseJSON, "fields.showonindex")
-    //     return responseJSON
-    // })()
+    const fetchBlogposts = (async () => {
+        try {
+            var response = await fetch('https://potion-api.vercel.app/table?id=c962b6a899d94ea39739998c6690b54b')
+            var responseJSON = await response.json()
+            responseJSON = sortJsonArray(responseJSON, "fields.showonindex")
+            return responseJSON
+        }
+        catch(err) {
+            console.log(err)
+        }
+    })()
     
     // Localising JSON for dev
-    const fetchBlogposts = (async () => {
-        return ([{"fields":{"description":"I mean, the title's pretty self explanatory. Read this shit to be revered by the GeoGuesser/Risk Mandem.","showonindex":true,"title":"Aversed: A mathematical model to beat Risk everytime"},"id":"c3de8131-6022-4b54-9c65-cd6453a6c0d5","created":1621366631940,"last_edited":1621372200000},{"fields":{"description":"I mean, the title's pretty self explanatory. Read this shit to be revered by the GeoGuesser/Risk Mandem.","showonindex":true,"title":"Aversed: A mathematical model to beat Risk everytime"},"id":"b55ddfe2-0f89-4642-99ac-a317b1a6404b","created":1621372200000,"last_edited":1621372200000}])
-    })()
+    // const fetchBlogposts = (async () => {
+    //     return ([{"fields":{"description":"I mean, the title's pretty self explanatory. Read this shit to be revered by the GeoGuesser/Risk Mandem.","showonindex":true,"title":"Aversed: A mathematical model to beat Risk everytime"},"id":"c3de8131-6022-4b54-9c65-cd6453a6c0d5","created":1621366631940,"last_edited":1621372200000},{"fields":{"description":"I mean, the title's pretty self explanatory. Read this shit to be revered by the GeoGuesser/Risk Mandem.","showonindex":true,"title":"Aversed: A mathematical model to beat Risk everytime"},"id":"b55ddfe2-0f89-4642-99ac-a317b1a6404b","created":1621372200000,"last_edited":1621372200000}])
+    // })()
 
 </script>
 
@@ -25,6 +30,7 @@
         <br/>
 
         {#await fetchBlogposts}
+        <p>Blog posts loading...</p>
         {:then data}
         <div class="row">
             {#each range(0,2,1) as i, index}
