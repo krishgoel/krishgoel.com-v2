@@ -57,7 +57,7 @@
                         <p class="mono">There has been an error due to the <a href="https://potion-api.vercel.app/" target="_blank">Potion API</a> (third party) used</p>
                         {/await}
                         <br/>
-                        <p>Here's what <a hef="">I been listening to lately</a></p>
+                        <p>Here's what <a hef="/recent">I been listening to lately</a></p>
                     </div>
                 </div>
             </div>
