@@ -36,6 +36,7 @@
                     <h1>I'm Krish</h1>
                     <p class="mono">(short for Krishnamangalrathnam nunununun)</p>
                 </Typewriter>
+                <br/>
                 <!-- Typewriter flipping text -->
                 <div class="banner-text-flipping">
                     <Typewriter loop interval={30} delay={2500} scramble>

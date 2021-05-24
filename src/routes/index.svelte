@@ -11,7 +11,7 @@
     import Projects from '../components/index/projects.svelte'
     import Blog from '../components/index/blog.svelte'
     import Reachme from '../components/index/reachme.svelte'
-    import Footer from '../components/Footer.svelte'
+    // import Footer from '../components/Footer.svelte'
 
 </script>
 
@@ -51,9 +51,6 @@
     </div>
     <div class="dark">
         <Reachme/>
-    </div>
-    <div class="light" style="padding: 0">
-        <Footer/>
     </div>
     
 </section>

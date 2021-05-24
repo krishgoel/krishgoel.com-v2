@@ -1,6 +1,7 @@
 <style>
     footer {
         padding: 20px 0;
+        margin-top: 20px
     }
     footer .width-restriction {
         display: flex;
@@ -16,8 +17,8 @@
     <div class="width-restriction">
         <p>Made with ❤️</p>
         <div class="links">
-            <p><a>Colophon</a></p>
-            <p><a>Thanks</a></p>
+            <p><a href="/colophon">Colophon</a></p>
+            <p><a href="/thanks">Thanks</a></p>
         </div>
     </div>
 </footer>
