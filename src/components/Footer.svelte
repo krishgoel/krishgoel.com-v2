@@ -15,7 +15,7 @@
 
 <footer>
     <div class="width-restriction">
-        <p>Made with</p>
+        <p>&copy; Krish Goel<p>
         <div class="links">
             <p><a href="/colophon">Colophon</a></p>
             <p><a href="/thanks">Thanks</a></p>
