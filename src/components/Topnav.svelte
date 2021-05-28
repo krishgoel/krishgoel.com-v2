@@ -6,14 +6,12 @@
 
 <style>
     .dark {
-        /* background-color: #818181; */
-        box-shadow: var(--dark-card-shadow);
         padding: 20px 0; 
         z-index: 2;
         position: sticky;
         top: -1px;
-        /* white-space: nowrap;
-        overflow-x: auto; */
+        white-space: nowrap;
+        overflow-x: auto;
         margin-bottom: 20px
     }
     nav .width-restriction {

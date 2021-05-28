@@ -15,7 +15,7 @@
 
 <footer>
     <div class="width-restriction">
-        <p>Made with ❤️</p>
+        <p>Made with</p>
         <div class="links">
             <p><a href="/colophon">Colophon</a></p>
             <p><a href="/thanks">Thanks</a></p>

@@ -34,7 +34,7 @@
                 <Typewriter cascade>
                     <h3 style="margin: 5px 0">Hi</h3>
                     <h1>I'm Krish</h1>
-                    <p class="mono">(short for Krishnamangalrathnam nunununun)</p>
+                    <p class="mono">(short for Krishnamangalrathn-algorithm nunununununununu)</p>
                 </Typewriter>
                 <br/>
                 <!-- Typewriter flipping text -->

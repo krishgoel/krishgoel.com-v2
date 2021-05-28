@@ -52,12 +52,13 @@
                         <p>Last listened to</p>
                         {/if}
                         <h3>{data.recenttracks.track[0].name}</h3>
-                        <p>by <a href="{data.recenttracks.track[0].url}" target="_blank "style="font-weight: 700">{data.recenttracks.track[0].artist["#text"]}</a></p>
+                        <!-- <p>by <a href="{data.recenttracks.track[0].url}" target="_blank "style="font-weight: 700">{data.recenttracks.track[0].artist["#text"]}</a></p> -->
+                        <p>by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
                         {:catch error}
                         <p class="mono">There has been an error due to the <a href="https://potion-api.vercel.app/" target="_blank">Potion API</a> (third party) used</p>
                         {/await}
                         <br/>
-                        <p>Here's what <a hef="/recent">I been listening to lately</a></p>
+                        <p>Here's what <a href="/recent">I been listening to lately</a></p>
                     </div>
                 </div>
             </div>
