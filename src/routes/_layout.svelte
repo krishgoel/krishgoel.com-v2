@@ -1,5 +1,5 @@
 <script>
-	import Nav from '../components/Topnav.svelte';
+	import Nav from '../components/Topnav.svelte'
     import Footer from '../components/Footer.svelte'
 
 	import { stores } from '@sapper/app';

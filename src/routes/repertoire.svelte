@@ -1,4 +1,6 @@
 <script>
+	import { fadeIn, fadeOut } from "../components/pageFade";
+
     let title= "Repertoire | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
     let url = "https://krishgoel-v4.vercel.app";
@@ -16,7 +18,7 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section class="repertoire">
+<section class="repertoire" in:fadeIn out:fadeOut>
     <div class="width-restriction">
         <h1>Repertoire</h1>
     </div>

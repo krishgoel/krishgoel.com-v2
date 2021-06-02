@@ -1,4 +1,6 @@
 <script>
+	import { fadeIn, fadeOut } from "../components/pageFade";
+
 	export let status;
 	export let error;
 
@@ -31,10 +33,15 @@
 	<title>{status}</title>
 </svelte:head>
 
-<h1>{status}</h1>
+<main in:fadeIn out:fadeOut>
+	<div class="width-restriction">
 
-<p>{error.message}</p>
-
-{#if dev && error.stack}
-	<pre>{error.stack}</pre>
-{/if}
+		<h1>{status}</h1>
+		
+		<!-- <p>{error.message}</p> -->
+		
+		{#if dev && error.stack}
+		<pre>{error.stack}</pre>
+		{/if}
+	</div>
+</main>
