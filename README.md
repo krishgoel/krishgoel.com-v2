@@ -13,6 +13,7 @@
 - [ ] Consider this https://stackoverflow.com/questions/60201324/send-data-from-one-page-to-another-instead-of-preloading
 - [ ] Uninstall svelte-loading-spinners
 - [ ] Wrap everything in the page transition ting (```import { fadeIn, fadeOut } from "../components/pageFade"``` and ```in:fadeIn out:fadeOut```) [import { fadeIn, fadeOut } from "../components/pageFade";]
+- [ ] Configure the error page
 
 ## Extra Node Packages used
 - svelte-typewriter
