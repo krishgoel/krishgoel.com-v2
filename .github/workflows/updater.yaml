@@ -3,7 +3,7 @@ name: Update JSON Files
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
     - cron: "0 1 * * *" # Everyday at 1AM
 
