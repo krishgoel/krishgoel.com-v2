@@ -73,6 +73,10 @@
 }
 
 /* Font sizing */
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
 h1 {
 	font-size: clamp(35px, 6vw, 45px);
 }
