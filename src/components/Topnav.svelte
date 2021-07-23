@@ -41,11 +41,11 @@
                 {#if $page.path != "/"}
                 <p><a href="">Home</a></p>
                 {/if}
-                <p><a href="/youtube">YouTube</a></p>
-                <p><a href="/projects">Projects</a></p>
-                <p><a href="/experience">Experience</a></p>
-                <p><a href="/repertoire">Repertoire</a></p>
-                <p><a href="/thoughts">Thoughts</a></p>
+                <p><a aria-label="YouTube" rel=prefetch href="/youtube">YouTube</a></p>
+                <p><a aria-label="Projects" rel=prefetch href="/projects">Projects</a></p>
+                <p><a aria-label="Experience" rel=prefetch href="/experience">Experience</a></p>
+                <p><a aria-label="Repertoire" rel=prefetch href="/repertoire">Repertoire</a></p>
+                <p><a aria-label="Thoughts" rel=prefetch href="/thoughts">Thoughts</a></p>
             </div>
         </div>
     </nav>

@@ -88,7 +88,7 @@ h3 {
 }
 p {
 	/* font-size: clamp(14px, 0.97rem, 20px); */
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 150%;
 }
 
@@ -146,10 +146,6 @@ p a:hover {
 }
 
 /* Color scheming */
-.dark, .light {
-	padding: 40px 0;
-}
-
 .dark {
 	background-color: var(--dark-background);
 	color: var(--light-text)

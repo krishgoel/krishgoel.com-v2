@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "krishgoel.com",
+  "description": "4th iteration of Krish Goel's personal website",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
@@ -13,7 +13,6 @@
     "cross-fetch": "^3.1.4",
     "polka": "next",
     "sirv": "^1.0.0",
-    "sort-json-array": "^0.1.7",
     "svelte-typewriter": "^2.4.5"
   },
   "devDependencies": {
