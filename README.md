@@ -24,6 +24,9 @@
 - Potion (with Notion)
 - Audioscrobbler (with Last.fm)
 
+## External libraries and snippets used
+- CSS from Prism.JS for syntax highlighting
+
 ## How the preload works
 ```html
 <script context="module">

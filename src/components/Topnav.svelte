@@ -19,12 +19,19 @@
         justify-content: space-between;
         align-items: center;
     }
-    nav h2 {
+    /* nav h2 {
         margin-right: 30px
-    }
+    } */
     nav .links {
         white-space: nowrap;
         overflow-x: auto;
+        /* Hiding scrollbar */
+        -ms-overflow-style: none;
+        scrollbar-width: none; 
+    }
+    nav .links::-webkit-scrollbar {
+        /* Hiding scrollbar */
+        display: none;
     }
     nav .links, nav p {
         display: inline-block
@@ -35,17 +42,17 @@
     <nav>
         <div class="width-restriction">
             {#if $page.path != "/"}
-            <h3><a href="">Krish Goel</a></h3>
+            <h3 style="padding-right: 20px"><a href="">Krish Goel</a></h3>
             {/if}
             <div class="links">
                 {#if $page.path != "/"}
                 <p><a href="">Home</a></p>
                 {/if}
-                <p><a aria-label="YouTube" rel=prefetch href="/youtube">YouTube</a></p>
+                <!-- <p><a aria-label="YouTube" rel=prefetch href="/youtube">YouTube</a></p> -->
+                <p><a aria-label="Thoughts" rel=prefetch href="/thoughts">Thoughts</a></p>
                 <p><a aria-label="Projects" rel=prefetch href="/projects">Projects</a></p>
                 <p><a aria-label="Experience" rel=prefetch href="/experience">Experience</a></p>
                 <p><a aria-label="Repertoire" rel=prefetch href="/repertoire">Repertoire</a></p>
-                <p><a aria-label="Thoughts" rel=prefetch href="/thoughts">Thoughts</a></p>
             </div>
         </div>
     </nav>

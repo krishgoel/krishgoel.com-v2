@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
-    "cross-fetch": "^3.1.4",
     "polka": "next",
     "sirv": "^1.0.0",
+    "svelte-prismjs": "^1.0.2",
     "svelte-typewriter": "^2.4.5"
   },
   "devDependencies": {

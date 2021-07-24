@@ -6,12 +6,16 @@
         const blogpostsFetch = await this.fetch("https://potion-api.vercel.app/table?id=c962b6a899d94ea39739998c6690b54b")
         const blogposts = await blogpostsFetch.json()
 
+        const liveFetch = await this.fetch("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=KrishSkywalker&api_key=faa73d570313176a337af4dea9827765&format=json&limit=1")
+        const live = await liveFetch.json()
+
         const socialsFetch = await this.fetch("https://potion-api.vercel.app/table?id=fe3fe0e8c9e54061b7412307da4c035f")
         const socials = await socialsFetch.json()
 
         return { 
             projects: projects,
             blogposts: blogposts,
+            live: live,
             socials: socials
         }
     }
@@ -20,6 +24,7 @@
 <script>
     import { range } from '../scripts/range'
 
+    export let live
     export let projects
     export let blogposts
     export let socials
@@ -34,17 +39,6 @@
     import Intro from '../components/index/intro.svelte'
     import YouTube from '../components/index/youtube.svelte'
     import Colophon from './colophon.svelte'
-
-    import fetch from 'cross-fetch'
-    const liveListening = (async () => {
-        try {
-            var response = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=KrishSkywalker&api_key=faa73d570313176a337af4dea9827765&format=json&limit=1')
-            return await response.json()
-        }
-        catch(err){
-            console.log(err)
-        }
-    })()
 </script>
 
 <style>
@@ -81,7 +75,7 @@
 
     <Nav/>
 
-    <div class="dark">
+    <div class="dark" style="padding-top: 0">
         <Intro/>
     </div>
     <div class="light">
@@ -168,21 +162,15 @@
                     <div class="col-2 live-listening">
                         <div class="card" style="padding-top: 30px">
                             <div class="width-restriction">
-                                {#await liveListening}
-                                <p>Data loading...</p>
-                                {:then data}
-                                {#if data.recenttracks.track[0].hasOwnProperty("@attr")}
+                                {#if live.recenttracks.track[0].hasOwnProperty("@attr")}
                                 <p>Currently listening to</p>
                                 {:else}
                                 <p>Last listened to</p>
                                 {/if}
-                                <h3>{data.recenttracks.track[0].name}</h3>
-                                <p>by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
-                                {:catch error}
-                                <p class="mono">There has been an error due to the <a href="https://potion-api.vercel.app/" target="_blank">Potion API</a> (third party) used</p>
-                                {/await}
+                                <h3>{live.recenttracks.track[0].name}</h3>
+                                <p>by <strong>{live.recenttracks.track[0].artist["#text"]}</strong></p>
                                 <br/>
-                                <p>Here's what <a href="/recent">I been listening to lately</a></p>
+                                <p>Here's what <a href="/recentlistening">I been listening to lately</a></p>
                             </div>
                         </div>
                     </div>

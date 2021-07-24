@@ -21,6 +21,10 @@
 	--light-link-hover-bg: #666666;
 	--light-link-hover: #f0f0f0;
 
+	/* Blockquote background */
+	--dark-blockquote-background: #dadada28;
+	--light-blockquote-background: #2B2B2B28;
+
 	/* Card shadows */
 	--light-card-shadow: 7px 7px 21px -10px #000000;
 	--dark-card-shadow: 7px 7px 21px -10px #252525;
@@ -145,6 +149,16 @@ p a:hover {
 	color: var(--light-link-hover) */
 }
 
+blockquote {
+	margin-left: 0;
+	border-left: 5px solid;
+	padding: 5px 0;
+	width: calc(100% - 25px);
+	padding-left: 20px;
+	color: var(--light-text);
+	background-color: var(--dark-blockquote-background);
+}
+
 /* Color scheming */
 .dark {
 	background-color: var(--dark-background);
@@ -171,6 +185,15 @@ p a:hover {
 	box-shadow: var(--link-background) var(--dark-link-hover-bg);
 	color: var(--dark-link-hover)
 }
+.dark blockquote {
+	color: var(--light-text);
+	background-color: var(--dark-blockquote-background);
+}
+.light blockquote {
+	color: var(--dark-text);
+	background-color: var(--light-blockquote-background);
+}
+
 /* Card desgin */
 .card {
 	padding-bottom: 30px;
@@ -210,4 +233,10 @@ p a:hover {
 .light .card p a:hover {
 	box-shadow: var(--link-background) var(--light-link-hover-bg);
 	color: var(--light-link-hover)
+}
+
+pre {
+	background-color: #161b22;
+	border-radius: 10px;
+	padding: 20px 30px;
 }
