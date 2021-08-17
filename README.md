@@ -1,13 +1,13 @@
 # krishgoel.com
 
 ## To-do
-- [ ] Page transitions
+- [x] Page transitions
 - [ ] SEO and updated meta on social media shares
 - [ ] Add G-Analytics
 - [ ] Build the blog CMS architecture
 - [ ] GitHub repo update
 - [x] Typewriter animation (https://svelte.dev/repl/9dfb73bfa9b34aeea4740fa23f5cde8a?version=3.38.2)
-- [ ] Fix the banner animation on iOS Safari, it fucking sucks because of some sort of line-height adjustment error
+- [x] Fix the banner animation on iOS Safari, it fucking sucks because of some sort of line-height adjustment error
 - [ ] Update each individual routes' SEO
 - [ ] Update robots.txt and sitemap
 - [ ] Before pushing to production, ensure that the meta URLs are changed to krishgoel.com and not krishgoel-v4.vercel.app 

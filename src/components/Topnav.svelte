@@ -42,11 +42,11 @@
     <nav>
         <div class="width-restriction">
             {#if $page.path != "/"}
-            <h3 style="padding-right: 20px"><a href="">Krish Goel</a></h3>
+            <h3 style="padding-right: 20px"><a aria-label="Home Page" rel=prefetch href="/">Krish Goel</a></h3>
             {/if}
             <div class="links">
                 {#if $page.path != "/"}
-                <p><a href="">Home</a></p>
+                <p><a aria-label="Home Page" rel=prefetch href="/">Home</a></p>
                 {/if}
                 <!-- <p><a aria-label="YouTube" rel=prefetch href="/youtube">YouTube</a></p> -->
                 <p><a aria-label="Thoughts" rel=prefetch href="/thoughts">Thoughts</a></p>
