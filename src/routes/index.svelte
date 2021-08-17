@@ -170,7 +170,7 @@
                                 <h3>{live.recenttracks.track[0].name}</h3>
                                 <p>by <strong>{live.recenttracks.track[0].artist["#text"]}</strong></p>
                                 <br/>
-                                <p>Here's what <a href="/recentlistening">I been listening to lately</a></p>
+                                <p>Here's what <a aria-label="Recent Listening" rel=prefetch href="/recentlistening">I been listening to lately</a></p>
                             </div>
                         </div>
                     </div>
@@ -181,7 +181,7 @@
                         <br/>
                         <div class="socials">
                             {#each socials as social, i}
-                                <p><a href="{social.fields.url}" target="_blank">{social.fields.platform}</a></p>
+                                <p><a aria-label="Link to my {social.fields.platform}" href="{social.fields.url}" target="_blank">{social.fields.platform}</a></p>
                             {/each}
                         </div>
                     </div>
