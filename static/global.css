@@ -81,6 +81,7 @@ body {
 	-webkit-user-select: none;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
+	background-color: var(--dark-background);
 }
 /* Font sizing */
 html {
