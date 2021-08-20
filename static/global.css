@@ -76,6 +76,12 @@
 	src: url(fonts/Recoleta-Bold.woff2);
 }
 
+/* iOS native-like */
+body {
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+}
 /* Font sizing */
 html {
 	-webkit-text-size-adjust: 100%;
@@ -194,6 +200,11 @@ blockquote {
 	background-color: var(--light-blockquote-background);
 }
 
+/* Section design */
+.section-opening {
+	margin-bottom: 30px
+}
+
 /* Card desgin */
 .card {
 	padding-bottom: 30px;
@@ -203,8 +214,15 @@ blockquote {
 .card h3 {
 	line-height: 130%;
 }
+.card .width-restriction p {
+	margin-bottom: 10px
+}
 .card .links p {
-	display: inline-block
+	display: inline-block;
+}
+.card .links p a {
+	margin: 0;
+	margin-right: 5px
 }
 
 .dark .card {

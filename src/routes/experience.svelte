@@ -31,9 +31,10 @@
 
 <section class="experience">
     <div class="width-restriction">
-        <h1>Experience</h1>
-        <p>A lot of things that been dun by urs truly</p>
-        <br/>
+        <div class="section-opening">
+            <h1>Experience</h1>
+            <p>A lot of things that been dun by urs truly</p>
+        </div>
         <div class="row dark">
             {#each range(0,3,1) as i, index}
                 <div class="col-3">
@@ -44,7 +45,6 @@
                             <h3 style="padding-top: 25px">{experience.fields.title}</h3>
                             <p class="mono" style="margin-bottom: 10px;">{experience.fields.date}</p>
                             <p>{@html experience.fields.description}</p>
-                            <br/>
                             <div class="links">
                                 {#if experience.fields.link1 != undefined}
                                 <p><a href="{experience.fields.url1}">{experience.fields.link1}</a></p>

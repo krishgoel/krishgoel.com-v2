@@ -31,9 +31,10 @@
 
 <section class="repertoire">
     <div class="width-restriction">
-        <h1>Repertoire</h1>
-        <p>A lot of things that learnt dun by urs truly</p>
-        <br/>
+        <div class="section-opening">
+            <h1>Repertoire</h1>
+            <p>A lot of things that learnt dun by urs truly</p>
+        </div>
         <div class="row dark">
             {#each range(0,3,1) as i, index}
                 <div class="col-3">
@@ -42,7 +43,7 @@
                     <div class="card">
                         <div class="width-restriction">
                             <h3 style="padding-top: 25px">{skill.fields.name}</h3>
-                            <p>{@html skill.fields.description}</p>
+                            <p style="margin-bottom: 0px">{@html skill.fields.description}</p>
                             <!-- <div class="links">
                                 {#if experience.fields.link1 != undefined}
                                 <p><a href="{experience.fields.url1}">{experience.fields.link1}</a></p>

@@ -78,14 +78,18 @@
     <div class="dark" style="padding-top: 0">
         <Intro/>
     </div>
-    <div class="light">
+    <!-- <div class="light">
         <YouTube/>
+    </div> -->
+    <div class="light">
+        
     </div>
     <div class="dark">
         <section class="projects">
             <div class="width-restriction">
-                <h2>My Projects</h2>
-                <br/>
+                <div class="section-opening">
+                    <h2>My Projects</h2>
+                </div>
                 <div class="row">
                     {#each range(0,3,1) as i, index}
                         <div class="col-3">
@@ -104,7 +108,7 @@
                                     {/if}
                                     <p class="mono" style="margin-bottom: 10px;">{project.fields.date}</p>
                                     <p>{project.fields.description}</p>
-                                    <br/>
+                                    <!--  -->
                                     <div class="links">
                                         <p><a href="{project.fields.url1}">{project.fields.link1}</a></p>
                                         {#if project.fields.link2 != undefined}
@@ -128,10 +132,10 @@
     <div class="light">
         <section class="blog">
             <div class="width-restriction">
-                <h2>Thots n dat</h2>
-                <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check them out.</p>
-                <br/>
-
+                <div class="section-opening">
+                    <h2>Thots n dat</h2>
+                    <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check them out.</p>
+                </div>
                 <div class="row">
                 {#each range(0,2,1) as i, index}
                 <div class="col-2">
@@ -142,8 +146,10 @@
                         <div class="width-restriction">
                             <h3 style="padding-top: 30px">{blogpost.fields.title}</h3>
                             <p>{blogpost.fields.description}</p>
-                            <br/>
-                            <p><a href="{blogpost.fields.url}">Read now</a></p>
+                            <div class="links">
+                                <p><a href="{blogpost.fields.url}">Read now</a></p>
+                            </div>
+
                         </div>
                     </div>
                     {/if}
@@ -169,17 +175,14 @@
                                 {/if}
                                 <h3>{live.recenttracks.track[0].name}</h3>
                                 <p>by <strong>{live.recenttracks.track[0].artist["#text"]}</strong></p>
-                                <br/>
                                 <p>Here's what <a aria-label="Recent Listening" rel=prefetch href="/recentlistening">I been listening to lately</a></p>
                             </div>
                         </div>
                     </div>
-                    <div class="contact col-2">
-                        <br/>
+                    <div class="contact col-2" style="margin-top: 20px">
                         <h2>Reach me</h2>
                         <p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span></p>
-                        <br/>
-                        <div class="socials">
+                        <div class="socials" style="margin-top: 20px">
                             {#each socials as social, i}
                                 <p><a aria-label="Link to my {social.fields.platform}" href="{social.fields.url}" target="_blank">{social.fields.platform}</a></p>
                             {/each}

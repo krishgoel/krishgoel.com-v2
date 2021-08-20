@@ -31,9 +31,10 @@
 
 <section class="projects">
     <div class="width-restriction">
-        <h1>Projects</h1>
-        <p>A lot of things that been dun by urs truly</p>
-        <br/>
+        <div class="section-opening">
+            <h2>My Projects</h2>
+            <p>A lot of things that been dun by urs truly</p>
+        </div>
         <div class="row dark">
             {#each range(0,3,1) as i, index}
                 <div class="col-3">
@@ -50,8 +51,8 @@
                             <h3>{project.fields.name}</h3>
                             {/if}
                             <p class="mono" style="margin-bottom: 10px;">{project.fields.date}</p>
-                            <p>{@html project.fields.description}</p>
-                            <br/>
+                            <p>{project.fields.description}</p>
+                            <!--  -->
                             <div class="links">
                                 <p><a href="{project.fields.url1}">{project.fields.link1}</a></p>
                                 {#if project.fields.link2 != undefined}

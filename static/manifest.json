@@ -3,7 +3,7 @@
 	"theme_color": "#000000",
 	"name": "Krish Goel | KrishSkywalker",
 	"short_name": "krishgoel.com",
-	"display": "minimal-ui",
+	"display": "standalone",
 	"start_url": "/",
 	"icons": [
 		{

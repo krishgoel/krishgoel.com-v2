@@ -15,6 +15,8 @@
 - [ ] Uninstall svelte-loading-spinners
 - [ ] Configure the error page
 - Ensure all anchor tags have ```aria-label```
+- Get new icons etc
+- Fix the splashscreens (Generated using https://appsco.pe/developer/splash-screens)
 
 ## Extra Node Packages used
 - cross-fetch

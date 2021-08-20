@@ -20,6 +20,10 @@
         line-height: 150%;
         margin-bottom: 0
     }
+
+    .typewriter-intro {
+        margin-bottom: 20px
+    }
 </style>
 
 <script>
@@ -31,12 +35,14 @@
 
         <div class="row">
             <div class="col-2">
-                <Typewriter cascade>
-                    <h3 style="margin: 5px 0">Hi</h3>
-                    <h1>I'm Krish</h1>
-                    <p class="mono">(short for Krishnamangalrathn-algorithm nunununununununu)</p>
-                </Typewriter>
-                <br/>
+                <div class="typewriter-intro">
+                    <Typewriter cascade>
+                        <h3 style="margin: 5px 0">Hi</h3>
+                        <h1>I'm Krish</h1>
+                        <p class="mono">(short for Krishnamangalrathn-algorithm nunununununununu)</p>
+                    </Typewriter>
+                </div>
+
                 <!-- Typewriter flipping text -->
                 <div class="banner-text-flipping">
                     <Typewriter loop interval={30} delay={2500} scramble>
