@@ -175,7 +175,7 @@
                                 {/if}
                                 <h3>{live.recenttracks.track[0].name}</h3>
                                 <p>by <strong>{live.recenttracks.track[0].artist["#text"]}</strong></p>
-                                <p>Here's what <a aria-label="Recent Listening" rel=prefetch href="/recentlistening">I been listening to lately</a></p>
+                                <p>Here's what <a aria-label="Recent Listening" href="/recentlistening">I been listening to lately</a></p>
                             </div>
                         </div>
                     </div>

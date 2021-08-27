@@ -42,17 +42,17 @@
     <nav>
         <div class="width-restriction">
             {#if $page.path != "/"}
-            <h3 style="padding-right: 20px"><a aria-label="Home Page" rel=prefetch href="/">Krish Goel</a></h3>
+            <h3 style="padding-right: 20px"><a aria-label="Home Page" href="/">Krish Goel</a></h3>
             {/if}
             <div class="links">
                 {#if $page.path != "/"}
-                <p><a aria-label="Home Page" rel=prefetch href="/">Home</a></p>
+                <p><a aria-label="Home Page" href="/">Home</a></p>
                 {/if}
-                <!-- <p><a aria-label="YouTube" rel=prefetch href="/youtube">YouTube</a></p> -->
-                <p><a aria-label="Thoughts" rel=prefetch href="/thoughts">Thoughts</a></p>
-                <p><a aria-label="Projects" rel=prefetch href="/projects">Projects</a></p>
-                <p><a aria-label="Experience" rel=prefetch href="/experience">Experience</a></p>
-                <p><a aria-label="Repertoire" rel=prefetch href="/repertoire">Repertoire</a></p>
+                <!-- <p><a aria-label="YouTube" href="/youtube">YouTube</a></p> -->
+                <p><a aria-label="Thoughts" href="/thoughts">Thoughts</a></p>
+                <p><a aria-label="Projects" href="/projects">Projects</a></p>
+                <p><a aria-label="Experience" href="/experience">Experience</a></p>
+                <p><a aria-label="Repertoire" href="/repertoire">Repertoire</a></p>
             </div>
         </div>
     </nav>
