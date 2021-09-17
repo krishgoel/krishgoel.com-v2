@@ -16,12 +16,12 @@ jobs:
         uses: JamesIves/fetch-api-data-action@releases/v1
         with:
           ENDPOINT: https://potion-api.vercel.app/table?id=fe3fe0e8c9e54061b7412307da4c035f
-          SAVE_LOCATION: data
+          SAVE_LOCATION: public
           BRANCH: main
 
-      - name: Update resources
+      - name: Update socials
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: data/socials.json
+          file-path: public/socials.json
           commit-msg: Updated socials.json 
           github-token: ${{ secrets.TOKEN }}
