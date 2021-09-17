@@ -22,6 +22,6 @@ jobs:
       - name: Update socials.json
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: ./socials.json
+          file-path: ../public/socials.json
           commit-msg: Updated socials.json 
           github-token: ${{ secrets.TOKEN }}
