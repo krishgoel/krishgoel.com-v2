@@ -109,7 +109,7 @@
                                             {:else}
                                                 <h3>{project.fields.name}</h3>
                                             {/if}
-                                            <p class="mono" style="margin-bottom: 10px;">{project.fields.date}</p>
+                                            <p class="mono" style="margin-bottom: 10px; font-size: 14px">{project.fields.date}</p>
                                             <p style="margin-bottom: 10px;">{project.fields.description}</p>
                                             <!-- Links -->
                                             <div class="links">
