@@ -1,27 +1,27 @@
-name: Fetch Socials
+name: Fetch API
 
 on:
   push:
     branches:
-      - main
+      - master
   schedule:
-    - cron: "0 1 * * *" # Everyday at 1AM
+    - cron: "*/5 * * * *" # Every 5 minutes
 
 jobs:
   refresh-feed:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Fetch socials data from Potion API
+      - name: Fetch API Data
         uses: JamesIves/fetch-api-data-action@releases/v1
         with:
           ENDPOINT: https://potion-api.vercel.app/table?id=fe3fe0e8c9e54061b7412307da4c035f
           SAVE_LOCATION: public
-          BRANCH: main
+          BRANCH: master
 
-      - name: Update socials
+      - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: public/socials.json
-          commit-msg: Updated socials.json 
+          file-path: public/data.json
+          commit-msg: Updated data.json 
           github-token: ${{ secrets.TOKEN }}
