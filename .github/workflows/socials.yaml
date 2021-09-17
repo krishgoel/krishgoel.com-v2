@@ -22,6 +22,6 @@ jobs:
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: data/socialsta.json
+          file-path: data/socials.json
           commit-msg: Updated socials.json 
           github-token: ${{ secrets.CRON_ACCESS_TOKEN }}
