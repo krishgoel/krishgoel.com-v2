@@ -1,14 +1,10 @@
-<script context="module">
-    export async function preload(page, session) {
-        const res = await this.fetch("https://potion-api.vercel.app/html?id=4a3cc84785654ec687c0c4b2559e2834")
-        const colophon = await res.text()
-
-        return { colophon: colophon }
-    }
-</script>
-
 <script>
-    export let colophon
+	import fetch from 'cross-fetch'
+
+    const colophon = (async () => {
+        var response = await fetch(`https://potion-api.vercel.app/html?id=4a3cc84785654ec687c0c4b2559e2834`)
+        return await response.text()
+    })()
 
     let title= "Colophon | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
@@ -27,10 +23,12 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section class="thanks">
+<section class="colphon">
     <div class="width-restriction">
-        <h1>Colophon</h1>
-        <br/>
-        {@html colophon}
+        {#await colophon}
+            <!--  -->
+        {:then data}
+            {@html data}
+        {/await}
     </div>
 </section>

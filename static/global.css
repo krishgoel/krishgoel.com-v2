@@ -1,35 +1,3 @@
-:root {
-	/* Backgrounds */
-	--dark-background: #161616;
-	--light-background: #dadada;
-
-	/* Text colours */
-	--dark-text: #2B2B2B;
-	--light-text: #dadada;
-
-	/* Link underline and hover background */
-	--link-underline: inset 0 -8px 0;
-	--link-background: inset 0 -20px 0;
-
-	--dark-link-color: #353535;
-	--dark-link-underline: #93939388;
-	--dark-link-hover-bg: #939393b7;
-	--dark-link-hover: #313131;
-
-	--light-link-color: #e2e2e2;
-	--light-link-underline: #81818171;
-	--light-link-hover-bg: #666666;
-	--light-link-hover: #f0f0f0;
-
-	/* Blockquote background */
-	--dark-blockquote-background: #dadada28;
-	--light-blockquote-background: #2B2B2B28;
-
-	/* Card shadows */
-	--light-card-shadow: 7px 7px 21px -10px #000000;
-	--dark-card-shadow: 7px 7px 21px -10px #252525;
-}
-
 /* Fonts */
 /* Akkurat */
 @font-face {
@@ -76,13 +44,12 @@
 	src: url(fonts/Recoleta-Bold.woff2);
 }
 
-/* iOS native-like */
-body {
-	-webkit-user-select: none;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-touch-callout: none;
-	background-color: var(--dark-background);
+/* Margin and padding 0 */
+body, h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0
 }
+
 /* Font sizing */
 html {
 	-webkit-text-size-adjust: 100%;
@@ -93,14 +60,17 @@ h1 {
 }
 h2 {
 	font-size: clamp(25px, 4vw, 32px);
+	margin-bottom: 10px
 }
 h3 {
 	font-size: clamp(22px, 2.7vw, 25px);
+	margin-bottom: 5px;
 }
 p {
 	/* font-size: clamp(14px, 0.97rem, 20px); */
 	font-size: 15px;
 	line-height: 150%;
+	margin-bottom: 10px
 }
 
 /* Font assignment */
@@ -117,45 +87,99 @@ body {
 	font-family: "Akkurat";
 }
 
-/* Margin and padding 0 */
-body, h1, h2, h3, h4, h5, h6, p {
-	margin: 0;
-	padding: 0
+/* Color scheming */
+:root {
+	/* Backgrounds */
+	--dark-background: #161616;
+	--light-background: #dadada;
+
+	/* Text colours */
+	--dark-text: #2B2B2B;
+	--light-text: #dadada;
+
+	/* Link underline and hover background */
+	--link-underline: inset 0 -8px 0;
+	--link-background: inset 0 -20px 0;
+
+	--dark-link-color: #353535;
+	--dark-link-underline: #93939388;
+	--dark-link-hover-bg: #939393b7;
+	--dark-link-hover: #313131;
+
+	--light-link-color: #e2e2e2;
+	--light-link-underline: #81818171;
+	--light-link-hover-bg: #666666;
+	--light-link-hover: #f0f0f0;
+
+	/* Blockquote background */
+	--dark-blockquote-background: #dadada28;
+	--light-blockquote-background: #2B2B2B28;
+
+	/* Card shadows */
+	--light-card-shadow: 7px 7px 21px -10px #000000;
+	--dark-card-shadow: 7px 7px 21px -10px #252525;
 }
 
-/* General body styling */
+/* Dark */
 body {
 	background-color: var(--dark-background);
 	color: var(--light-text);
 }
-
-img {
-	width: 100%;
-	margin-bottom: 20px;
-}
-
-iframe {
-	width: 100%;
-}
-
-* a {
-	text-decoration: none;
-	color: var(--light-text)
-}
-p a {
-	/* font-weight: 700;; */
-	/* padding: 0px 3px; */
-	margin: 0 3px;
-	padding-top: 6px;
-	padding-bottom: 0px;
-	transition: 0.2s;
+a {
+	color: var(--light-link-color);
 	cursor: pointer;
 }
+/* Dark */
+p a {
+	color: var(--light-link-color);
+	box-shadow: var(--link-underline) var(--light-link-underline);
+}
 p a:hover {
-	/* box-shadow: inset 0 -22px 0 var(--light-link-hover-bg);
-	color: var(--light-link-hover) */
+	box-shadow: var(--link-background) var(--light-link-hover-bg);
+	color: var(--light-link-hover)
 }
 
+/* Light */
+.light {
+	background-color: var(--light-background);
+	color: var(--dark-text);
+	padding: 30px 0;
+}
+.light p a {
+	color: var(--dark-link-color);
+	box-shadow: var(--link-underline) var(--dark-link-underline);
+}
+.light p a:hover {
+	box-shadow: var(--link-background) var(--dark-link-hover-bg);
+	color: var(--dark-link-hover)
+}
+.light blockquote {
+	color: var(--dark-text);
+	background-color: var(--light-blockquote-background);
+}
+
+/* Dark */
+.dark {
+	background-color: var(--dark-background);
+	color: var(--light-text);
+	padding: 30px 0;
+}
+
+/* Special components */
+a {
+	text-decoration: none;
+	transition: 0.2s;
+}
+img {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: var(--light-card-shadow);
+}
+pre {
+	background-color: #161b22;
+	border-radius: 10px;
+	padding: 20px 30px;
+}
 blockquote {
 	margin-left: 0;
 	border-left: 5px solid;
@@ -166,84 +190,36 @@ blockquote {
 	background-color: var(--dark-blockquote-background);
 }
 
-/* Color scheming */
-.dark {
-	background-color: var(--dark-background);
-	color: var(--light-text)
-}
-.light {
-	background-color: var(--light-background);
-	color: var(--dark-text)
-}
 
-.dark p a {
-	color: var(--light-link-color);
-	box-shadow: var(--link-underline) var(--light-link-underline);
-}
-.dark p a:hover {
-	box-shadow: var(--link-background) var(--light-link-hover-bg);
-	color: var(--light-link-hover)
-}
-.light p a {
-	color: var(--dark-link-color);
-	box-shadow: var(--link-underline) var(--dark-link-underline);
-}
-.light p a:hover {
-	box-shadow: var(--link-background) var(--dark-link-hover-bg);
-	color: var(--dark-link-hover)
-}
-.dark blockquote {
-	color: var(--light-text);
-	background-color: var(--dark-blockquote-background);
-}
-.light blockquote {
-	color: var(--dark-text);
-	background-color: var(--light-blockquote-background);
-}
-
-/* Section design */
-.section-opening {
-	margin-bottom: 30px
-}
-
-/* Card desgin */
+/* Card styling */
 .card {
-	padding-bottom: 30px;
+	padding: 30px 0;
+	border-radius: 10px;
 	margin-bottom: 20px;
-}
-
-.card h3 {
-	line-height: 130%;
-}
-.card .width-restriction p {
-	margin-bottom: 10px
-}
-.card .links p {
-	display: inline-block;
-}
-.card .links p a {
-	margin: 0;
-	margin-right: 5px
-}
-
-.dark .card {
 	background-color: var(--light-background);
 	color: var(--dark-text);
 	box-shadow: var(--light-card-shadow);
 }
-.dark .card p a {
+.card .width-restriction {
+	width: 80%
+}
+.card .links p {
+	display: inline;
+	margin-right: 5px
+}
+.card p a {
 	color: var(--dark-link-color);
 	box-shadow: var(--link-underline) var(--dark-link-underline);
 }
-.dark .card p a:hover {
+.card p a:hover {
 	box-shadow: var(--link-background) var(--dark-link-hover-bg);
 	color: var(--dark-link-hover)
 }
-
+/* Light card styling */
 .light .card {
 	background-color: var(--dark-background);
 	color: var(--light-text);
-	box-shadow: var(--dark-card-shadow)
+	box-shadow: var(--dark-card-shadow);
 }
 .light .card p a {
 	color: var(--light-link-color);
@@ -253,9 +229,6 @@ blockquote {
 	box-shadow: var(--link-background) var(--light-link-hover-bg);
 	color: var(--light-link-hover)
 }
-
-pre {
-	background-color: #161b22;
-	border-radius: 10px;
-	padding: 20px 30px;
+.light img {
+	box-shadow: var(--dark-card-shadow);
 }

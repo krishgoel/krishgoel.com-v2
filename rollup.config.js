@@ -9,6 +9,9 @@ import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
+// To import local JSON files into Svelte files
+import json from '@rollup/plugin-json'
+
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
@@ -23,6 +26,8 @@ export default {
 		input: config.client.input(),
 		output: config.client.output(),
 		plugins: [
+			// To import local JSON files into Svelte files
+			json(),
 			replace({
 				preventAssignment: true,
 				values:{

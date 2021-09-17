@@ -1,7 +1,8 @@
 # krishgoel.com
 
 ## To-do
-- [x] Page transitions
+- [ ] Fix the card design
+- [ ] Add link animation
 - [ ] SEO and updated meta on social media shares
 - [ ] Add G-Analytics
 - [ ] Build the blog CMS architecture
@@ -12,11 +13,11 @@
 - [ ] Update robots.txt and sitemap
 - [ ] Before pushing to production, ensure that the meta URLs are changed to krishgoel.com and not krishgoel-v4.vercel.app 
 - [ ] Consider this https://stackoverflow.com/questions/60201324/send-data-from-one-page-to-another-instead-of-preloading
-- [ ] Uninstall svelte-loading-spinners
+- [x] Uninstall svelte-loading-spinners
 - [ ] Configure the error page
-- Ensure all anchor tags have ```aria-label```
-- Get new icons etc
-- Fix the splashscreens (Generated using https://appsco.pe/developer/splash-screens)
+- [ ] Ensure all anchor tags have ```aria-label```
+- [ ] Get new icons etc
+- [ ] Fix the splashscreens (Generated using https://appsco.pe/developer/splash-screens)
 
 ## Extra Node Packages used
 - cross-fetch
@@ -43,6 +44,17 @@
 <script>
     export let projects
 </script>
+```
+
+## How to import local JSON files into Svelte
+```html
+<script>
+  import * as someJSON from './someJsonFile.json';  
+  
+  console.log(someJSON);
+</script>
+
+<div>{someJSON.someKey}</div>
 ```
 
 _Don't read this istfg_

@@ -1,7 +1,6 @@
 <style>
     footer {
         padding: 20px 0;
-        margin-top: 20px
     }
     footer .width-restriction {
         display: flex;
@@ -11,9 +10,20 @@
     footer .links, footer .links p{
         display: inline-block;
     }
+
+    footer .links p {
+        margin-left: 10px;
+    }
+    footer p {
+        margin-bottom: 0
+    }
 </style>
 
-<footer>
+<script>
+    export let appearance
+</script>
+
+<footer class="{appearance}">
     <div class="width-restriction">
         <p>&copy; Krish Goel<p>
         <div class="links">

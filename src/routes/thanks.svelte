@@ -1,14 +1,10 @@
-<script context="module">
-    export async function preload(page, session) {
-        const res = await this.fetch("https://potion-api.vercel.app/html?id=8c5410f76b7444179afdfd874665a9b5")
-        const thanks = await res.text()
-
-        return { thanks: thanks }
-    }
-</script>
-
 <script>
-    export let thanks
+	import fetch from 'cross-fetch'
+
+    const thanks = (async () => {
+        var response = await fetch(`https://potion-api.vercel.app/html?id=8c5410f76b7444179afdfd874665a9b5`)
+        return await response.text()
+    })()
 
     let title= "Thanks | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
@@ -29,8 +25,10 @@
 
 <section class="thanks">
     <div class="width-restriction">
-        <h1>Thank you</h1>
-        <br/>
-        {@html thanks}
+        {#await thanks}
+            <!--  -->
+        {:then data}
+            {@html data}
+        {/await}
     </div>
 </section>
