@@ -24,4 +24,4 @@ jobs:
         with:
           file-path: data/socials.json
           commit-msg: Updated socials.json 
-          github-token: ${{ secrets.CRON_ACCESS_TOKEN }}
+          github-token: ${{ secrets.TOKEN }}
