@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev",
     // "build": "sapper build --legacy",
-    "build": "sapper export",
+    "build": "sapper export && mv ./__sapper__/export ./public",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build"
   },
