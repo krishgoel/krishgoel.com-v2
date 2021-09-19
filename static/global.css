@@ -203,6 +203,9 @@ blockquote {
 .card .width-restriction {
 	width: 80%
 }
+.card img {
+	border-radius: 5px;
+}
 .card .links p {
 	display: inline;
 	margin-right: 5px
