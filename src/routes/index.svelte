@@ -1,5 +1,18 @@
 <script context="module">
     export async function preload() {
+        // Projects
+        let projects = await this.fetch(`/data/projects.json`);
+        projects = await projects.json()
+
+        // Garden
+        let plants = await this.fetch(`/data/plants.json`);
+        plants = await plants.json()
+
+        // Socials
+        let socials = await this.fetch(`/data/socials.json`);
+        socials = await socials.json()
+
+        // Commit details
         let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/refs/heads/main`);
         commitID = await commitID.json();
         commitID = commitID.object.sha
@@ -7,16 +20,17 @@
         let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/commits/` + commitID);
         commit = await commit.json()
         
+        // Return values
         return {
+            projects: projects,
+            plants: plants,
+            socials: socials,
             commit: commit
         }
     }
 </script>
 
 <script>
-    export let commit
-
-
     import { range } from '../scripts/range'
     import fetch from 'cross-fetch'
 
@@ -29,25 +43,16 @@
     let title= "Krish Goel | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
     let url = "https://krishgoel-v4.vercel.app";
-    
-    const projects = (async () => {
-        var response = await fetch(`https://potion-api.vercel.app/table?id=5856546a8a954678937de8e1d91d99d7`)
-        return await response.json()
-    })()
-    const blogposts = (async () => {
-        var response = await fetch(`https://potion-api.vercel.app/table?id=c962b6a899d94ea39739998c6690b54b`)
-        return await response.json()
-    })()
 
     const livelistening = (async () => {
         var response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=KrishSkywalker&api_key=faa73d570313176a337af4dea9827765&format=json&limit=1`)
         return await response.json()
     })()
-    
-    const socials = (async () => {
-        var response = await fetch(`https://potion-api.vercel.app/table?id=fe3fe0e8c9e54061b7412307da4c035f`)
-        return await response.json()
-    })()
+
+    export let projects
+    export let commit
+    export let plants
+    export let socials
 </script>
 
 <style>
@@ -109,48 +114,42 @@
             <Space/>
 
             <div class="row">
-                {#await projects}
-                <!-- Loading -->
-                {:then data}
-                    {#each range(0,3,1) as i, index}
-                        <div class="col-3">
-                            {#each data as project, p}
-                                {#if project.fields.showonindex}
-                                    {#if p%3 == i}
-                                    <div class="card">
-                                        {#if project.fields.cover != undefined}
-                                            <img src="{project.fields.cover}" alt="Cover image for {project.fields.name}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
+                {#each range(0,3,1) as i, index}
+                    <div class="col-3">
+                        {#each projects as project, p}
+                            {#if project.fields.showonindex}
+                                {#if p%3 == i}
+                                <div class="card">
+                                    {#if project.fields.cover != undefined}
+                                        <img src="{project.fields.cover}" alt="Cover image for {project.fields.name}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
+                                    {/if}
+                                    <div class="width-restriction">
+                                        {#if project.fields.cover == undefined}
+                                            <h3 style="padding-top: 30px">{project.fields.name}</h3>
+                                        {:else}
+                                            <h3>{project.fields.name}</h3>
                                         {/if}
-                                        <div class="width-restriction">
-                                            {#if project.fields.cover == undefined}
-                                                <h3 style="padding-top: 30px">{project.fields.name}</h3>
-                                            {:else}
-                                                <h3>{project.fields.name}</h3>
+                                        <p class="mono" style="margin-bottom: 10px; font-size: 14px">{project.fields.date}</p>
+                                        <p style="margin-bottom: 10px;">{project.fields.description}</p>
+                                        <!-- Links -->
+                                        <div class="links">
+                                            {#if project.fields.link1 != undefined}
+                                                <p><a href="{project.fields.url1}">{project.fields.link1}</a></p>
                                             {/if}
-                                            <p class="mono" style="margin-bottom: 10px; font-size: 14px">{project.fields.date}</p>
-                                            <p style="margin-bottom: 10px;">{project.fields.description}</p>
-                                            <!-- Links -->
-                                            <div class="links">
-                                                {#if project.fields.link1 != undefined}
-                                                    <p><a href="{project.fields.url1}">{project.fields.link1}</a></p>
-                                                {/if}
-                                                {#if project.fields.link2 != undefined}
-                                                    <p><a href="{project.fields.url2}">{project.fields.link2}</a></p>
-                                                {/if}
-                                                {#if project.fields.link3 != undefined}
-                                                    <p><a href="{project.fields.url3}">{project.fields.link3}</a></p>
-                                                {/if}
-                                            </div>
+                                            {#if project.fields.link2 != undefined}
+                                                <p><a href="{project.fields.url2}">{project.fields.link2}</a></p>
+                                            {/if}
+                                            {#if project.fields.link3 != undefined}
+                                                <p><a href="{project.fields.url3}">{project.fields.link3}</a></p>
+                                            {/if}
                                         </div>
                                     </div>
-                                    {/if}
+                                </div>
                                 {/if}
-                            {/each}
-                        </div>
-                    {/each}
-                {:catch error}
-                    <!-- Throw error -->
-                {/await}
+                            {/if}
+                        {/each}
+                    </div>
+                {/each}
             </div>
         </div>
     </section>
@@ -161,32 +160,26 @@
             <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check them out.</p>
             <Space/>
             <div class="row">
-                {#await blogposts}
-                    <!-- Loading -->
-                {:then data}
-                    {#each range(0,2,1) as i, index}
-                        <div class="col-2">
-                            {#each data as blog, p}
-                                {#if blog.fields.showonindex}
-                                    {#if p%2 == i}
-                                    <div class="card">
-                                        <div class="width-restriction">
-                                            <h3>{blog.fields.title}</h3>
-                                            <p style="margin-bottom: 10px;">{blog.fields.description}</p>
-                                            <!-- Links -->
-                                            <div class="links">
-                                                <p><a href="/garden/{blog.fields.url}">Read more</a></p>
-                                            </div>
+                {#each range(0,2,1) as i, index}
+                    <div class="col-2">
+                        {#each plants as blog, p}
+                            {#if blog.fields.showonindex}
+                                {#if p%2 == i}
+                                <div class="card">
+                                    <div class="width-restriction">
+                                        <h3>{blog.fields.title}</h3>
+                                        <p style="margin-bottom: 10px;">{blog.fields.description}</p>
+                                        <!-- Links -->
+                                        <div class="links">
+                                            <p><a href="/garden/{blog.fields.url}">Read more</a></p>
                                         </div>
                                     </div>
-                                    {/if}
+                                </div>
                                 {/if}
-                            {/each}
-                        </div>
-                    {/each}
-                {:catch error}
-                <!-- Throw error -->
-                {/await}
+                            {/if}
+                        {/each}
+                    </div>
+                {/each}
             </div>
         </div>
 
@@ -220,14 +213,10 @@
                     <Space height={"10px"}/>
                     <h2>Reach me</h2>
                     <p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span></p>
-                    {#await socials}
-                        <!--  -->
-                    {:then data} 
-                        {#each data as social, i}
-                            <p><a aria-label="Link to my {social.fields.platform}" href="{social.fields.url}" target="_blank">{social.fields.platform}</a></p>
-                        {/each}
-                    {/await}
-                    <Space height={"20px"}/>
+                    {#each socials as social, i}
+                        <p><a aria-label="Link to my {social.fields.platform}" href="{social.fields.url}" target="_blank">{social.fields.platform}</a></p>
+                    {/each}
+                    <Space height={"10px"}/>
                     <p>
                         Last commit:  
                         <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank">"{commit.message}"</a></p>
