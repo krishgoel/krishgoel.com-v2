@@ -206,6 +206,9 @@ blockquote {
 .card img {
 	border-radius: 5px;
 }
+.card p {
+	margin-bottom: 0
+}
 .card .links p {
 	display: inline;
 	margin-right: 5px

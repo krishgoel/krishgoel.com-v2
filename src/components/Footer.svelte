@@ -1,3 +1,7 @@
+<script>
+    export let appearance
+</script>
+
 <style>
     footer {
         padding: 20px 0;
@@ -18,10 +22,6 @@
         margin-bottom: 0
     }
 </style>
-
-<script>
-    export let appearance
-</script>
 
 <footer class="{appearance}">
     <div class="width-restriction">

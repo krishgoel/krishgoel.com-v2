@@ -1,3 +1,7 @@
+<script>
+    export let height
+</script>
+
 <style>
     div {
         width: 100%;
@@ -5,4 +9,8 @@
     }
 </style>
 
-<div></div>
+{#if height != undefined}
+    <div style="padding: 0; padding-top: {height}"></div>
+{:else}
+    <div></div>
+{/if}

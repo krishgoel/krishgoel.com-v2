@@ -37,21 +37,22 @@
             <div class="col-2">
                 <div class="typewriter-intro">
                     <Typewriter cascade>
-                        <h3 style="margin: 5px 0">Hi</h3>
+                        <h3 style="margin-bottom: 5px 0">Hi</h3>
                         <h1>I'm Krish</h1>
                         <p class="mono">(short for Krishnamangalrathn-algorithm nunununununununu)</p>
                     </Typewriter>
                 </div>
 
                 <!-- Typewriter flipping text -->
-                <div class="banner-text-flipping">
+                <!-- <div class="banner-text-flipping">
                     <Typewriter loop interval={30} delay={2500} scramble>
                         <h3>and manz against the degenerates who price Flaming Hot Cheetos in India</h3>
                         <h3>and manz a web developer</h3>
                         <h3>and manz a fan of ya mum jokes</h3>
                         <h3>and manz a financial literacy enthusiast</h3>
                     </Typewriter>
-                </div>
+                </div> -->
+
             </div>
         </div>
 

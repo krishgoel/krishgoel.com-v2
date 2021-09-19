@@ -1,4 +1,22 @@
+<script context="module">
+    export async function preload() {
+        let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/refs/heads/main`);
+        commitID = await commitID.json();
+        commitID = commitID.object.sha
+
+        let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/commits/` + commitID);
+        commit = await commit.json()
+        
+        return {
+            commit: commit
+        }
+    }
+</script>
+
 <script>
+    export let commit
+
+
     import { range } from '../scripts/range'
     import fetch from 'cross-fetch'
 
@@ -187,10 +205,10 @@
                                 {:else}
                                     <p>Last listened to</p>
                                 {/if}
-                                <Space/>
+                                <Space height={"10px"}/>
                                 <h3>{data.recenttracks.track[0].name}</h3>
                                 <p>by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
-                                <Space/>
+                                <Space height={"10px"}/>
                                 <p>Here's what <a aria-label="Recent Listening" href="/recentlistening">I been listening to lately</a></p>
                             {:catch error}
                                     <!--  -->
@@ -199,7 +217,7 @@
                     </div>
                 </div>
                 <div class="col-2 socials">
-                    <Space/>
+                    <Space height={"10px"}/>
                     <h2>Reach me</h2>
                     <p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span></p>
                     {#await socials}
@@ -209,6 +227,10 @@
                             <p><a aria-label="Link to my {social.fields.platform}" href="{social.fields.url}" target="_blank">{social.fields.platform}</a></p>
                         {/each}
                     {/await}
+                    <Space height={"20px"}/>
+                    <p>
+                        Last commit:  
+                        <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank">"{commit.message}"</a></p>
                 </div>
             </div>
         </div>
