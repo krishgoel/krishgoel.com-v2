@@ -57,10 +57,12 @@
 
 <style>
     main {
-        background-size: 100px 100px;
+        background-size: 120px 120px;
         background-image:
-            linear-gradient(to right, rgb(60,60,60) 1px, transparent 1px),
-            linear-gradient(to bottom, rgb(60,60,60) 1px, transparent 1px);
+            /* linear-gradient(to right, rgb(60,60,60) 1px, transparent 1px),
+            linear-gradient(to bottom, rgb(60,60,60) 1px, transparent 1px); */
+            linear-gradient(to right, rgba(60, 60, 60, 0.7) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(60, 60, 60, 0.7) 1px, transparent 1px);
     }
     section {
         padding: 40px 0;
