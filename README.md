@@ -13,6 +13,8 @@
 - [ ] Update robots.txt and sitemap
 - [ ] Before pushing to production, ensure that the meta URLs are changed to krishgoel.com and not krishgoel-v4.vercel.app 
 - [x] Consider this https://stackoverflow.com/questions/60201324/send-data-from-one-page-to-another-instead-of-preloading
+- [ ] Add the project filtering tag system as suggested by Ishaan
+- [ ] Switch from Last.FM to Spotify for Music fetching
 - [x] Uninstall svelte-loading-spinners
 - [ ] Configure the error page
 - [ ] Ensure all anchor tags have ```aria-label```

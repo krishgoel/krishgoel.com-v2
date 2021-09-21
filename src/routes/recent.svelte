@@ -51,9 +51,8 @@
     <Space height={"25px"}/>
     <div class="row">
         <div class="col-2">
-            <h2>Top Tracks</h2>
             <div class="inline">
-                <p>From this week</p>
+                <h2>Top Tracks</h2>
                 <p><a href="https://last.fm/user/KrishSkywalker" target="_blank">Last.fm ></a></p>
             </div>
             <Space height={"10px"}/>
@@ -74,9 +73,12 @@
             </div>
         </div>
         <div class="col-2">
+            <h2>Other activity?</h2>
+            <Space height={"10px"}/>
             <div class="card">
                 <div class="width-restriction">
                     <p>Hmmmm, let's see what else we can add here</p>
+                    <p>Here's <a href="https://www.notion.so/krishgoel/ed5a59a2d5924e6f81044a1ac9247f97?v=6f977945ff954f4e91c1be3a4ea83295" target="_blank">my read list</a> for now</p>
                 </div>
             </div>
         </div>
