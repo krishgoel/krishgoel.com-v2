@@ -120,10 +120,10 @@
             <div class="row">
                 <div class="col-2">
                     <h2>Projec</h2>
-                    <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check them out.</p>
+                    <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if out.</p>
                 </div>
             </div>
-            <Space/>
+            <Space height={"25px"}/>
 
             <div class="row">
                 {#each range(0,3,1) as i, index}
@@ -168,9 +168,13 @@
 
     <section class="blog light">
         <div class="width-restriction">
-            <h2>Thoughts n dat</h2>
-            <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check them out.</p>
-            <Space/>
+            <div class="row">
+                <div class="col-2">
+                    <h2>Thoughts n dat</h2>
+                    <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check</p>
+                </div>
+            </div>
+            <Space height={"25px"}/>
             <div class="row">
                 {#each range(0,2,1) as i, index}
                     <div class="col-2">
