@@ -16,6 +16,7 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
+        box-shadow: var(--dark-card-shadow);
     }
     nav .width-restriction {
         display: flex;
@@ -56,6 +57,7 @@
             <p><a rel=prefetch aria-label="Projects" href="/projects">Projects</a></p>
             <p><a rel=prefetch aria-label="Experience" href="/experience">Experience</a></p>
             <p><a rel=prefetch aria-label="Repertoire" href="/repertoire">Repertoire</a></p>
+            <p><a rel=prefetch aria-label="Contact" href="/contact">Contact</a></p>
         </div>
     </div>
 </nav>

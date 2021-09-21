@@ -30,16 +30,7 @@
     })()
 </script>
 
-<style>
-    .blog-container {
-        width: 100%;
-        max-width: 700px;
-        display: block;
-        margin: 0 auto
-    }
-</style>
-
-<section class="blog-container">
+<section class="slim-container">
     {#await postFetch}
         <!--  -->
     {:then data}

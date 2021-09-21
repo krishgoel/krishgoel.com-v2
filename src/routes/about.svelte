@@ -2,7 +2,7 @@
 	import fetch from 'cross-fetch'
 
     const colophon = (async () => {
-        var response = await fetch(`https://potion-api.vercel.app/html?id=4a3cc84785654ec687c0c4b2559e2834`)
+        var response = await fetch(`https://potion-api.vercel.app/html?id=491e86f5e76b4b048ee3bb6cd7679750`)
         return await response.text()
     })()
 
@@ -23,12 +23,10 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section class="colphon">
-    <div class="width-restriction">
-        {#await colophon}
-            <!--  -->
-        {:then data}
-            {@html data}
-        {/await}
-    </div>
+<section class="slim-container">
+    {#await colophon}
+        <!--  -->
+    {:then data}
+        {@html data}
+    {/await}
 </section>

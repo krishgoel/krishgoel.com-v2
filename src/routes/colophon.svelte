@@ -23,12 +23,10 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section class="colphon">
-    <div class="width-restriction">
-        {#await colophon}
-            <!--  -->
-        {:then data}
-            {@html data}
-        {/await}
-    </div>
+<section class="colophon slim-container">
+    {#await colophon}
+        <!--  -->
+    {:then data}
+        {@html data}
+    {/await}
 </section>

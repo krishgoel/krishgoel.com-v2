@@ -132,7 +132,7 @@ a {
 /* Dark */
 p a {
 	color: var(--light-link-color);
-	box-shadow: var(--link-underline) var(--light-link-underline);
+	box-shadow: var(--link-underline) var(--light-link-underline);	
 }
 p a:hover {
 	box-shadow: var(--link-background) var(--light-link-hover-bg);
@@ -189,7 +189,9 @@ blockquote {
 	color: var(--light-text);
 	background-color: var(--dark-blockquote-background);
 }
-
+li {
+	margin-bottom: 10px;
+}
 
 /* Card styling */
 .card {
@@ -239,7 +241,13 @@ blockquote {
 	box-shadow: var(--dark-card-shadow);
 }
 
-/* Blog ppost-loading styling */
-.blog-container img {
+/* Documentation pages slim container */
+.slim-container {
+	width: 100%;
+	max-width: 700px;
+	display: block;
+	margin: 0 auto
+}
+.slim-container img {
 	margin: 20px 0;
 }

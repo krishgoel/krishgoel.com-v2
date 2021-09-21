@@ -13,19 +13,19 @@
         socials = await socials.json()
 
         // Commit details
-        // let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/refs/heads/main`);
-        // commitID = await commitID.json();
-        // commitID = commitID.object.sha
+        let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/refs/heads/main`);
+        commitID = await commitID.json();
+        commitID = commitID.object.sha
 
-        // let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/commits/` + commitID);
-        // commit = await commit.json()
+        let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/commits/` + commitID);
+        commit = await commit.json()
         
         // Return values
         return {
             projects: projects,
             plants: plants,
             socials: socials,
-            // commit: commit
+            commit: commit
         }
     }
 </script>
@@ -50,7 +50,7 @@
     })()
 
     export let projects
-    // export let commit
+    export let commit
     export let plants
     export let socials
 </script>
@@ -66,6 +66,13 @@
     }
     section {
         padding: 40px 0;
+    }
+    /* Inline display for "see all" links */
+    .inline * {
+        display: inline
+    }
+    .inline p {
+        margin-left: 15px
     }
     /* Project Cards */
     .projects .card {
@@ -119,7 +126,11 @@
         <div class="width-restriction">
             <div class="row">
                 <div class="col-2">
-                    <h2>Projec</h2>
+                    <div class="inline">
+                        <h2>Projec</h2>
+                        <p><a href="/projects">See all ></a></p>
+                    </div>
+                    <Space height={"5px"}/>
                     <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if out.</p>
                 </div>
             </div>
@@ -170,7 +181,11 @@
         <div class="width-restriction">
             <div class="row">
                 <div class="col-2">
-                    <h2>Thoughts n dat</h2>
+                    <div class="inline">
+                        <h2>Thoughtsx</h2>
+                        <p><a href="/garden">See all ></a></p>
+                    </div>
+                    <Space height={"5px"}/>
                     <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check</p>
                 </div>
             </div>
@@ -204,30 +219,33 @@
         <div class="width-restriction">
             <div class="row">
                 <div class="col-2">
+                    {#await livelistening}
+                        <!--  -->
+                    {:then data}
                     <div class="card">
                         <div class="width-restriction">
-                            {#await livelistening}
-                                <!--  -->
-                            {:then data}
-                                {#if data.recenttracks.track[0].hasOwnProperty("@attr")}
-                                    <p>Currently listening to</p>
-                                {:else}
-                                    <p>Last listened to</p>
-                                {/if}
-                                <Space height={"10px"}/>
-                                <h3>{data.recenttracks.track[0].name}</h3>
-                                <p>by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
-                                <Space height={"10px"}/>
-                                <p>Here's what <a aria-label="Recent Listening" href="/recentlistening">I been listening to lately</a></p>
-                            {:catch error}
-                                    <!--  -->
-                            {/await}
+                            {#if data.recenttracks.track[0].hasOwnProperty("@attr")}
+                                <p>Currently listening to</p>
+                            {:else}
+                                <p>Last listened to</p>
+                            {/if}
+                            <Space height={"10px"}/>
+                            <h3>{data.recenttracks.track[0].name}</h3>
+                            <p>by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
+                            <Space height={"10px"}/>
+                            <p>Here's what <a aria-label="Recent Listening" href="/recent">I been up to lately</a></p>
                         </div>
                     </div>
+                    {:catch error}
+                            <!--  -->
+                    {/await}
                 </div>
                 <div class="col-2 socials">
                     <Space height={"10px"}/>
-                    <h2>Reach me</h2>
+                    <div class="inline">
+                        <h2>Reach Me</h2>
+                        <p><a href="/contact">Contact Form ></a></p>
+                    </div>
                     <p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span></p>
                     {#each socials as social, i}
                         <p><a aria-label="Link to my {social.fields.platform}" href="{social.fields.url}" target="_blank">{social.fields.platform}</a></p>
@@ -235,7 +253,7 @@
                     <Space height={"10px"}/>
                     <p>
                         Last commit:  
-                        <!-- <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank">"{commit.message}"</a></p> -->
+                        <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank">"{commit.message}"</a></p>
                 </div>
             </div>
         </div>

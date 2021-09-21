@@ -23,12 +23,10 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section class="thanks">
-    <div class="width-restriction">
-        {#await thanks}
-            <!--  -->
-        {:then data}
-            {@html data}
-        {/await}
-    </div>
+<section class="thanks slim-container">
+    {#await thanks}
+        <!--  -->
+    {:then data}
+        {@html data}
+    {/await}
 </section>
