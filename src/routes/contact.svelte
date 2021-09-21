@@ -47,10 +47,11 @@
     }
     /* Form */
     form input, form textarea {
-        width: 100%;
+        width: calc(100% - 20px);
         color: var(--light-text);
         background-color: rgba(147, 147, 147, 0.404);
         border: 2px solid var(--light-background);
+        margin-top: 5px;
         margin-bottom: 10px;
         padding: 10px;
         border-radius: 10px;
