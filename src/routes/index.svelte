@@ -13,19 +13,19 @@
         socials = await socials.json()
 
         // Commit details
-        let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/refs/heads/main`);
-        commitID = await commitID.json();
-        commitID = commitID.object.sha
+        // let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/refs/heads/main`);
+        // commitID = await commitID.json();
+        // commitID = commitID.object.sha
 
-        let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/commits/` + commitID);
-        commit = await commit.json()
+        // let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/commits/` + commitID);
+        // commit = await commit.json()
         
         // Return values
         return {
             projects: projects,
             plants: plants,
             socials: socials,
-            commit: commit
+            // commit: commit
         }
     }
 </script>
@@ -50,12 +50,18 @@
     })()
 
     export let projects
-    export let commit
+    // export let commit
     export let plants
     export let socials
 </script>
 
 <style>
+    main {
+        background-size: 100px 100px;
+        background-image:
+            linear-gradient(to right, rgb(60,60,60) 1px, transparent 1px),
+            linear-gradient(to bottom, rgb(60,60,60) 1px, transparent 1px);
+    }
     section {
         padding: 40px 0;
     }
@@ -88,7 +94,7 @@
 <main>
     <Banner/>
     <Nav appearance={"light"}/>
-    <section class="intro">
+    <!-- <section class="intro">
         <div class="width-restriction">
             <div class="row">
                 <div class="col-2">
@@ -105,12 +111,16 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="projects light">
+    <section class="projects ">
         <div class="width-restriction">
-            <h2>Projec</h2>
-            <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check them out.</p>
+            <div class="row">
+                <div class="col-2">
+                    <h2>Projec</h2>
+                    <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check them out.</p>
+                </div>
+            </div>
             <Space/>
 
             <div class="row">
@@ -154,7 +164,7 @@
         </div>
     </section>
 
-    <section class="blog">
+    <section class="blog light">
         <div class="width-restriction">
             <h2>Thoughts n dat</h2>
             <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check them out.</p>
@@ -184,7 +194,7 @@
         </div>
 
     </section>
-    <section class="reachme light">
+    <section class="reachme">
         <div class="width-restriction">
             <div class="row">
                 <div class="col-2">
@@ -219,11 +229,11 @@
                     <Space height={"10px"}/>
                     <p>
                         Last commit:  
-                        <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank">"{commit.message}"</a></p>
+                        <!-- <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank">"{commit.message}"</a></p> -->
                 </div>
             </div>
         </div>
 
     </section>
-    <Footer appearance={"dark"}/>
+    <Footer appearance={"light"}/>
 </main>

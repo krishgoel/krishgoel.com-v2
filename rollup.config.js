@@ -1,16 +1,20 @@
 import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import {config} from 'dotenv'
 import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
 import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
-import config from 'sapper/config/rollup.js';
+import sapperConfig from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
 // To import local JSON files into Svelte files
 import json from '@rollup/plugin-json'
+
+// For accessing environment variables
+const production = !process.env.ROLLUP_WATCH;
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -23,17 +27,19 @@ const onwarn = (warning, onwarn) =>
 
 export default {
 	client: {
-		input: config.client.input(),
-		output: config.client.output(),
+		input: sapperConfig.client.input(),
+		output: sapperConfig.client.output(),
 		plugins: [
 			// To import local JSON files into Svelte files
 			json(),
 			replace({
-				preventAssignment: true,
-				values:{
-					'process.browser': true,
-					'process.env.NODE_ENV': JSON.stringify(mode)
-				},
+				// stringify the object       
+				process: JSON.stringify({
+					env: {
+						isProd: production,
+						...config().parsed // attached the .env config
+					}
+				}),
 			}),
 			svelte({
 				compilerOptions: {
@@ -78,8 +84,8 @@ export default {
 	},
 
 	server: {
-		input: config.server.input(),
-		output: config.server.output(),
+		input: sapperConfig.server.input(),
+		output: sapperConfig.server.output(),
 		plugins: [
 			replace({
 				preventAssignment: true,
@@ -112,8 +118,8 @@ export default {
 	},
 
 	serviceworker: {
-		input: config.serviceworker.input(),
-		output: config.serviceworker.output(),
+		input: sapperConfig.serviceworker.input(),
+		output: sapperConfig.serviceworker.output(),
 		plugins: [
 			resolve(),
 			replace({

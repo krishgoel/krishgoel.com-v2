@@ -238,3 +238,8 @@ blockquote {
 .light img {
 	box-shadow: var(--dark-card-shadow);
 }
+
+/* Blog ppost-loading styling */
+.blog-container img {
+	margin: 20px 0;
+}

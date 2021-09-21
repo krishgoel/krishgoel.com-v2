@@ -33,7 +33,7 @@
 <style>
     .blog-container {
         width: 100%;
-        max-width: 800px;
+        max-width: 700px;
         display: block;
         margin: 0 auto
     }

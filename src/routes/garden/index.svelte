@@ -12,7 +12,7 @@
 
 <style>
     .card {
-        padding-top: 20px
+        padding-top: 30px
     }
 </style>
 
