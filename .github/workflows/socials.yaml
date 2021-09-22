@@ -3,7 +3,7 @@ name: Fetch API
 on:
   push:
     branches:
-      - master
+      - main
   # schedule:
     # - cron: "*/5 * * * *"
 
