@@ -1,4 +1,4 @@
-name: Socials Fetch Workflow
+name: Plants Fetch Workflow
 
 on:
   push:
@@ -12,16 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Fetch Socials from Potion
+      - name: Fetch Plants from Potion
         uses: JamesIves/fetch-api-data-action@releases/v1
         with:
-          ENDPOINT: https://potion-api.vercel.app/table?id=fe3fe0e8c9e54061b7412307da4c035f
+          ENDPOINT: https://potion-api.vercel.app/table?id=c962b6a899d94ea39739998c6690b54b
           SAVE_LOCATION: static/data
-          SAVE_NAME: socials
+          SAVE_NAME: plants
 
-      - name: Update socials.json
+      - name: Update plants.json
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: static/data/socials.json
-          commit-msg: Updated socials.json 
+          file-path: static/data/plants.json
+          commit-msg: Updated plants.json 
           github-token: ${{ secrets.TOKEN }}

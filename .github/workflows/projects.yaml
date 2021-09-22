@@ -1,4 +1,4 @@
-name: Socials Fetch Workflow
+name: Projects Fetch Workflow
 
 on:
   push:
@@ -12,16 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Fetch Socials from Potion
+      - name: Fetch Projects from Potion
         uses: JamesIves/fetch-api-data-action@releases/v1
         with:
-          ENDPOINT: https://potion-api.vercel.app/table?id=fe3fe0e8c9e54061b7412307da4c035f
+          ENDPOINT: https://potion-api.vercel.app/table?id=5856546a8a954678937de8e1d91d99d7
           SAVE_LOCATION: static/data
-          SAVE_NAME: socials
+          SAVE_NAME: projects
 
-      - name: Update socials.json
+      - name: Update projects.json
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: static/data/socials.json
-          commit-msg: Updated socials.json 
+          file-path: static/data/projects.json
+          commit-msg: Updated projects.json 
           github-token: ${{ secrets.TOKEN }}
