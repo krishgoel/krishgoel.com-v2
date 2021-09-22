@@ -59,4 +59,6 @@
 <div>{someJSON.someKey}</div>
 ```
 
+- Ishaan's Figma Prototype https://www.figma.com/file/ys6XyJryfwtPeraRADHH0R/Krish-Skywalker?node-id=0%3A1
+
 _Don't read this istfg_
