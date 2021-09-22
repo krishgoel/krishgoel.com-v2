@@ -127,7 +127,7 @@
             <div class="row">
                 <div class="col-2">
                     <div class="inline">
-                        <h2>Projec</h2>
+                        <h2>Featured Projects</h2>
                         <p><a href="/projects">See all ></a></p>
                     </div>
                     <Space height={"5px"}/>
@@ -152,7 +152,7 @@
                                         {:else}
                                             <h3>{project.fields.name}</h3>
                                         {/if}
-                                        <p class="mono" style="margin-bottom: 10px; font-size: 14px">{project.fields.date}</p>
+                                        <p class="mono" style="margin-bottom: 10px; font-size: 14px">{project.fields.date} · {project.fields.type}</p>
                                         <p style="margin-bottom: 10px;">{project.fields.description}</p>
                                         <!-- Links -->
                                         <div class="links">
@@ -182,11 +182,11 @@
             <div class="row">
                 <div class="col-2">
                     <div class="inline">
-                        <h2>Thoughtsx</h2>
+                        <h2>Tho(ugh)t Garden</h2>
                         <p><a href="/garden">See all ></a></p>
                     </div>
                     <Space height={"5px"}/>
-                    <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check</p>
+                    <p>This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, expectedly about technology, things I am using, or about the time I went backpacking to the foothills of mount Tibidabo ;)</p>                        
                 </div>
             </div>
             <Space height={"25px"}/>
