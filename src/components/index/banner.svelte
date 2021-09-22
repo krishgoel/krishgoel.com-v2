@@ -28,10 +28,10 @@
 
                 <Space height={"12px"}/>
 
-                <p>I am a technophile and a full-time "flex machine" from New Delhi. I am currently completing my high schooling from <a href="http://sanskritischool.edu.in" target="_blank">Sanskriti School</a> and will be joining <a href="#" target="_blank">Some University</a> for pursuing every Indian dads&apos; dream for their son - <s>MBA</s>  Engineering Major (+ Elective) this fall.</p>
-                <p>While web-development and programming is my m&eacute;tier, I&rsquo;m currently in the search for my Ikigai.</p>
-                <p>I occasionally venture into introducing the beautiful intricacies of programming to the younger students during my summer breaks and looking at the bigger picture, I aspire to develop &quot;smarter energy sources&quot;.</p>
-                <p>Welcome to <s>my website/secret base</s> Jaku! &nbsp;(btw irrespective of the <em>kringe,</em> people <strong>LIKE</strong> to call me <span class="mono">KrishSkywalker</span> &macr;\(ツ)/&macr;. <span class="swag">Yes</span> 😤)</p>
+                <p>I am a technophile and a full-time "flex machine" from New Delhi. I recently completed my high school from <a href="http://sanskritischool.edu.in" target="_blank">Sanskriti School</a> and will be joining <a href="https://manipal.edu/mit.html" target="_blank">Manipal Institute of Technology, Manipal</a> for pursuing every Indian dads&apos; dream for their son - <s>MBA</s>  BTech (in Mechatronics) this fall.</p>
+                <!-- <p>While web-development and programming is my m&eacute;tier, I&rsquo;m currently in the search for my Ikigai.</p> -->
+                <p>Currently, my interest lies at the intersection of CS and tangibility along with startups and finances. I occasionally venture into introducing the beautiful intricacies of programming to younger students during my summer breaks. Looking at the bigger picture, I aspire to develop &quot;smarter energy sources&quot;</p>
+                <p>Welcome to <s>my website</s> the bent side of things (btw irrespective of the <span class="swag">kringe,</span> people <strong>LIKE</strong> to call me <span class="mono">KrishSkywalker</span> &macr;\(ツ)/&macr;. Yes)</p>
 
                 <Space height={"15px"}/>
 
