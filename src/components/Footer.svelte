@@ -16,7 +16,7 @@
     }
 
     footer .links p {
-        margin-left: 10px;
+        margin-left: 5px;
     }
     footer p {
         margin-bottom: 0
