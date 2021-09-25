@@ -3,10 +3,20 @@
         // Projects
         let projects = await this.fetch(`/data/projects.json`);
         projects = await projects.json()
+        for (let i = 0; i < projects.length; i++) {
+            if (!("showonindex" in projects[i].fields)) {
+                projects.splice(i, 1)
+            }
+        }
 
         // Garden
         let plants = await this.fetch(`/data/plants.json`);
         plants = await plants.json()
+        for (let i = 0; i < plants.length; i++) {
+            if (!("showonindex" in plants[i].fields)) {
+                plants.splice(i, 1)
+            }
+        }
 
         // Socials
         let socials = await this.fetch(`/data/socials.json`);
