@@ -149,13 +149,13 @@
                                         <!-- Links -->
                                         <div class="links">
                                             {#if project.fields.link1 != undefined}
-                                                <p><a href="{project.fields.url1}" target="_blank" aria-label="{projects.fields.link1}">{project.fields.link1}</a></p>
+                                                <p><a href="{project.fields.url1}" target="_blank" aria-label="{project.fields.link1}">{project.fields.link1}</a></p>
                                             {/if}
                                             {#if project.fields.link2 != undefined}
-                                                <p><a href="{project.fields.url2}" target="_blank" aria-label="{projects.fields.link2}">{project.fields.link2}</a></p>
+                                                <p><a href="{project.fields.url2}" target="_blank" aria-label="{project.fields.link2}">{project.fields.link2}</a></p>
                                             {/if}
                                             {#if project.fields.link3 != undefined}
-                                                <p><a href="{project.fields.url3}" target="_blank" aria-label="{projects.fields.link3}">{project.fields.link3}</a></p>
+                                                <p><a href="{project.fields.url3}" target="_blank" aria-label="{project.fields.link3}">{project.fields.link3}</a></p>
                                             {/if}
                                         </div>
                                     </div>
