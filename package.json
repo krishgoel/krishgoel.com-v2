@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "krishgoel.com",
+  "description": "4th iteration of my portfolio website",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
