@@ -6,9 +6,9 @@
         return await response.text()
     })()
 
-    let title= "Colophon | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app";
+    let title= "About | krishgoel.com";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi.";
+    let url = "https://krishgoel-v4.vercel.app/about";
 </script>
 
 <svelte:head>

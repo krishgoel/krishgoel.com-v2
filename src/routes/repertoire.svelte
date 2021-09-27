@@ -15,9 +15,9 @@
 
     export let repertoire
 
-    let title= "Krish Goel | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app";
+    let title= "Repertoire | krishgoel.com";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is my repertoire.";
+    let url = "https://krishgoel-v4.vercel.app/repertoire";
 </script>
 
 <svelte:head>
@@ -36,7 +36,7 @@
 	<div class="row">
         <div class="col-2">
             <h2>Repertoire</h2>
-            <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if out.</p>
+            <p>While programming and design-based problem solving are my métier, I am also looking to venture into the more tangible biomes of technology like cyber-physical systems and will be pursuing my undergrad degree in mechatronics. I eventually aim to work on "smarter" energy sources, brain-computer interfaces, and making STEM education accessible for everyone.</p>
         </div>
     </div>
     <Space height={"25px"}/>

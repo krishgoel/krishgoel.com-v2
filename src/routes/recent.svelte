@@ -9,9 +9,9 @@
         return response.toptracks.track
     })()
 
-    let title= "Colophon | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app";
+    let title= "Recent Activity | krishgoel.com";
+    let description = "Hi, this page reflects the recent activities of Krish, a technophile and maker from New Delhi.";
+    let url = "https://krishgoel-v4.vercel.app/recent";
 </script>
 
 <svelte:head>
@@ -53,7 +53,7 @@
         <div class="col-2">
             <div class="inline">
                 <h2>Top Tracks</h2>
-                <p><a href="https://last.fm/user/KrishSkywalker" target="_blank">Last.fm ></a></p>
+                <p><a href="https://last.fm/user/KrishSkywalker" target="_blank" aria-label="My Last.fm">Last.fm ></a></p>
             </div>
             <Space height={"10px"}/>
             <div class="card">
@@ -78,7 +78,7 @@
             <div class="card">
                 <div class="width-restriction">
                     <p>Hmmmm, let's see what else we can add here</p>
-                    <p>Here's <a href="https://www.notion.so/krishgoel/ed5a59a2d5924e6f81044a1ac9247f97?v=6f977945ff954f4e91c1be3a4ea83295" target="_blank">my read list</a> for now</p>
+                    <p>Here's <a href="https://www.notion.so/krishgoel/ed5a59a2d5924e6f81044a1ac9247f97?v=6f977945ff954f4e91c1be3a4ea83295" target="_blank" aria-label="My readlist">my read list</a> for now</p>
                 </div>
             </div>
         </div>

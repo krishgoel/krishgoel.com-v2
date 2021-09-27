@@ -26,7 +26,23 @@
             return undefined
         }
     })()
+
+    let title= "Project Documentation | krishgoel.com";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is a project documentation.";
+    let url = "https://krishgoel-v4.vercel.app/projects/";
 </script>
+
+<svelte:head>
+    <title>{title}</title>
+    <meta name="title" content="{title}" />
+    <meta name="description" content="{description}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:url" content="{url}" />
+    <meta property="og:description" content="{description}" />
+    <meta name="twitter:title" content="{title}" />
+    <meta name="twitter:url" content="{url}" />
+    <meta name="twitter:description" content="{description}" />
+</svelte:head>
 
 <section class="slim-container">
     {#await projectFetch}

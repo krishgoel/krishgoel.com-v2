@@ -2,9 +2,9 @@
     import { range } from '../scripts/range'
     import Space from '../components/space.svelte'
 
-    let title= "Colophon | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app";
+    let title= "Big Don Megaladon";
+    let description = "Ladness Madness from the highschool yearbook";
+    let url = "https://krishgoel-v4.vercel.app/bigDonMegaladon";
 
     let bois = [
         {
@@ -120,7 +120,7 @@
                                 <h3>{boi.name}</h3>
                                 <p>{boi.pretext}</p>
                                 {#if boi.linkText != ""}
-                                    <a href={boi.url}>🔗 {boi.linkText}</a>
+                                    <a href={boi.url} aria-label="{boi.linkText}">🔗 {boi.linkText}</a>
                                 {/if}
                             </div>
                         </div>

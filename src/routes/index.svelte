@@ -51,7 +51,7 @@
     import Banner from '../components/index/banner.svelte'
 
     let title= "Krish Goel | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi.";
     let url = "https://krishgoel-v4.vercel.app";
 
     const livelistening = (async () => {
@@ -119,10 +119,10 @@
                 <div class="col-2">
                     <div class="inline">
                         <h2>Featured Projects</h2>
-                        <p><a href="/projects">See all ></a></p>
+                        <p><a href="/projects" aria-label="See all projects">See all ></a></p>
                     </div>
                     <Space height={"5px"}/>
-                    <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if out.</p>
+                    <p>Below are some of my favourite projects I've worked on so far, this includes my hackathon submissions, side tinkers, failed startup ideas, and non-profits</p>
                 </div>
             </div>
             <Space height={"25px"}/>
@@ -149,13 +149,13 @@
                                         <!-- Links -->
                                         <div class="links">
                                             {#if project.fields.link1 != undefined}
-                                                <p><a href="{project.fields.url1}" target="_blank">{project.fields.link1}</a></p>
+                                                <p><a href="{project.fields.url1}" target="_blank" aria-label="{projects.fields.link1}">{project.fields.link1}</a></p>
                                             {/if}
                                             {#if project.fields.link2 != undefined}
-                                                <p><a href="{project.fields.url2}" target="_blank">{project.fields.link2}</a></p>
+                                                <p><a href="{project.fields.url2}" target="_blank" aria-label="{projects.fields.link2}">{project.fields.link2}</a></p>
                                             {/if}
                                             {#if project.fields.link3 != undefined}
-                                                <p><a href="{project.fields.url3}" target="_blank">{project.fields.link3}</a></p>
+                                                <p><a href="{project.fields.url3}" target="_blank" aria-label="{projects.fields.link3}">{project.fields.link3}</a></p>
                                             {/if}
                                         </div>
                                     </div>
@@ -178,7 +178,7 @@
                         <p><a href="/garden">See all ></a></p>
                     </div>
                     <Space height={"5px"}/>
-                    <p>This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, expectedly about technology, things I am using, or about the time I went backpacking to the foothills of mount Tibidabo ;) <i>This will take some more time for me to fully organize</i></p>                        
+                    <p>This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank" aria-label="Digital Garden Explanation">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, expectedly about technology, things I am using, or about the time I went backpacking to the foothills of mount Tibidabo ;) <i>This will take some more time for me to fully organize</i></p>                        
                 </div>
             </div>
             <Space height={"25px"}/>
@@ -194,7 +194,7 @@
                                         <p style="margin-bottom: 10px;">{blog.fields.description}</p>
                                         <!-- Links -->
                                         <div class="links">
-                                            <p><a href="/garden/{blog.fields.url}">Read more</a></p>
+                                            <p><a href="/garden/{blog.fields.url}" aria-label="Link to blog">Read more</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -245,7 +245,7 @@
                     <Space height={"10px"}/>
                     <p>
                         Last commit:  
-                        <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank">"{commit.message}"</a></p>
+                        <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a></p>
                 </div>
             </div>
         </div>

@@ -28,7 +28,23 @@
             return undefined
         }
     })()
+
+    let title= "Digital Garden | krishgoel.com";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is my digital garden.";
+    let url = "https://krishgoel-v4.vercel.app/garden/";
 </script>
+
+<svelte:head>
+    <title>{title}</title>
+    <meta name="title" content="{title}" />
+    <meta name="description" content="{description}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:url" content="{url}" />
+    <meta property="og:description" content="{description}" />
+    <meta name="twitter:title" content="{title}" />
+    <meta name="twitter:url" content="{url}" />
+    <meta name="twitter:description" content="{description}" />
+</svelte:head>
 
 <section class="slim-container">
     {#await postFetch}

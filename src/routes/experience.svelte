@@ -15,9 +15,9 @@
 
     export let experience
 
-    let title= "Krish Goel | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app";
+    let title= "Experience | krishgoel.com";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is my XP.";
+    let url = "https://krishgoel-v4.vercel.app/experience";
 </script>
 
 <svelte:head>
@@ -35,8 +35,8 @@
 <section>
 	<div class="row">
         <div class="col-2">
-            <h2>XP</h2>
-            <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if out.</p>
+            <h2>Experience Portfolio</h2>
+            <!-- <p>Here's a list of </p> -->
         </div>
     </div>
     <Space height={"25px"}/>
@@ -54,10 +54,10 @@
                                 <!-- Links -->
                                 <div class="links">
                                     {#if experience.fields.link1 != undefined}
-                                        <p><a href="{experience.fields.url1}">{experience.fields.link1}</a></p>
+                                        <p><a href="{experience.fields.url1}" aria-label="{experience.fields.link1}">{experience.fields.link1}</a></p>
                                     {/if}
                                     {#if experience.fields.link2 != undefined}
-                                        <p><a href="{experience.fields.url2}">{experience.fields.link2}</a></p>
+                                        <p><a href="{experience.fields.url2}" aria-label="{experience.fields.link2}">{experience.fields.link2}</a></p>
                                     {/if}
                                 </div>
                             </div>

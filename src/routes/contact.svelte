@@ -16,9 +16,9 @@
 
     import Space from '../components/space.svelte'
 
-    let title= "Krish Goel | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app";
+    let title= "Reach me | krishgoel.com";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and here's how you can reach me.";
+    let url = "https://krishgoel-v4.vercel.app/contact";
 
     export let socials
 </script>

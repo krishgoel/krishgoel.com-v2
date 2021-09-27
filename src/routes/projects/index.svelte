@@ -15,9 +15,9 @@
 
     export let projects
 
-    let title= "Krish Goel | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app";
+    let title= "Projects | krishgoel.com";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is a comprehensive list of all my projects.";
+    let url = "https://krishgoel-v4.vercel.app/projects";
 </script>
 
 <svelte:head>
@@ -41,8 +41,8 @@
 <section>
 	<div class="row">
         <div class="col-2">
-            <h2>Projec</h2>
-            <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if out.</p>
+            <h2>Projects Portfolio</h2>
+            <p>This is a detailed list of all the projects I've worked on so far, it includes my hackathon submissions, side tinkers, failed startup ideas, and non-profits</p>
         </div>
     </div>
     <Space height={"25px"}/>
@@ -68,13 +68,13 @@
                                 <!-- Links -->
                                 <div class="links">
                                     {#if project.fields.link1 != undefined}
-                                        <p><a href="{project.fields.url1}" target="_blank">{project.fields.link1}</a></p>
+                                        <p><a href="{project.fields.url1}" target="_blank" aria-label="{project.fields.link1}">{project.fields.link1}</a></p>
                                     {/if}
                                     {#if project.fields.link2 != undefined}
-                                        <p><a href="{project.fields.url2}" target="_blank">{project.fields.link2}</a></p>
+                                        <p><a href="{project.fields.url2}" target="_blank" aria-label="{project.fields.link2}">{project.fields.link2}</a></p>
                                     {/if}
                                     {#if project.fields.link3 != undefined}
-                                        <p><a href="{project.fields.url3}" target="_blank">{project.fields.link3}</a></p>
+                                        <p><a href="{project.fields.url3}" target="_blank" aria-label="{project.fields.link3}">{project.fields.link3}</a></p>
                                     {/if}
                                 </div>
                             </div>

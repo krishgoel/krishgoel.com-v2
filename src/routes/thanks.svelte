@@ -7,8 +7,8 @@
     })()
 
     let title= "Thanks | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is a thank you to everyone who's helped me in my journey.";
+    let url = "https://krishgoel-v4.vercel.app/thanks";
 </script>
 
 <svelte:head>

@@ -16,9 +16,9 @@
 
     import Space from '../../components/space.svelte'
 
-    let title= "Krish Goel | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile on a journey to find and fulfill my Ikigai from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app";
+    let title= "Digital Garden | krishgoel.com";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is my digital garden.";
+    let url = "https://krishgoel-v4.vercel.app/garden";
 
     export let plants
 </script>
@@ -32,8 +32,8 @@
 <section>
     <div class="row">
         <div class="col-2">
-            <h2>Thoughts n dat</h2>
-            <p>I casually dab into writing sometimes, usually about technology, things I am using or about the time I went backpacking to the foothills of mount Tibidabo. Here are 2 of my latest posts, I'd really appreciate it if you could check</p>
+            <h2>Thoughts Garden</h2>
+            <p>This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank"  aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, expectedly about technology, things I am using, or about the time I went backpacking to the foothills of mount Tibidabo ;) <i>This will take some more time for me to fully organize</i></p>          
         </div>
     </div>
     <Space height={"25px"}/>
@@ -49,7 +49,7 @@
                             <p style="margin-bottom: 10px;">{blog.fields.description}</p>
                             <!-- Links -->
                             <div class="links">
-                                <p><a href="/garden/{blog.fields.url}">Read more</a></p>
+                                <p><a href="/garden/{blog.fields.url}"  aria-label="Read more">Read more</a></p>
                             </div>
                         </div>
                     </div>
