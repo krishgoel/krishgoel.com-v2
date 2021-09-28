@@ -1,9 +1,22 @@
 <script context="module">
     export async function preload() {
-        let experience = await this.fetch('/data/experience.json');
-        experience = await experience.json();
+        let socialservice = await this.fetch('/data/socialservice.json')
+        socialservice = await socialservice.json()
+
+        let dubs = await this.fetch('/data/dubs.json')
+        dubs = await dubs.json()
+
+        let leadership = await this.fetch('/data/leadership.json')
+        leadership = await leadership.json()
+
+        let courses = await this.fetch('/data/courses.json')
+        courses = await courses.json()
+
         return {
-            experience: experience
+            socialservice: socialservice,
+            dubs: dubs,
+            leadership: leadership,
+            courses: cources
         }
     }
 </script>

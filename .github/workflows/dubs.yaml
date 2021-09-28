@@ -1,4 +1,4 @@
-name: Experience Fetch Workflow
+name: Dubs Fetch Workflow
 
 on:
   # push: # Disabled because this creates a perpetual loop, every action causes a push which triggers the actions again
@@ -13,16 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Fetch Experience from Potion
+      - name: Fetch Dubs from Potion
         uses: JamesIves/fetch-api-data-action@releases/v1
         with:
-          ENDPOINT: https://potion-api.vercel.app/table?id=3dc7e12b69a7437eb2447aa174174547
+          ENDPOINT: https://potion-api.vercel.app/table?id=edce5932ae364539866dfe523ef6f1a5
           SAVE_LOCATION: static/data
-          SAVE_NAME: experience
+          SAVE_NAME: dubs
 
-      - name: Update experience.json
+      - name: Update dubs.json
         uses: test-room-7/action-update-file@v1
         with:
-          file-path: static/data/experience.json
-          commit-msg: Updated experience.json 
+          file-path: static/data/dubs.json
+          commit-msg: Updated dubs.json 
           github-token: ${{ secrets.TOKEN }}
