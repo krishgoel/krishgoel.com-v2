@@ -16,7 +16,7 @@
             socialservice: socialservice,
             dubs: dubs,
             leadership: leadership,
-            courses: cources
+            courses: courses
         }
     }
 </script>
@@ -26,7 +26,10 @@
     
     import Space from '../components/space.svelte'
 
-    export let experience
+    export let socialservice
+    export let dubs
+    export let leadership
+    export let courses
 
     let title= "Experience | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is my XP.";
@@ -48,29 +51,132 @@
 <section>
 	<div class="row">
         <div class="col-2">
-            <h2>Experience Portfolio</h2>
-            <!-- <p>Here's a list of </p> -->
+            <h1>Experience Portfolio</h1>
+            <p>This page is a log of all the events and activities that I believe have helped me gain insights into various domains that would otherwise be unreachable, ranging from rural sensitization trips focused around STEM education to introducing 280+ teachers at my school to AI and its applications.</p>
         </div>
     </div>
-    <Space height={"25px"}/>
+    <Space height={"15px"}/>
 	
+    <h2>Social Services</h2>
+    <Space height={"25px"}/>
     <div class="row">
         {#each range(0,3,1) as i, index}
             <div class="col-3">
-                {#each experience as experience, p}
+                {#each socialservice as service, p}
                     {#if p%3 == i}
                         <div class="card">
                             <div class="width-restriction">
-                                <h3>{experience.fields.title}</h3>
-                                <p class="mono" style="margin-bottom: 10px; font-size: 14px">{experience.fields.date}</p>
-                                <p style="margin-bottom: 10px;">{experience.fields.description}</p>
+                                <h3>{service.fields.title}</h3>
+                                <p class="mono" style="margin-bottom: 10px; font-size: 14px">{service.fields.date}</p>
+                                {#if service.fields.description != undefined}
+                                    <p style="margin-bottom: 10px;">{service.fields.description}</p>
+                                {/if}
                                 <!-- Links -->
                                 <div class="links">
-                                    {#if experience.fields.link1 != undefined}
-                                        <p><a href="{experience.fields.url1}" aria-label="{experience.fields.link1}">{experience.fields.link1}</a></p>
+                                    {#if service.fields.link1 != undefined}
+                                        <p><a href="{service.fields.url1}" aria-label="{service.fields.link1}">{service.fields.link1}</a></p>
                                     {/if}
-                                    {#if experience.fields.link2 != undefined}
-                                        <p><a href="{experience.fields.url2}" aria-label="{experience.fields.link2}">{experience.fields.link2}</a></p>
+                                    {#if service.fields.link2 != undefined}
+                                        <p><a href="{service.fields.url2}" aria-label="{service.fields.link2}">{service.fields.link2}</a></p>
+                                    {/if}
+                                </div>
+                            </div>
+                        </div>
+                    {/if}
+                {/each}
+            </div>
+        {/each}
+	</div>
+
+    <Space height={"25px"}/>
+
+    <h2>Dub Portfolio</h2>
+    <Space height={"25px"}/>
+    <div class="row">
+        {#each range(0,3,1) as i, index}
+            <div class="col-3">
+                {#each dubs as dub, p}
+                    {#if p%3 == i}
+                        <div class="card">
+                            <div class="width-restriction">
+                                <h3>{dub.fields.title}</h3>
+                                <p class="mono" style="margin-bottom: 10px; font-size: 14px">{dub.fields.date}</p>
+                                {#if dub.fields.description != undefined}
+                                    <p style="margin-bottom: 10px;">{dub.fields.description}</p>
+                                {/if}
+                                <!-- Links -->
+                                <div class="links">
+                                    {#if dub.fields.link1 != undefined}
+                                        <p><a href="{dub.fields.url1}" aria-label="{dub.fields.link1}">{dub.fields.link1}</a></p>
+                                    {/if}
+                                    {#if dub.fields.link2 != undefined}
+                                        <p><a href="{dub.fields.url2}" aria-label="{dub.fields.link2}">{dub.fields.link2}</a></p>
+                                    {/if}
+                                </div>
+                            </div>
+                        </div>
+                    {/if}
+                {/each}
+            </div>
+        {/each}
+	</div>
+    
+    <Space height={"25px"}/>
+    
+    <h2>Leadership Portfolio</h2>
+    <Space height={"25px"}/>
+    <div class="row">
+        {#each range(0,3,1) as i, index}
+            <div class="col-3">
+                {#each leadership as leadership, p}
+                    {#if p%3 == i}
+                        <div class="card">
+                            <div class="width-restriction">
+                                <h3>{leadership.fields.title}</h3>
+                                <p class="mono" style="margin-bottom: 10px; font-size: 14px">{leadership.fields.date}</p>
+                                {#if leadership.fields.description != undefined}
+                                    <p style="margin-bottom: 10px;">{leadership.fields.description}</p>
+                                {/if}
+                                <!-- Links -->
+                                <div class="links">
+                                    {#if leadership.fields.link1 != undefined}
+                                        <p><a href="{leadership.fields.url1}" aria-label="{leadership.fields.link1}">{leadership.fields.link1}</a></p>
+                                    {/if}
+                                    {#if leadership.fields.link2 != undefined}
+                                        <p><a href="{leadership.fields.url2}" aria-label="{leadership.fields.link2}">{leadership.fields.link2}</a></p>
+                                    {/if}
+                                </div>
+                            </div>
+                        </div>
+                    {/if}
+                {/each}
+            </div>
+        {/each}
+	</div>
+
+    <Space height={"25px"}/>
+    
+    <h2>Courses Portfolio</h2>
+    <Space height={"25px"}/>
+    <div class="row">
+        {#each range(0,3,1) as i, index}
+            <div class="col-3">
+                {#each courses as course, p}
+                    {#if p%3 == i}
+                        <div class="card">
+                            <div class="width-restriction">
+                                <h3>{course.fields.title}</h3>
+                                <p class="mono" style="margin-bottom: 10px; font-size: 14px">{course.fields.date}</p>
+                                {#if course.fields.description != undefined}
+                                    <p style="margin-bottom: 10px;">{course.fields.description}</p>
+                                {/if}
+                                <!-- Links -->
+                                <div class="links">
+                                    {#if course.fields.link1 != undefined}
+                                        <p><a href="{course.fields.url1}" aria-label="{course.fields.link1}">{course.fields.link1}</a></p>
+                                    {/if}
+                                    {#if course.fields.link2 != undefined}
+                                        <p><a href="{course.fields.url2}" aria-label="{course.fields.link2}">{course.fields.link2}</a></p>
                                     {/if}
                                 </div>
                             </div>

@@ -11,6 +11,7 @@
 [![Socials Fetch Workflow](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/socials.yaml/badge.svg)](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/socials.yaml)
 
 ## To-do
+- [ ] Find a better way to present /recent
 - [ ] All cards change ther position on the mobile views because of row-stacking, fix it using the snippet from krishgoel.com-v3
 - [ ] GitHub repo update
 - [ ] Before pushing to production, ensure that the meta URLs are changed to krishgoel.com and not krishgoel-v4.vercel.app 
