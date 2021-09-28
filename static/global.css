@@ -10,17 +10,6 @@
 	font-weight: 700;
 	src: url(fonts/Akkurat-Bold.woff2);
 }
-/* SF Pro */
-@font-face {
-	font-family: SF-Pro;
-	font-weight: 400;
-	src: url(fonts/SF-Pro-Display-Regular.otf);
-}
-@font-face {
-	font-family: SF-Pro;
-	font-weight: 700;
-	src: url(fonts/SF-Pro-Display-Bold.otf);
-}
 /* SF Mono */
 @font-face {
 	font-family: SF-Mono;
@@ -262,8 +251,11 @@ li {
 	margin: 20px 0;
 }
 .slim-container h1, .slim-container h2, .slim-container h3{
-	margin-bottom: 10px
+	margin-bottom: 15px
 }
 .slim-container p {
-	margin-bottom:  15px;
+	margin-bottom:  20px;
+}
+.slim-container ul {
+	margin-bottom: 25px;
 }
