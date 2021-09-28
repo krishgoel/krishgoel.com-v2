@@ -12,6 +12,8 @@
 
 ## To-do
 - [ ] Find a better way to present /recent
+    - [ ] Add /recent/books
+- [ ] Fix the texts etc
 - [ ] All cards change ther position on the mobile views because of row-stacking, fix it using the snippet from krishgoel.com-v3
 - [ ] GitHub repo update
 - [ ] Before pushing to production, ensure that the meta URLs are changed to krishgoel.com and not krishgoel-v4.vercel.app 
