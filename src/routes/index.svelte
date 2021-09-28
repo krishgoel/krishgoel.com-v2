@@ -149,7 +149,7 @@
                                     {/if}
                                     <div class="width-restriction">
                                         {#if project.fields.cover == undefined}
-                                            <h3 style="padding-top: 30px; margin-bottom: 0">{project.fields.name}</h3>
+                                            <h3 style="margin-top: 30px; margin-bottom: 0">{project.fields.name}</h3>
                                         {:else}
                                             <h3 style="margin-bottom: 0">{project.fields.name}</h3>
                                         {/if}

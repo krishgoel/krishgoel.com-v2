@@ -1,15 +1,5 @@
 # krishgoel.com
 
-[![Experience Fetch Workflow](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/experience.yaml/badge.svg?branch=main)](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/experience.yaml) 
-
-[![Plants Fetch Workflow](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/plants.yaml/badge.svg)](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/plants.yaml)
-
-[![Projects Fetch Workflow](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/projects.yaml/badge.svg)](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/projects.yaml)
-
-[![Repertoire Fetch Workflow](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/repertoire.yaml/badge.svg)](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/repertoire.yaml)
-
-[![Socials Fetch Workflow](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/socials.yaml/badge.svg)](https://github.com/KrishSkywalker/krishgoel.com-v4/actions/workflows/socials.yaml)
-
 ## To-do
 - [ ] Find a better way to present /recent
     - [ ] Add /recent/books

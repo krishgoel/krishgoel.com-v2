@@ -87,6 +87,16 @@ body {
 	font-family: "Akkurat";
 }
 
+::-moz-selection { /* Code for Firefox */
+	color: #ffffff;
+	background: #64ceff73;
+}
+
+::selection {
+	color: #ffffff;
+	background: #64ceff73;
+}
+
 /* Color scheming */
 :root {
 	/* Backgrounds */

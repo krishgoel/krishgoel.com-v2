@@ -56,7 +56,6 @@
             <p><a rel=prefetch aria-label="Garden" href="/garden">Garden</a></p>
             <p><a rel=prefetch aria-label="Projects" href="/projects">Projects</a></p>
             <p><a rel=prefetch aria-label="Experience" href="/experience">Experience</a></p>
-            <p><a rel=prefetch aria-label="Repertoire" href="/repertoire">Repertoire</a></p>
             <p><a rel=prefetch aria-label="Contact" href="/contact">Contact</a></p>
         </div>
     </div>

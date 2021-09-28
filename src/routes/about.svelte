@@ -30,3 +30,5 @@
         {@html data}
     {/await}
 </section>
+
+<!-- <p>While programming and design-based problem solving are my métier, I am also looking to venture into the more tangible biomes of technology like cyber-physical systems and will be pursuing my undergrad degree in mechatronics. I eventually aim to work on brain-computer interfaces, and making STEM education accessible for everyone.</p> -->
