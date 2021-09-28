@@ -261,3 +261,6 @@ li {
 .slim-container img {
 	margin: 20px 0;
 }
+.slim-container h1, .slim-container h2, .slim-container h3 {
+	margin-bottom: 10px
+}
