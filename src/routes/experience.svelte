@@ -57,7 +57,7 @@
     </div>
     <Space height={"15px"}/>
 	
-    <h2>Social Services</h2>
+    <h2>Social Service</h2>
     <Space height={"25px"}/>
     <div class="row">
         {#each range(0,3,1) as i, index}
@@ -69,12 +69,12 @@
                                 <h3>{service.fields.title}</h3>
                                 <p class="mono" style="margin-bottom: 10px; font-size: 14px">{service.fields.date}</p>
                                 {#if service.fields.description != undefined}
-                                    <p style="margin-bottom: 10px;">{service.fields.description}</p>
+                                    <p>{service.fields.description}</p>
                                 {/if}
                                 <!-- Links -->
                                 <div class="links">
                                     {#if service.fields.link1 != undefined}
-                                        <p><a href="{service.fields.url1}" aria-label="{service.fields.link1}">{service.fields.link1}</a></p>
+                                        <p><a href="{service.fields.url1}" aria-label="{service.fields.link1}" style="margin-top: 10px;">{service.fields.link1}</a></p>
                                     {/if}
                                     {#if service.fields.link2 != undefined}
                                         <p><a href="{service.fields.url2}" aria-label="{service.fields.link2}">{service.fields.link2}</a></p>
@@ -90,7 +90,7 @@
 
     <Space height={"25px"}/>
 
-    <h2>Dub Portfolio</h2>
+    <h2>Victories and Participations</h2>
     <Space height={"25px"}/>
     <div class="row">
         {#each range(0,3,1) as i, index}
@@ -102,12 +102,12 @@
                                 <h3>{dub.fields.title}</h3>
                                 <p class="mono" style="margin-bottom: 10px; font-size: 14px">{dub.fields.date}</p>
                                 {#if dub.fields.description != undefined}
-                                    <p style="margin-bottom: 10px;">{dub.fields.description}</p>
+                                    <p>{dub.fields.description}</p>
                                 {/if}
                                 <!-- Links -->
                                 <div class="links">
                                     {#if dub.fields.link1 != undefined}
-                                        <p><a href="{dub.fields.url1}" aria-label="{dub.fields.link1}">{dub.fields.link1}</a></p>
+                                        <p><a href="{dub.fields.url1}" aria-label="{dub.fields.link1}" style="margin-top: 10px;">{dub.fields.link1}</a></p>
                                     {/if}
                                     {#if dub.fields.link2 != undefined}
                                         <p><a href="{dub.fields.url2}" aria-label="{dub.fields.link2}">{dub.fields.link2}</a></p>
@@ -123,7 +123,7 @@
     
     <Space height={"25px"}/>
     
-    <h2>Leadership Portfolio</h2>
+    <h2>Leadership and Positions Held</h2>
     <Space height={"25px"}/>
     <div class="row">
         {#each range(0,3,1) as i, index}
@@ -135,12 +135,12 @@
                                 <h3>{leadership.fields.title}</h3>
                                 <p class="mono" style="margin-bottom: 10px; font-size: 14px">{leadership.fields.date}</p>
                                 {#if leadership.fields.description != undefined}
-                                    <p style="margin-bottom: 10px;">{leadership.fields.description}</p>
+                                    <p>{leadership.fields.description}</p>
                                 {/if}
                                 <!-- Links -->
                                 <div class="links">
                                     {#if leadership.fields.link1 != undefined}
-                                        <p><a href="{leadership.fields.url1}" aria-label="{leadership.fields.link1}">{leadership.fields.link1}</a></p>
+                                        <p><a href="{leadership.fields.url1}" aria-label="{leadership.fields.link1}" style="margin-top: 10px;">{leadership.fields.link1}</a></p>
                                     {/if}
                                     {#if leadership.fields.link2 != undefined}
                                         <p><a href="{leadership.fields.url2}" aria-label="{leadership.fields.link2}">{leadership.fields.link2}</a></p>
@@ -154,7 +154,7 @@
         {/each}
 	</div>
 
-    <Space height={"25px"}/>
+    <!-- <Space height={"25px"}/>
     
     <h2>Courses Portfolio</h2>
     <Space height={"25px"}/>
@@ -168,12 +168,11 @@
                                 <h3>{course.fields.title}</h3>
                                 <p class="mono" style="margin-bottom: 10px; font-size: 14px">{course.fields.date}</p>
                                 {#if course.fields.description != undefined}
-                                    <p style="margin-bottom: 10px;">{course.fields.description}</p>
+                                    <p>{course.fields.description}</p>
                                 {/if}
-                                <!-- Links -->
                                 <div class="links">
                                     {#if course.fields.link1 != undefined}
-                                        <p><a href="{course.fields.url1}" aria-label="{course.fields.link1}">{course.fields.link1}</a></p>
+                                        <p><a href="{course.fields.url1}" aria-label="{course.fields.link1}" style="margin-top: 10px;">{course.fields.link1}</a></p>
                                     {/if}
                                     {#if course.fields.link2 != undefined}
                                         <p><a href="{course.fields.url2}" aria-label="{course.fields.link2}">{course.fields.link2}</a></p>
@@ -185,5 +184,5 @@
                 {/each}
             </div>
         {/each}
-	</div>
+	</div> -->
 </section>
