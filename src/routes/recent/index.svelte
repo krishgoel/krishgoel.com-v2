@@ -9,6 +9,12 @@
         return response.toptracks.track
     })()
 
+    const readlist = (async () => {
+        let response = await fetch(`https://potion-api.vercel.app/table?id=ed5a59a2d5924e6f81044a1ac9247f97`)
+        response = await response.json()
+        return response
+    })()
+
     let title= "Recent Activity | krishgoel.com";
     let description = "Hi, this page reflects the recent activities of Krish, a technophile and maker from New Delhi.";
     let url = "https://krishgoel-v4.vercel.app/recent";
@@ -47,7 +53,7 @@
 </style>
 
 <section class="recent slim-container">
-    <h1>Recent Activityx</h1>
+    <h1>Recent Activity</h1>
     <Space height={"25px"}/>
     <div class="row">
         <div class="col-2">
@@ -73,18 +79,32 @@
             </div>
         </div>
         <div class="col-2">
-            <h2>Other activity?</h2>
+            <div class="inline">
+                <h2>Reading</h2>
+                <p><a href="https://krishgoel.notion.site/ed5a59a2d5924e6f81044a1ac9247f97?v=6f977945ff954f4e91c1be3a4ea83295" target="_blank" aria-label="My Read List">My Read List ></a></p>
+            </div>
             <Space height={"10px"}/>
             <div class="card">
                 <div class="width-restriction">
-                    <p>Hmmmm, let's see what else we can add here</p>
-                    <p>Here's <a href="https://www.notion.so/krishgoel/ed5a59a2d5924e6f81044a1ac9247f97?v=6f977945ff954f4e91c1be3a4ea83295" target="_blank" aria-label="My readlist">my read list</a> for now</p>
+                    <p>Currently reading</p>
+                    <Space height={"10px"}/>
+                    {#await readlist}
+                        <!--  -->
+                    {:then data}
+                        {#each data as book, i}
+                            {#if book.fields.Status == "Currently reading"}
+                                <h4>{book.fields.Book}</h4>
+                                <Space height={"10px"}/>
+                                <p>by <strong>{book.fields.Author}</strong></p>
+                            {/if}
+                        {/each}
+                    {/await}
                 </div>
+            </div>
+            <div class="inline">
+                <h2>Learning</h2>
+                <p><a href="https://krishgoel.notion.site/Learn-List-39a102bb06044a3cbd0830cd6555b6ca" target="_blank" aria-label="My Learn List">My Learn List ></a></p>
             </div>
         </div>
     </div>
-    <!-- {#await colophon}
-    {:then data}
-        {@html data}
-    {/await} -->
 </section>
