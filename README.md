@@ -1,27 +1,28 @@
-# krishgoel.com
+# krishgoel.com ```-v4```
+> The source code to the 4th iteration of my personal website, hosted at [krishgoel-com-v4.vercel.app](https://krishgoel-com-v4.vercel.app) (not pushed to production yet).
 
-## To-do
-- [ ] Find a better way to present /recent
-    - [ ] Add /recent/books
+## To-do for future upgrades
+- [ ] Find a better way to present ```/recent```
+    - [ ] Fix ```/recent/books```
 - [ ] Fix the texts etc
-- [ ] All cards change ther position on the mobile views because of row-stacking, fix it using the snippet from krishgoel.com-v3
+- [ ] All cards change there position on the mobile views because of row-stacking, fix it using the snippet from krishgoel.com```-v3```
 - [ ] GitHub repo update
 - [ ] Before pushing to production, ensure that the meta URLs are changed to krishgoel.com and not krishgoel-v4.vercel.app 
 - [ ] Add the project filtering tag system as suggested by Ishaan
 - [ ] Switch from Last.FM to Spotify for Music fetching
 
-## Extra Node Packages used
+## Tech stack
+Built on Svelte (with Sapper for routing) and hosted on Vercel.
+### Other Node Packages used
 - cross-fetch
 - svelte-typewriter
 - svelte-prismjs
 
-## APIs used
+### APIs used
 - Potion (with Notion)
 - Audioscrobbler (with Last.fm)
 
-## External libraries and snippets used
+### External libraries and snippets used
 - CSS from Prism.JS for syntax highlighting
 
-- Ishaan's Figma Prototype https://www.figma.com/file/ys6XyJryfwtPeraRADHH0R/Krish-Skywalker?node-id=0%3A1
-
-_Don't read this istfg_
+Made with ❤️
