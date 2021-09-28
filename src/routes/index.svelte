@@ -3,19 +3,29 @@
         // Projects
         let projects = await this.fetch(`/data/projects.json`);
         projects = await projects.json()
+        let eliminateProjects = []
         for (let i = 0; i < projects.length; i++) {
-            if (!("showonindex" in projects[i].fields)) {
-                projects.splice(i, 1)
+            if (projects[i].fields.showonindex == undefined) {
+                eliminateProjects.push(i)
             }
+        }
+        eliminateProjects = eliminateProjects.reverse()
+        for (let i = 0; i < eliminateProjects.length; i++) {
+            projects.splice(eliminateProjects[i], 1)
         }
 
         // Garden
         let plants = await this.fetch(`/data/plants.json`);
         plants = await plants.json()
+        let eliminatePlants = []
         for (let i = 0; i < plants.length; i++) {
-            if (!("showonindex" in plants[i].fields)) {
-                plants.splice(i, 1)
+            if (plants[i].fields.showonindex == undefined) {
+                eliminatePlants.push(i)
             }
+        }
+        eliminatePlants = eliminatePlants.reverse()
+        for (let i = 0; i < eliminatePlants.length; i++) {
+            plants.splice(eliminatePlants[i], 1)
         }
 
         // Socials
