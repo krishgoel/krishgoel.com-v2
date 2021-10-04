@@ -47,14 +47,11 @@
     <div class="width-restriction">
         {#if $page.path != "/"}
             <h3 style="padding-right: 20px; color: #353535; margin-bottom: 0; margin-top: 0"><a rel=prefetch aria-label="Home Page" href="/" style="color: #353535">Krish Goel</a></h3>
-        {:else}
-            <!-- <h3 style="padding-right: 20px; color: #353535; margin-bottom: 0"><a rel=prefetch aria-label="Home Page" href="/" style="display: none">Krish Goel</a></h3> -->
         {/if}
         <div class="links">
             {#if $page.path != "/"}
                 <p><a rel=prefetch aria-label="Home Page" href="/">Home</a></p>
             {/if}
-            <!-- <p><a rel=prefetch aria-label="YouTube" href="/youtube">YouTube</a></p> -->
             <p><a rel=prefetch aria-label="Garden" href="/garden">Garden</a></p>
             <p><a rel=prefetch aria-label="Projects" href="/projects">Projects</a></p>
             <p><a rel=prefetch aria-label="Experience" href="/experience">Experience</a></p>

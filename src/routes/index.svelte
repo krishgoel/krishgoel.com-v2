@@ -348,8 +348,9 @@
                     {/each}
                     <Space height={"10px"}/>
                     <p>
-                        Last commit:  
-                        <!-- <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a></p> -->
+                        <!-- Last commit:   -->
+                        <!-- <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a> -->
+                    </p>
                 </div>
             </div>
         </div>
