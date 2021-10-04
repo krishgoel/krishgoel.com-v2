@@ -35,7 +35,7 @@
         // Commit details
         let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/refs/heads/main`);
         commitID = await commitID.json();
-        commitID = commitID.object.sha
+        // commitID = commitID.object.sha
 
         let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/commits/` + commitID);
         commit = await commit.json()
@@ -137,43 +137,119 @@
             </div>
             <Space height={"25px"}/>
 
-            <div class="row">
-                {#each range(0,3,1) as i, index}
-                    <div class="col-3">
-                        {#each projects as project, p}
-                            {#if project.fields.showonindex}
-                                {#if p%3 == i}
-                                <div class="card">
-                                    {#if project.fields.cover != undefined}
-                                        <img src="{project.fields.cover}" alt="Cover image for {project.fields.name}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
-                                    {/if}
-                                    <div class="width-restriction">
-                                        {#if project.fields.cover == undefined}
-                                            <h3 style="margin-top: 30px; margin-bottom: 0">{project.fields.name}</h3>
-                                        {:else}
-                                            <h3 style="margin-bottom: 0">{project.fields.name}</h3>
+            <div class="large-view">
+                <div class="row">
+                    {#each range(0,3,1) as i, index}
+                        <div class="col-3">
+                            {#each projects as project, p}
+                                {#if project.fields.showonindex}
+                                    {#if p%3 == i}
+                                    <div class="card">
+                                        {#if project.fields.cover != undefined}
+                                            <img src="{project.fields.cover}" alt="Cover image for {project.fields.name}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                                         {/if}
-                                        <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.fields.date} </p>
-                                        <p style="font-weight: bold; margin-bottom: 10px">{project.fields.type}</p>
-                                        <p style="margin-bottom: 10px;">{@html project.fields.description}</p>
-                                        <!-- Links -->
-                                        <div class="links">
-                                            {#if project.fields.link1 != undefined}
-                                                <p><a href="{project.fields.url1}" target="_blank" aria-label="{project.fields.link1}">{project.fields.link1}</a></p>
+                                        <div class="width-restriction">
+                                            {#if project.fields.cover == undefined}
+                                                <h3 style="padding-top: 30px; margin-bottom: 0">{project.fields.name}</h3>
+                                            {:else}
+                                                <h3 style="margin-bottom: 0">{project.fields.name}</h3>
                                             {/if}
-                                            {#if project.fields.link2 != undefined}
-                                                <p><a href="{project.fields.url2}" target="_blank" aria-label="{project.fields.link2}">{project.fields.link2}</a></p>
-                                            {/if}
-                                            {#if project.fields.link3 != undefined}
-                                                <p><a href="{project.fields.url3}" target="_blank" aria-label="{project.fields.link3}">{project.fields.link3}</a></p>
-                                            {/if}
+                                            <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.fields.date} </p>
+                                            <p style="font-weight: bold; margin-bottom: 10px">{project.fields.type}</p>
+                                            <p style="margin-bottom: 10px;">{@html project.fields.description}</p>
+                                            <!-- Links -->
+                                            <div class="links">
+                                                {#if project.fields.link1 != undefined}
+                                                    <p><a href="{project.fields.url1}" target="_blank" aria-label="{project.fields.link1}">{project.fields.link1}</a></p>
+                                                {/if}
+                                                {#if project.fields.link2 != undefined}
+                                                    <p><a href="{project.fields.url2}" target="_blank" aria-label="{project.fields.link2}">{project.fields.link2}</a></p>
+                                                {/if}
+                                                {#if project.fields.link3 != undefined}
+                                                    <p><a href="{project.fields.url3}" target="_blank" aria-label="{project.fields.link3}">{project.fields.link3}</a></p>
+                                                {/if}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    {/if}
                                 {/if}
+                            {/each}
+                        </div>
+                    {/each}
+                </div>
+            </div>
+            <div class="tablet-view">
+                <div class="row">
+                    {#each range(0,2,1) as i, index}
+                        <div class="col-2">
+                            {#each projects as project, p}
+                                {#if project.fields.showonindex}
+                                    {#if p%2 == i}
+                                    <div class="card">
+                                        {#if project.fields.cover != undefined}
+                                            <img src="{project.fields.cover}" alt="Cover image for {project.fields.name}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
+                                        {/if}
+                                        <div class="width-restriction">
+                                            {#if project.fields.cover == undefined}
+                                                <h3 style="margin-top: 30px; margin-bottom: 0">{project.fields.name}</h3>
+                                            {:else}
+                                                <h3 style="margin-bottom: 0">{project.fields.name}</h3>
+                                            {/if}
+                                            <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.fields.date} </p>
+                                            <p style="font-weight: bold; margin-bottom: 10px">{project.fields.type}</p>
+                                            <p style="margin-bottom: 10px;">{@html project.fields.description}</p>
+                                            <!-- Links -->
+                                            <div class="links">
+                                                {#if project.fields.link1 != undefined}
+                                                    <p><a href="{project.fields.url1}" target="_blank" aria-label="{project.fields.link1}">{project.fields.link1}</a></p>
+                                                {/if}
+                                                {#if project.fields.link2 != undefined}
+                                                    <p><a href="{project.fields.url2}" target="_blank" aria-label="{project.fields.link2}">{project.fields.link2}</a></p>
+                                                {/if}
+                                                {#if project.fields.link3 != undefined}
+                                                    <p><a href="{project.fields.url3}" target="_blank" aria-label="{project.fields.link3}">{project.fields.link3}</a></p>
+                                                {/if}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/if}
+                                {/if}
+                            {/each}
+                        </div>
+                    {/each}
+                </div>
+            </div>
+            <div class="mobile-view">
+                {#each projects as project, p}
+                    {#if project.fields.showonindex}
+                        <div class="card">
+                            {#if project.fields.cover != undefined}
+                                <img src="{project.fields.cover}" alt="Cover image for {project.fields.name}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                             {/if}
-                        {/each}
-                    </div>
+                            <div class="width-restriction">
+                                {#if project.fields.cover == undefined}
+                                    <h3 style="margin-top: 30px; margin-bottom: 0">{project.fields.name}</h3>
+                                {:else}
+                                    <h3 style="margin-bottom: 0">{project.fields.name}</h3>
+                                {/if}
+                                <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.fields.date} </p>
+                                <p style="font-weight: bold; margin-bottom: 10px">{project.fields.type}</p>
+                                <p style="margin-bottom: 10px;">{@html project.fields.description}</p>
+                                <!-- Links -->
+                                <div class="links">
+                                    {#if project.fields.link1 != undefined}
+                                        <p><a href="{project.fields.url1}" target="_blank" aria-label="{project.fields.link1}">{project.fields.link1}</a></p>
+                                    {/if}
+                                    {#if project.fields.link2 != undefined}
+                                        <p><a href="{project.fields.url2}" target="_blank" aria-label="{project.fields.link2}">{project.fields.link2}</a></p>
+                                    {/if}
+                                    {#if project.fields.link3 != undefined}
+                                        <p><a href="{project.fields.url3}" target="_blank" aria-label="{project.fields.link3}">{project.fields.link3}</a></p>
+                                    {/if}
+                                </div>
+                            </div>
+                        </div>
+                    {/if}
                 {/each}
             </div>
         </div>
@@ -192,26 +268,44 @@
                 </div>
             </div>
             <Space height={"25px"}/>
-            <div class="row">
-                {#each range(0,2,1) as i, index}
-                    <div class="col-2">
-                        {#each plants as blog, p}
-                            {#if blog.fields.showonindex}
-                                {#if p%2 == i}
-                                <div class="card">
-                                    <div class="width-restriction">
-                                        <h3>{blog.fields.title}</h3>
-                                        <p style="margin-bottom: 10px;">{blog.fields.description}</p>
-                                        <!-- Links -->
-                                        <div class="links">
-                                            <p><a href="/garden/{blog.fields.url}" aria-label="Link to blog">Read more</a></p>
+            <div class="large-view tablet-view">
+                <div class="row">
+                    {#each range(0,2,1) as i, index}
+                        <div class="col-2">
+                            {#each plants as blog, p}
+                                {#if blog.fields.showonindex}
+                                    {#if p%2 == i}
+                                    <div class="card">
+                                        <div class="width-restriction">
+                                            <h3>{blog.fields.title}</h3>
+                                            <p style="margin-bottom: 10px;">{blog.fields.description}</p>
+                                            <!-- Links -->
+                                            <div class="links">
+                                                <p><a href="/garden/{blog.fields.url}" aria-label="Link to blog">Read more</a></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    {/if}
                                 {/if}
-                            {/if}
-                        {/each}
-                    </div>
+                            {/each}
+                        </div>
+                    {/each}
+                </div>
+            </div>
+            <div class="mobile-view">
+                {#each plants as blog, p}
+                    {#if blog.fields.showonindex}
+                        <div class="card">
+                            <div class="width-restriction">
+                                <h3>{blog.fields.title}</h3>
+                                <p style="margin-bottom: 10px;">{blog.fields.description}</p>
+                                <!-- Links -->
+                                <div class="links">
+                                    <p><a href="/garden/{blog.fields.url}" aria-label="Link to blog">Read more</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    {/if}
                 {/each}
             </div>
         </div>
@@ -255,7 +349,7 @@
                     <Space height={"10px"}/>
                     <p>
                         Last commit:  
-                        <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a></p>
+                        <!-- <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a></p> -->
                 </div>
             </div>
         </div>

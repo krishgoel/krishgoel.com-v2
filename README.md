@@ -1,11 +1,9 @@
-# krishgoel.com ```-v4```
-> The source code to the 4th iteration of my personal website, hosted at [krishgoel-com-v4.vercel.app](https://krishgoel-com-v4.vercel.app) (not pushed to production yet).
+# krishgoel.com ```-v2```
+> The source code to the 2nd iteration of my personal website, hosted at [krishgoel-com-v4.vercel.app](https://krishgoel-com-v4.vercel.app) (not pushed to production yet).
 
 ## To-do for future upgrades
 - [ ] Find a better way to present ```/recent```
     - [ ] Fix ```/recent/books```
-- [ ] Fix the texts etc
-- [ ] All cards change there position on the mobile views because of row-stacking, fix it using the snippet from krishgoel.com```-v3```
 - [ ] GitHub repo update
 - [ ] Before pushing to production, ensure that the meta URLs are changed to krishgoel.com and not krishgoel-v4.vercel.app 
 - [ ] Add the project filtering tag system as suggested by Ishaan

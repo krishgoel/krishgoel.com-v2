@@ -38,23 +38,39 @@
     </div>
     <Space height={"25px"}/>
 
-    <div class="row">
-        {#each range(0,2,1) as i, index}
-            <div class="col-2">
-                {#each plants as blog, p}
-                    {#if p%2 == i}
-                    <div class="card">
-                        <div class="width-restriction">
-                            <h3>{blog.fields.title}</h3>
-                            <p style="margin-bottom: 10px;">{blog.fields.description}</p>
-                            <!-- Links -->
-                            <div class="links">
-                                <p><a href="/garden/{blog.fields.url}"  aria-label="Read more">Read more</a></p>
+    <div class="large-view tablet-view">
+        <div class="row">
+            {#each range(0,2,1) as i, index}
+                <div class="col-2">
+                    {#each plants as blog, p}
+                        {#if p%2 == i}
+                        <div class="card">
+                            <div class="width-restriction">
+                                <h3>{blog.fields.title}</h3>
+                                <p style="margin-bottom: 10px;">{blog.fields.description}</p>
+                                <!-- Links -->
+                                <div class="links">
+                                    <p><a href="/garden/{blog.fields.url}"  aria-label="Read more">Read more</a></p>
+                                </div>
                             </div>
                         </div>
+                        {/if}
+                    {/each}
+                </div>
+            {/each}
+        </div>
+    </div>
+    <div class="mobile-view">
+        {#each plants as blog, p}
+            <div class="card">
+                <div class="width-restriction">
+                    <h3>{blog.fields.title}</h3>
+                    <p style="margin-bottom: 10px;">{blog.fields.description}</p>
+                    <!-- Links -->
+                    <div class="links">
+                        <p><a href="/garden/{blog.fields.url}"  aria-label="Read more">Read more</a></p>
                     </div>
-                    {/if}
-                {/each}
+                </div>
             </div>
         {/each}
     </div>

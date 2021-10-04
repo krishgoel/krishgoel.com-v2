@@ -66,3 +66,22 @@
         width: 100%
     }
 }
+
+.mobile-view, .tablet-view, .large-view {
+    display: none
+}
+@media screen and (max-width: 450px) {
+    .mobile-view {
+        display: block;
+    }
+}
+@media screen and (min-width: 451px) and (max-width: 850px) {
+    .tablet-view {
+        display: block;
+    }
+}
+@media screen and (min-width: 851px) {
+    .large-view {
+        display: block;
+    }
+}
