@@ -46,7 +46,7 @@
 <nav class="{appearance}">
     <div class="width-restriction">
         {#if $page.path != "/"}
-            <h3 style="padding-right: 20px; color: #353535; margin-bottom: 0"><a rel=prefetch aria-label="Home Page" href="/" style="color: #353535">Krish Goel</a></h3>
+            <h3 style="padding-right: 20px; color: #353535; margin-bottom: 0; margin-top: 0"><a rel=prefetch aria-label="Home Page" href="/" style="color: #353535">Krish Goel</a></h3>
         {:else}
         <h3 style="padding-right: 20px; color: #353535; margin-bottom: 0"><a rel=prefetch aria-label="Home Page" href="/" style="display: none">Krish Goel</a></h3>
         {/if}
