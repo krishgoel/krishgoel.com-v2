@@ -132,6 +132,7 @@
                     <div class="inline">
                         <h2>Featured Projects</h2>
                         <p><a href="/projects" aria-label="See all projects">See all ></a></p>
+                        <p><a href="/bigdonmegaladon" aria-label="See all projects">See all ></a></p>
                     </div>
                     <Space height={"5px"}/>
                     <p>Below are some of my favourite projects I've worked on so far, this includes my hackathon submissions, side tinkers, failed startup ideas, and non-profits</p>
