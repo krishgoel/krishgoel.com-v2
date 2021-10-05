@@ -129,26 +129,25 @@ a {
 	cursor: pointer;
 }
 /* Dark */
-p a {
+p a, li a {
 	color: var(--light-link-color);
 	box-shadow: var(--link-underline) var(--light-link-underline);	
 }
-p a:hover {
+p a:hover, li a:hover {
 	box-shadow: var(--link-background) var(--light-link-hover-bg);
 	color: var(--light-link-hover)
 }
-
 /* Light */
 .light {
 	background-color: var(--light-background);
 	color: var(--dark-text);
 	padding: 30px 0;
 }
-.light p a {
+.light p a, .light li a  {
 	color: var(--dark-link-color);
 	box-shadow: var(--link-underline) var(--dark-link-underline);
 }
-.light p a:hover {
+.light p a:hover, .light li a:hover {
 	box-shadow: var(--link-background) var(--dark-link-hover-bg);
 	color: var(--dark-link-hover)
 }
