@@ -64,7 +64,7 @@
 
     let title= "Krish Goel | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app";
+    let url = "https://krishgoel.com";
 
     const livelistening = (async () => {
         var response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=KrishSkywalker&api_key=faa73d570313176a337af4dea9827765&format=json&limit=1`)

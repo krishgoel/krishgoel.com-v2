@@ -8,7 +8,7 @@
 
     let title= "Colophon | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is the colophon to the 4th edition of my portfolio website.";
-    let url = "https://krishgoel-v4.vercel.app/colophon";
+    let url = "https://krishgoel.com/colophon";
 </script>
 
 <svelte:head>

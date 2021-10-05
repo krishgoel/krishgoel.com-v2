@@ -5,7 +5,6 @@
 - [ ] Find a better way to present ```/recent```
     - [ ] Fix ```/recent/books```
 - [ ] GitHub repo update
-- [ ] Before pushing to production, ensure that the meta URLs are changed to krishgoel.com and not krishgoel-v4.vercel.app 
 - [ ] Add the project filtering tag system as suggested by Ishaan
 - [ ] Switch from Last.FM to Spotify for Music fetching
 

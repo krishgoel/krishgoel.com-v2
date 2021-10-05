@@ -28,7 +28,7 @@
 
     let title= "Experience | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is my XP.";
-    let url = "https://krishgoel-v4.vercel.app/experience";
+    let url = "https://krishgoel.com/experience";
 </script>
 
 <svelte:head>

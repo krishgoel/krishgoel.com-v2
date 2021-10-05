@@ -18,7 +18,7 @@
 
     let title= "Reach me | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi and here's how you can reach me.";
-    let url = "https://krishgoel-v4.vercel.app/contact";
+    let url = "https://krishgoel.com/contact";
 
     export let socials
 </script>

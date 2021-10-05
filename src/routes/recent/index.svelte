@@ -17,7 +17,7 @@
 
     let title= "Recent Activity | krishgoel.com";
     let description = "Hi, this page reflects the recent activities of Krish, a technophile and maker from New Delhi.";
-    let url = "https://krishgoel-v4.vercel.app/recent";
+    let url = "https://krishgoel.com/recent";
 </script>
 
 <svelte:head>

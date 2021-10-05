@@ -4,7 +4,7 @@
 
     let title= "Big Don Megaladon";
     let description = "Ladness Madness from the highschool yearbook";
-    let url = "https://krishgoel-com-v2.vercel.app/bigDonMegaladon";
+    let url = "https://krishgoel.com/bigdonmegaladon";
 
     let bois = [
         {
