@@ -1,6 +1,6 @@
 <script>
-    import { range } from '../scripts/range'
-    import Space from '../components/space.svelte'
+    import { range } from '../../scripts/range'
+    import Space from '../../components/space.svelte'
 
     let title= "Big Don Megaladon";
     let description = "Ladness Madness from the highschool yearbook";
