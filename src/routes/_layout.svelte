@@ -21,7 +21,7 @@
 	<Nav appearance={"light"}/>
 	<div class="width-restriction">
 		<slot>
-			<!-- The shit is injected here -->
+			<!-- The shit is injected here noice -->
 		</slot>
 	</div>
 	<Footer appearance={"light"}/>
