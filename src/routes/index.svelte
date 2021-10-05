@@ -33,13 +33,13 @@
         socials = await socials.json()
 
         // Commit details
-        let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/refs/heads/main`);
+        let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v2/git/refs/heads/main`);
         commitID = await commitID.json();
         if (commitID != undefined) {
             commitID = commitID.object.sha
         }
 
-        let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v4/git/commits/` + commitID);
+        let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v2/git/commits/` + commitID);
         commit = await commit.json()
         
         // Return values
@@ -352,7 +352,7 @@
                     <p>
                         Last commit:  
                         {#if commit != undefined}
-                            <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a>
+                            <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v2/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a>
                         {:else}
                             <span class="mono">Error occured, last commit not available</span>
                         {/if}
