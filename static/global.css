@@ -250,7 +250,7 @@ li {
 .slim-container img {
 	margin: 20px 0;
 }
-.slim-container h1, h2, h3{
+.slim-container h1, .slim-container h2, .slim-container h3{
 	margin-bottom: 15px;
 	margin-top: 10px
 }
