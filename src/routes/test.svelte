@@ -2,11 +2,9 @@
     import { range } from '../scripts/range'
     import Space from '../components/space.svelte'
 
-    // test comment
-    
     let title= "Big Don Megaladon";
     let description = "Ladness Madness from the highschool yearbook";
-    let url = "https://krishgoel-v4.vercel.app/bigDonMegaladon";
+    let url = "https://krishgoel-com-v2.vercel.app/bigDonMegaladon";
 
     let bois = [
         {
@@ -100,7 +98,7 @@
 </svelte:head>
 
 <section class="width-restriction">
-    <img src="https://i.kym-cdn.com/entries/icons/original/000/032/196/apes.jpg"/>
+    <img src="https://i.kym-cdn.com/entries/icons/original/000/032/196/apes.jpg" alt="Apes together strong"/>
     <h1>🍻 This one's fr da Sanskriti dons</h1>
     <p>If you're here because of the yearbook, you need to get better shit to do. If you're mentioned here you should really go kys 'cause you spent your time interacting with me in school but this also means you took away a portion of my time and that isn't something I regret giving to any one of you here. ly ❤️. sorryimbent</p>
     <Space height={"15px"}/>
