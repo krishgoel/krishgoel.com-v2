@@ -9,14 +9,10 @@
         let leadership = await this.fetch('/data/leadership.json')
         leadership = await leadership.json()
 
-        let courses = await this.fetch('/data/courses.json')
-        courses = await courses.json()
-
         return {
             socialservice: socialservice,
             dubs: dubs,
-            leadership: leadership,
-            courses: courses
+            leadership: leadership
         }
     }
 </script>
@@ -29,7 +25,6 @@
     export let socialservice
     export let dubs
     export let leadership
-    export let courses
 
     let title= "Experience | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is my XP.";
