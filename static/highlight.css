@@ -15,10 +15,8 @@ pre[class*="language-"] {
 	font-family: "SF-mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 0.9em;
 	text-align: left;
-	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
-	word-wrap: normal;
 	line-height: 1.5;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -27,6 +25,12 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
 }
 
 pre[class*="language-"]::-moz-selection,
