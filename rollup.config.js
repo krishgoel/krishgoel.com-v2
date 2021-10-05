@@ -1,20 +1,11 @@
-import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
-import {config} from 'dotenv'
 import commonjs from '@rollup/plugin-commonjs';
-import url from '@rollup/plugin-url';
 import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
-import sapperConfig from 'sapper/config/rollup.js';
+import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
-
-// To import local JSON files into Svelte files
-import json from '@rollup/plugin-json'
-
-// For accessing environment variables
-const production = !process.env.ROLLUP_WATCH;
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -27,29 +18,17 @@ const onwarn = (warning, onwarn) =>
 
 export default {
 	client: {
-		input: sapperConfig.client.input(),
-		output: sapperConfig.client.output(),
+		input: config.client.input(),
+		output: config.client.output(),
 		plugins: [
-			// To import local JSON files into Svelte files
-			json(),
 			replace({
-				// stringify the object       
-				process: JSON.stringify({
-					env: {
-						isProd: production,
-						...config().parsed // attached the .env config
-					}
-				}),
+				'process.browser': true,
+				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svelte({
-				compilerOptions: {
-					dev,
-					hydratable: true
-				}
-			}),
-			url({
-				sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
-				publicPath: '/client/'
+				dev,
+				hydratable: true,
+				emitCss: true
 			}),
 			resolve({
 				browser: true,
@@ -84,28 +63,17 @@ export default {
 	},
 
 	server: {
-		input: sapperConfig.server.input(),
-		output: sapperConfig.server.output(),
+		input: config.server.input(),
+		output: config.server.output(),
 		plugins: [
 			replace({
-				preventAssignment: true,
-				values:{
-					'process.browser': false,
-					'process.env.NODE_ENV': JSON.stringify(mode)
-				},
+				'process.browser': false,
+				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svelte({
-				compilerOptions: {
-					dev,
-					generate: 'ssr',
-					hydratable: true
-				},
-				emitCss: false
-			}),
-			url({
-				sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
-				publicPath: '/client/',
-				emitFiles: false // already emitted by client build
+				generate: 'ssr',
+				hydratable: true,
+				dev
 			}),
 			resolve({
 				dedupe: ['svelte']
@@ -113,25 +81,24 @@ export default {
 			commonjs()
 		],
 		external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
+
 		preserveEntrySignatures: 'strict',
 		onwarn,
 	},
 
 	serviceworker: {
-		input: sapperConfig.serviceworker.input(),
-		output: sapperConfig.serviceworker.output(),
+		input: config.serviceworker.input(),
+		output: config.serviceworker.output(),
 		plugins: [
 			resolve(),
 			replace({
-				preventAssignment: true,
-				values:{
-					'process.browser': true,
-					'process.env.NODE_ENV': JSON.stringify(mode)
-				},
+				'process.browser': true,
+				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			commonjs(),
 			!dev && terser()
 		],
+
 		preserveEntrySignatures: false,
 		onwarn,
 	}
