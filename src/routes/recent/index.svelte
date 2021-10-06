@@ -21,8 +21,8 @@
 
     export let toptracks
 
-    let title= "Recent Activity | krishgoel.com";
-    let description = "Hi, this page reflects the recent activities of Krish, a technophile and maker from New Delhi.";
+    let title= "Top tracks | krishgoel.com";
+    let description = "Hi, this page reflects the recent listening activities of Krish, a technophile and maker from New Delhi.";
     let url = "https://krishgoel.com/recent";
 </script>
 

@@ -16,7 +16,7 @@ Built on Svelte (with Sapper for routing) and hosted on Vercel.
 - svelte-prismjs
 
 ### APIs used
-- Potion (with Notion)
+<!-- - Potion (with Notion) -->
 - Audioscrobbler (with Last.fm)
 
 ### External libraries and snippets used
