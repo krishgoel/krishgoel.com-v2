@@ -68,10 +68,13 @@
                     <!--  -->
                     {:then data}
                         {#each data as track, i}
-                            <h4>{track.name}</h4>
-                            <p>by {track.artist.name}</p>
                             {#if i != 4}
+                                <h4>{track.name}</h4>
+                                <p>by {track.artist.name}</p>
                                 <hr/>
+                            {:else}
+                                <h4>{track.name}</h4>
+                                <p style="margin-bottom: 0">by {track.artist.name}</p>
                             {/if}
                         {/each}
                     {/await}
