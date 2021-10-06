@@ -4,8 +4,8 @@ on:
   # push: # Disabled because this creates a perpetual loop, every action causes a push which triggers the actions again
   #   branches:
   #     - main
-  schedule:
-    - cron: "0 1 * * *"
+  # schedule:
+    # - cron: "0 1 * * *"
   workflow_dispatch:
 
 jobs:
