@@ -1,0 +1,28 @@
+name: Top Tracks Fetch Workflow
+
+on:
+  # push: # Disabled because this creates a perpetual loop, every action causes a push which triggers the actions again
+  #   branches:
+  #     - main
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  refresh-feed:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Fetch Top Track from Last.FM
+        uses: JamesIves/fetch-api-data-action@releases/v1
+        with:
+          ENDPOINT: https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&period=7day&user=KrishSkywalker&api_key=faa73d570313176a337af4dea9827765&format=json&limit=5
+          SAVE_LOCATION: static/data
+          SAVE_NAME: toptracks
+
+      - name: Update toptracks.json
+        uses: test-room-7/action-update-file@v1
+        with:
+          file-path: static/data/toptracks.json
+          commit-msg: Updated toptracks.json
+          github-token: ${{ secrets.TOKEN }}

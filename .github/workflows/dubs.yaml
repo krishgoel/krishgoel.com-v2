@@ -1,28 +1,28 @@
-name: Dubs Fetch Workflow
+# name: Dubs Fetch Workflow
 
-on:
+# on:
   # push: # Disabled because this creates a perpetual loop, every action causes a push which triggers the actions again
   #   branches:
   #     - main
   # schedule:
     # - cron: "0 1 * * *"
-  workflow_dispatch:
+  # workflow_dispatch:
 
-jobs:
-  refresh-feed:
-    runs-on: ubuntu-latest
-    steps:
+# jobs:
+#   refresh-feed:
+#     runs-on: ubuntu-latest
+#     steps:
 
-      - name: Fetch Dubs from Potion
-        uses: JamesIves/fetch-api-data-action@releases/v1
-        with:
-          ENDPOINT: https://potion-api.vercel.app/table?id=edce5932ae364539866dfe523ef6f1a5
-          SAVE_LOCATION: static/data
-          SAVE_NAME: dubs
+#       - name: Fetch Dubs from Potion
+#         uses: JamesIves/fetch-api-data-action@releases/v1
+#         with:
+#           ENDPOINT: https://potion-api.vercel.app/table?id=edce5932ae364539866dfe523ef6f1a5
+#           SAVE_LOCATION: static/data
+#           SAVE_NAME: dubs
 
-      - name: Update dubs.json
-        uses: test-room-7/action-update-file@v1
-        with:
-          file-path: static/data/dubs.json
-          commit-msg: Updated dubs.json 
-          github-token: ${{ secrets.TOKEN }}
+#       - name: Update dubs.json
+#         uses: test-room-7/action-update-file@v1
+#         with:
+#           file-path: static/data/dubs.json
+#           commit-msg: Updated dubs.json 
+#           github-token: ${{ secrets.TOKEN }}

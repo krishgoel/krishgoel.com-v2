@@ -1,28 +1,28 @@
-name: Projects Fetch Workflow
+# name: Projects Fetch Workflow
 
-on:
-  # push: # Disabled because this creates a perpetual loop, every action causes a push which triggers the actions again
-  #   branches:
-  #     - main
-  # schedule:
-  #   - cron: "0 1 * * *"
-  workflow_dispatch:
+# on:
+#   # push: # Disabled because this creates a perpetual loop, every action causes a push which triggers the actions again
+#   #   branches:
+#   #     - main
+#   # schedule:
+#   #   - cron: "0 1 * * *"
+#   workflow_dispatch:
 
-jobs:
-  refresh-feed:
-    runs-on: ubuntu-latest
-    steps:
+# jobs:
+#   refresh-feed:
+#     runs-on: ubuntu-latest
+#     steps:
 
-      - name: Fetch Projects from Potion
-        uses: JamesIves/fetch-api-data-action@releases/v1
-        with:
-          ENDPOINT: https://potion-api.vercel.app/table?id=5856546a8a954678937de8e1d91d99d7
-          SAVE_LOCATION: static/data
-          SAVE_NAME: projects
+#       - name: Fetch Projects from Potion
+#         uses: JamesIves/fetch-api-data-action@releases/v1
+#         with:
+#           ENDPOINT: https://potion-api.vercel.app/table?id=5856546a8a954678937de8e1d91d99d7
+#           SAVE_LOCATION: static/data
+#           SAVE_NAME: projects
 
-      - name: Update projects.json
-        uses: test-room-7/action-update-file@v1
-        with:
-          file-path: static/data/projects.json
-          commit-msg: Updated projects.json 
-          github-token: ${{ secrets.TOKEN }}
+#       - name: Update projects.json
+#         uses: test-room-7/action-update-file@v1
+#         with:
+#           file-path: static/data/projects.json
+#           commit-msg: Updated projects.json 
+#           github-token: ${{ secrets.TOKEN }}

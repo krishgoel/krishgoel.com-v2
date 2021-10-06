@@ -195,6 +195,7 @@ li {
 .card {
 	padding: 30px 0;
 	border-radius: 10px;
+	/* margin-top: 0px; */
 	margin-bottom: 20px;
 	background-color: var(--light-background);
 	color: var(--dark-text);
