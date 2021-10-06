@@ -1,10 +1,10 @@
 <script>
-	import fetch from 'cross-fetch'
+	// import fetch from 'cross-fetch'
 
-    const thanks = (async () => {
-        var response = await fetch(`https://potion-api.vercel.app/html?id=8c5410f76b7444179afdfd874665a9b5`)
-        return await response.text()
-    })()
+    // const thanks = (async () => {
+    //     var response = await fetch(`https://potion-api.vercel.app/html?id=8c5410f76b7444179afdfd874665a9b5`)
+    //     return await response.text()
+    // })()
 
     let title= "Thanks | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is a thank you to everyone who's helped me in my journey.";
@@ -24,9 +24,21 @@
 </svelte:head>
 
 <section class="thanks slim-container">
-    {#await thanks}
-        <!--  -->
+    <!-- {#await thanks}
+
     {:then data}
         {@html data}
-    {/await}
+    {/await} -->
+    
+    <h1>Thanks</h1>
+    <p>This is a page dedicated to thank everyone who's been an absolute madlad</p>
+    <h2>Development of this website</h2>
+    <ul>
+        <li><a href="https://ishaandas.com/">Ishaan Das</a> made some fantastic <a href="https://www.figma.com/file/ys6XyJryfwtPeraRADHH0R/">Figma mockups</a>, gratis. He's also the guy behind the grid on the index page, make sure you check out his work. </li>
+    </ul>
+    <h2>General note of thanks</h2>
+    <ul>
+        <li>The fam gang for not disowning me</li>
+        <li>The entire fookin Mandem, for more check out <a href="/bigdonmegaladon">/bigdonmegaladon</a></li>
+    </ul>
 </section>
