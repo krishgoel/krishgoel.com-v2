@@ -52,6 +52,7 @@
             {#if $page.path != "/"}
                 <p><a rel=prefetch aria-label="Home Page" href="/">Home</a></p>
             {/if}
+            <p><a rel=prefetch aria-label="Blog" href="/blog">Blog</a></p>
             <p><a rel=prefetch aria-label="Garden" href="/garden">Garden</a></p>
             <p><a rel=prefetch aria-label="Projects" href="/projects">Projects</a></p>
             <p><a rel=prefetch aria-label="Experience" href="/experience">Experience</a></p>
