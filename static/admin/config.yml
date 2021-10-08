@@ -3,8 +3,8 @@ backend:
   branch: main
 
 publish_mode: editorial_workflow # Allows you to save drafts before publishing them
-media_folder: static/uploads # Media files will be stored in the repo under static/images/uploads
-public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
+# media_folder: static/uploads # Media files will be stored in the repo under static/images/uploads
+# public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
@@ -17,5 +17,24 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Date", name: "date", widget: "string" }
       - { label: "Read Time", name: "readtime", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+    - name: "projects"
+    label: "Projects"
+    folder: "static/data/projects"
+    create: true
+    fields:
+      - { label: "Show on index", name: "showonindex", widget: "boolean", default: true }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Cover", name: "cover", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "string" }
+      - { label: "Type", name: "type", widget: "string" }
+      - { label: "Link1", name: "link1", widget: "string" }
+      - { label: "URL1", name: "url1", widget: "string" }
+      - { label: "Link2", name: "link2", widget: "string" }
+      - { label: "URL2", name: "url2", widget: "string" }
+      - { label: "Link3", name: "link3", widget: "string" }
+      - { label: "URL3", name: "url3", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }

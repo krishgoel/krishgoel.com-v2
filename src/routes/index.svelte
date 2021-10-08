@@ -1,5 +1,5 @@
 <script context="module">
-    export async function preload() {
+    export async function preload({ params, query }) {
         // Projects
         let projects = await this.fetch(`/data/projects.json`);
         projects = await projects.json()
@@ -14,18 +14,18 @@
             projects.splice(eliminateProjects[i], 1)
         }
 
-        // Garden
-        let plants = await this.fetch(`/data/plants.json`);
-        plants = await plants.json()
-        let eliminatePlants = []
-        for (let i = 0; i < plants.length; i++) {
-            if (plants[i].fields.showonindex == undefined) {
-                eliminatePlants.push(i)
+        // Blog
+        let posts = await this.fetch(`blog.json`);
+        posts = await posts.json()
+        let eliminatePosts = []
+        for (let i = 0; i < posts.length; i++) {
+            if (posts[i].showonindex == false) {
+                eliminatePosts.push(i)
             }
         }
-        eliminatePlants = eliminatePlants.reverse()
-        for (let i = 0; i < eliminatePlants.length; i++) {
-            plants.splice(eliminatePlants[i], 1)
+        eliminatePosts = eliminatePosts.reverse()
+        for (let i = 0; i < eliminatePosts.length; i++) {
+            posts.splice(eliminatePosts[i], 1)
         }
 
         // Socials
@@ -45,7 +45,7 @@
         // Return values
         return {
             projects: projects,
-            plants: plants,
+            posts: posts,
             socials: socials,
             commit: commit
         }
@@ -72,9 +72,10 @@
     })()
 
     export let projects
-    export let commit
-    export let plants
+    export let posts
     export let socials
+    export let commit
+
 </script>
 
 <style>
@@ -132,10 +133,10 @@
                     <div class="inline">
                         <h2>Featured Projects</h2>
                         <p><a href="/projects" aria-label="See all projects">See all ></a></p>
-                        <!-- <p><a href="/bigdonmegaladon" aria-label="See all projects">See all ></a></p> -->
                     </div>
                     <Space height={"5px"}/>
                     <p>Below are some of my favourite projects I've worked on so far, this includes my hackathon submissions, side tinkers, failed startup ideas, and non-profits</p>
+                    <p>{JSON.stringify(posts)}</p>
                 </div>
             </div>
             <Space height={"25px"}/>
@@ -263,32 +264,33 @@
             <div class="row">
                 <div class="col-2">
                     <div class="inline">
-                        <h2>Tho(ugh)t Garden</h2>
-                        <p><a href="/garden">See all ></a></p>
+                        <h2>thoughts.log()</h2>
+                        <p><a href="/blog" aria-label="See all projects">aka /blog ></a></p>
                     </div>
                     <Space height={"5px"}/>
-                    <p>This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank" aria-label="Digital Garden Explanation">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, expectedly about technology, things I am using, or about the time I went backpacking to the foothills of mount Tibidabo ;) <i>This will take some more time for me to fully organize</i></p>                        
+                    <p>This is my blog. I plan on updating it periodically with any showcase worthy ideas/thoughts I have, expectedly about technology, things I am using, or about the time I went backpacking to the foothills of mount Tibidabo ;) <i>For a more recent insight into my current thoughts, check out <a rel="prefetch" href="/garden" aria-label="Digital Garden">/garden</a>.</i></p>
                 </div>
             </div>
             <Space height={"25px"}/>
+        
             <div class="large-view tablet-view">
                 <div class="row">
                     {#each range(0,2,1) as i, index}
                         <div class="col-2">
-                            {#each plants as blog, p}
-                                {#if blog.fields.showonindex}
-                                    {#if p%2 == i}
-                                    <div class="card">
-                                        <div class="width-restriction">
-                                            <h3>{blog.fields.title}</h3>
-                                            <p style="margin-bottom: 10px;">{blog.fields.description}</p>
-                                            <!-- Links -->
-                                            <div class="links">
-                                                <p><a href="/garden/{blog.fields.url}" aria-label="Link to blog">Read more</a></p>
-                                            </div>
+                            {#each posts as post, p}
+                                {#if p%2 == i}
+                                <div class="card">
+                                    <div class="width-restriction">
+                                        <h3>{post.title}</h3>
+                                        <p>{post.readtime}</p>
+                                        <Space height={"10px"}/>
+                                        <p style="margin-bottom: 10px;">{post.description}</p>
+                                        <!-- Links -->
+                                        <div class="links">
+                                            <p><a rel="prefetch" href="blog/{post.slug}" aria-label="Read more">Read more</a></p>
                                         </div>
                                     </div>
-                                    {/if}
+                                </div>
                                 {/if}
                             {/each}
                         </div>
@@ -296,19 +298,19 @@
                 </div>
             </div>
             <div class="mobile-view">
-                {#each plants as blog, p}
-                    {#if blog.fields.showonindex}
-                        <div class="card">
-                            <div class="width-restriction">
-                                <h3>{blog.fields.title}</h3>
-                                <p style="margin-bottom: 10px;">{blog.fields.description}</p>
-                                <!-- Links -->
-                                <div class="links">
-                                    <p><a href="/garden/{blog.fields.url}" aria-label="Link to blog">Read more</a></p>
-                                </div>
+                {#each posts as post, p}
+                    <div class="card">
+                        <div class="width-restriction">
+                            <h3>{post.title}</h3>
+                            <p>{post.readtime}</p>
+                            <Space height={"10px"}/>
+                            <p style="margin-bottom: 10px;">{post.description}</p>
+                            <!-- Links -->
+                            <div class="links">
+                                <p><a rel="prefetch" href="blog/{post.slug}" aria-label="Read more">Read more</a></p>
                             </div>
                         </div>
-                    {/if}
+                    </div>
                 {/each}
             </div>
         </div>
