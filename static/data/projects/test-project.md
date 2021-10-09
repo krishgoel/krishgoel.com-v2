@@ -5,8 +5,9 @@ cover: /uploads/img_7832.jpg
 description: Let's see how this turns out
 date: Why not?
 type: Test Project
+documentationAvailable: true
 link1: Documentation
-url1: https://krishgoel.com
+url1: ""
 slug: test-project
 ---
 # Kartik Srivastva
