@@ -7,7 +7,7 @@ date: Why not?
 type: Test Project
 link1: Documentation
 url1: https://krishgoel.com
-slug: test project
+slug: test-project
 ---
 # Kartik Srivastva
 
