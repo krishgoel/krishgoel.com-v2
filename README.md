@@ -6,6 +6,7 @@
     - [ ] Fix ```/recent/books```
 - [ ] GitHub repo update
 - [ ] Add the project filtering tag system as suggested by Ishaan
+- [ ] Add CMS functionality to socials.json
 - [ ] Switch from Last.FM to Spotify for Music fetching
 
 ## Tech stack

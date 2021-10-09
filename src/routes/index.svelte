@@ -1,7 +1,6 @@
 <script context="module">
     export async function preload({ params, query }) {
         // Projects
-
         let projects = await this.fetch(`projects.json`);
         projects = await projects.json()
         let eliminateProjects = []
@@ -14,19 +13,6 @@
         for (let i = 0; i < eliminateProjects.length; i++) {
             projects.splice(eliminateProjects[i], 1)
         }
-
-        // let projects = await this.fetch(`/data/projects.json`);
-        // projects = await projects.json()
-        // let eliminateProjects = []
-        // for (let i = 0; i < projects.length; i++) {
-        //     if (projects[i].fields.showonindex == undefined) {
-        //         eliminateProjects.push(i)
-        //     }
-        // }
-        // eliminateProjects = eliminateProjects.reverse()
-        // for (let i = 0; i < eliminateProjects.length; i++) {
-        //     projects.splice(eliminateProjects[i], 1)
-        // }
 
         // Blog
         let posts = await this.fetch(`blog.json`);
@@ -362,7 +348,7 @@
 					</div>
 					<p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span></p>
 					{#each socials as social, i}
-					<p><a aria-label="Link to my {social.fields.platform}" href="{social.fields.url}" target="_blank">{social.fields.platform}</a></p>
+					<p><a aria-label="Link to my {social.platform}" href="{social.url}" target="_blank">{social.platform}</a></p>
 					{/each}
 					<Space height={"10px"}/>
 					<p>

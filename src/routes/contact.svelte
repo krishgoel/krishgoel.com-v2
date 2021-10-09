@@ -86,7 +86,7 @@
     <p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span></p>
     <div class="socials">
         {#each socials as social, i}
-            <p><a aria-label="Link to my {social.fields.platform}" href="{social.fields.url}" target="_blank">{social.fields.platform}</a></p>
+            <p><a aria-label="Link to my {social.platform}" href="{social.url}" target="_blank">{social.platform}</a></p>
         {/each}
     </div>
 
