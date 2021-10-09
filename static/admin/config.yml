@@ -2,16 +2,16 @@ backend:
   name: git-gateway
   branch: main
 
-publish_mode: editorial_workflow # Allows you to save drafts before publishing them
-# media_folder: static/uploads # Media files will be stored in the repo under static/images/uploads
-# public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
+# publish_mode: editorial_workflow # Allows you to save drafts before publishing them
+media_folder: static/uploads # Media files will be stored in the repo under static/images/uploads
+public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "static/data/blogposts" # The path to the folder where our blog posts are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields for each document
+  - name: "blog"
+    label: "Blog"
+    folder: "static/data/blogposts"
+    create: true
+    fields:
       - { label: "Show on index", name: "showonindex", widget: "boolean", default: true }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
@@ -19,22 +19,23 @@ collections:
       - { label: "Read Time", name: "readtime", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-    - name: "projects"
+  - name: "projects"
     label: "Projects"
     folder: "static/data/projects"
     create: true
     fields:
-      - { label: "Show on index", name: "showonindex", widget: "boolean", default: true }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Cover", name: "cover", widget: "image" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Date", name: "date", widget: "string" }
-      - { label: "Type", name: "type", widget: "string" }
-      - { label: "Link1", name: "link1", widget: "string" }
-      - { label: "URL1", name: "url1", widget: "string" }
-      - { label: "Link2", name: "link2", widget: "string" }
-      - { label: "URL2", name: "url2", widget: "string" }
-      - { label: "Link3", name: "link3", widget: "string" }
-      - { label: "URL3", name: "url3", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+    - { label: "Show on index", name: "showonindex", widget: "boolean", default: true }
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Cover", name: "cover", widget: "image" }
+    - { label: "Description", name: "description", widget: "string" }
+    - { label: "Date", name: "date", widget: "string" }
+    - { label: "Type", name: "type", widget: "string" }
+    - { label: "Documentation available?", name: "documentationAvailable", widget: "boolean", default: false }
+    - { label: "Link1", name: "link1", widget: "string", required: false }
+    - { label: "URL1", name: "url1", widget: "string", required: false }
+    - { label: "Link2", name: "link2", widget: "string", required: false }
+    - { label: "URL2", name: "url2", widget: "string", required: false }
+    - { label: "Link3", name: "link3", widget: "string", required: false }
+    - { label: "URL3", name: "url3", widget: "string", required: false }
+    - { label: "Slug", name: "slug", widget: "string" }
+    - { label: "Body", name: "body", widget: "markdown" }

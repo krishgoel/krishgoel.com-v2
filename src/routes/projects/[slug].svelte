@@ -1,9 +1,9 @@
 <script context="module">
 	export async function preload({ params, query }) {
-		const res = await this.fetch(`blog/${params.slug}.json`);
+		const res = await this.fetch(`projects/${params.slug}.json`);
 		const data = await res.json();
 		if (res.status === 200) {
-			return { post: data };
+			return { project: data };
 		} else {
 			this.error(res.status, data.message);
 		}
@@ -13,11 +13,11 @@
 <script>
     import Space from '../../components/space.svelte'
 
-	export let post
+	export let project
 
-    let title= post.title + " | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is my blog.";
-    let url = "https://krishgoel.com/blog/" + post.slug;
+    let title= project.title + " | krishgoel.com";
+    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is the documentation to my Project " + project.title;
+    let url = "https://krishgoel.com/projects/" + project.slug;
 </script>
 
 <svelte:head>
@@ -33,7 +33,5 @@
 </svelte:head>
 
 <section class="slim-container">
-    <p>{post.date} · {post.readtime}</p>
-    <Space/>
-	{@html post.html}
+	{@html project.html}
 </section>

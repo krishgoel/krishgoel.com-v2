@@ -1,19 +1,17 @@
 <script context="module">
-    export async function preload() {
-        const response = await this.fetch('/data/projects.json');
-        const responseJson = await response.json();
-        return {
-            projects: responseJson
-        }
-    }
+	export function preload({ params, query }) {
+		return this.fetch(`projects.json`).then(r => r.json()).then(projects => {
+			return { projects };
+		});
+	}
 </script>
 
 <script>
-    import { range } from '../../scripts/range'
-    
-    import Space from '../../components/space.svelte'
-
     export let projects
+
+    import { range } from '../../scripts/range'
+
+    import Space from '../../components/space.svelte'
 
     let title= "Projects | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is a comprehensive list of all my projects.";
@@ -54,28 +52,32 @@
                     {#each projects as project, p}
                         {#if p%3 == i}
                         <div class="card">
-                            {#if project.fields.cover != undefined}
-                                <img src="{project.fields.cover}" alt="Cover image for {project.fields.name}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
+                            {#if project.cover != undefined}
+                                <img src="{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                             {/if}
                             <div class="width-restriction">
-                                {#if project.fields.cover == undefined}
-                                    <h3 style="padding-top: 30px; margin-bottom: 0">{project.fields.name}</h3>
+                                {#if project.cover == undefined}
+                                    <h3 style="padding-top: 30px; margin-bottom: 0">{project.title}</h3>
                                 {:else}
-                                    <h3 style="margin-bottom: 0">{project.fields.name}</h3>
+                                    <h3 style="margin-bottom: 0">{project.title}</h3>
                                 {/if}
-                                <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.fields.date} </p>
-                                <p style="font-weight: bold; margin-bottom: 10px">{project.fields.type}</p>
-                                <p style="margin-bottom: 10px;">{@html project.fields.description}</p>
+                                <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.date} </p>
+                                <p style="font-weight: bold; margin-bottom: 10px">{project.type}</p>
+                                <p style="margin-bottom: 10px;">{@html project.description}</p>
                                 <!-- Links -->
                                 <div class="links">
-                                    {#if project.fields.link1 != undefined}
-                                        <p><a href="{project.fields.url1}" target="_blank" aria-label="{project.fields.link1}">{project.fields.link1}</a></p>
+                                    {#if project.link1 != undefined}
+                                        {#if project.documentationAvailable == true}
+                                            <p><a rel="prefetch" href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
+                                        {:else}
+                                            <p><a href="{project.url1}" target="_blank" aria-label="{project.link1}">{project.link1}</a></p>
+                                        {/if}
                                     {/if}
-                                    {#if project.fields.link2 != undefined}
-                                        <p><a href="{project.fields.url2}" target="_blank" aria-label="{project.fields.link2}">{project.fields.link2}</a></p>
+                                    {#if project.link2 != undefined}
+                                        <p><a href="{project.url2}" target="_blank" aria-label="{project.link2}">{project.link2}</a></p>
                                     {/if}
-                                    {#if project.fields.link3 != undefined}
-                                        <p><a href="{project.fields.url3}" target="_blank" aria-label="{project.fields.link3}">{project.fields.link3}</a></p>
+                                    {#if project.link3 != undefined}
+                                        <p><a href="{project.url3}" target="_blank" aria-label="{project.link3}">{project.link3}</a></p>
                                     {/if}
                                 </div>
                             </div>
@@ -93,28 +95,32 @@
                     {#each projects as project, p}
                         {#if p%2 == i}
                         <div class="card">
-                            {#if project.fields.cover != undefined}
-                                <img src="{project.fields.cover}" alt="Cover image for {project.fields.name}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
+                            {#if project.cover != undefined}
+                                <img src="{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                             {/if}
                             <div class="width-restriction">
-                                {#if project.fields.cover == undefined}
-                                    <h3 style="padding-top: 30px; margin-bottom: 0">{project.fields.name}</h3>
+                                {#if project.cover == undefined}
+                                    <h3 style="padding-top: 30px; margin-bottom: 0">{project.title}</h3>
                                 {:else}
-                                    <h3 style="margin-bottom: 0">{project.fields.name}</h3>
+                                    <h3 style="margin-bottom: 0">{project.title}</h3>
                                 {/if}
-                                <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.fields.date} </p>
-                                <p style="font-weight: bold; margin-bottom: 10px">{project.fields.type}</p>
-                                <p style="margin-bottom: 10px;">{@html project.fields.description}</p>
+                                <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.date} </p>
+                                <p style="font-weight: bold; margin-bottom: 10px">{project.type}</p>
+                                <p style="margin-bottom: 10px;">{@html project.description}</p>
                                 <!-- Links -->
                                 <div class="links">
-                                    {#if project.fields.link1 != undefined}
-                                        <p><a href="{project.fields.url1}" target="_blank" aria-label="{project.fields.link1}">{project.fields.link1}</a></p>
+                                    {#if project.link1 != undefined}
+                                        {#if project.documentationAvailable == true}
+                                            <p><a rel="prefetch" href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
+                                        {:else}
+                                            <p><a href="{project.url1}" target="_blank" aria-label="{project.link1}">{project.link1}</a></p>
+                                        {/if}
                                     {/if}
-                                    {#if project.fields.link2 != undefined}
-                                        <p><a href="{project.fields.url2}" target="_blank" aria-label="{project.fields.link2}">{project.fields.link2}</a></p>
+                                    {#if project.link2 != undefined}
+                                        <p><a href="{project.url2}" target="_blank" aria-label="{project.link2}">{project.link2}</a></p>
                                     {/if}
-                                    {#if project.fields.link3 != undefined}
-                                        <p><a href="{project.fields.url3}" target="_blank" aria-label="{project.fields.link3}">{project.fields.link3}</a></p>
+                                    {#if project.link3 != undefined}
+                                        <p><a href="{project.url3}" target="_blank" aria-label="{project.link3}">{project.link3}</a></p>
                                     {/if}
                                 </div>
                             </div>
@@ -128,28 +134,32 @@
     <div class="mobile-view">
         {#each projects as project, p}
             <div class="card">
-                {#if project.fields.cover != undefined}
-                    <img src="{project.fields.cover}" alt="Cover image for {project.fields.name}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
+                {#if project.cover != undefined}
+                    <img src="{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                 {/if}
                 <div class="width-restriction">
-                    {#if project.fields.cover == undefined}
-                        <h3 style="padding-top: 30px; margin-bottom: 0">{project.fields.name}</h3>
+                    {#if project.cover == undefined}
+                        <h3 style="padding-top: 30px; margin-bottom: 0">{project.title}</h3>
                     {:else}
-                        <h3 style="margin-bottom: 0">{project.fields.name}</h3>
+                        <h3 style="margin-bottom: 0">{project.title}</h3>
                     {/if}
-                    <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.fields.date} </p>
-                    <p style="font-weight: bold; margin-bottom: 10px">{project.fields.type}</p>
-                    <p style="margin-bottom: 10px;">{@html project.fields.description}</p>
+                    <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.date} </p>
+                    <p style="font-weight: bold; margin-bottom: 10px">{project.type}</p>
+                    <p style="margin-bottom: 10px;">{@html project.description}</p>
                     <!-- Links -->
                     <div class="links">
-                        {#if project.fields.link1 != undefined}
-                            <p><a href="{project.fields.url1}" target="_blank" aria-label="{project.fields.link1}">{project.fields.link1}</a></p>
+                        {#if project.link1 != undefined}
+                            {#if project.documentationAvailable == true}
+                                <p><a rel="prefetch" href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
+                            {:else}
+                                <p><a href="{project.url1}" target="_blank" aria-label="{project.link1}">{project.link1}</a></p>
+                            {/if}
                         {/if}
-                        {#if project.fields.link2 != undefined}
-                            <p><a href="{project.fields.url2}" target="_blank" aria-label="{project.fields.link2}">{project.fields.link2}</a></p>
+                        {#if project.link2 != undefined}
+                            <p><a href="{project.url2}" target="_blank" aria-label="{project.link2}">{project.link2}</a></p>
                         {/if}
-                        {#if project.fields.link3 != undefined}
-                            <p><a href="{project.fields.url3}" target="_blank" aria-label="{project.fields.link3}">{project.fields.link3}</a></p>
+                        {#if project.link3 != undefined}
+                            <p><a href="{project.url3}" target="_blank" aria-label="{project.link3}">{project.link3}</a></p>
                         {/if}
                     </div>
                 </div>
