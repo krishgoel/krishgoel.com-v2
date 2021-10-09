@@ -1,7 +1,7 @@
 ---
 showonindex: true
 title: Test Project
-cover: /uploads/img_7832.jpg
+cover: images/uploads/img_7832.jpg
 description: Let's see how this turns out
 date: Why not?
 type: Test Project
