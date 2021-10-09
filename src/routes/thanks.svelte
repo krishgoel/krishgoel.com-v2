@@ -34,7 +34,7 @@
     <p>This is a page dedicated to thank everyone who's been an absolute madlad</p>
     <h2>Development of this website</h2>
     <ul>
-        <li><a href="https://ishaandas.com/">Ishaan Das</a> made some fantastic <a href="https://www.figma.com/file/ys6XyJryfwtPeraRADHH0R/">Figma mockups</a>, gratis. He's also the guy behind the grid on the index page, make sure you check out his work. </li>
+        <li><a href="https://ishaandas.com/" target="_blank">Ishaan Das</a> made some fantastic <a href="https://www.figma.com/file/ys6XyJryfwtPeraRADHH0R/" target="_blank">Figma mockups</a>, gratis. He's also the guy behind the grid on the index page, make sure you check out his work. </li>
     </ul>
     <h2>General note of thanks</h2>
     <ul>
