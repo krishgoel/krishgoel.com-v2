@@ -257,6 +257,9 @@ li {
 .slim-container p {
 	margin-bottom:  20px;
 }
+.slim-container blockquote p {
+	margin-bottom: 0
+}
 .slim-container ul {
 	margin-bottom: 25px;
 }
