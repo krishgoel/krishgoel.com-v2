@@ -20,6 +20,6 @@ export function get(_, res) {
   res.writeHead(200, {
     "Content-Type": "application/json",
   });
-  const leadership = getAllLeadership();
-  res.end(JSON.stringify(leadership));
+  const leaderships = getAllLeadership();
+  res.end(JSON.stringify(leaderships));
 }

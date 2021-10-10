@@ -73,7 +73,7 @@ collections:
     - { label: "URL2", name: "url2", widget: "string", required: false }
   - name: "leadership"
     label: "Leadership"
-    folder: "static/data/dubs"
+    folder: "static/data/leadership"
     create: true
     fields:
     - { label: "Title", name: "title", widget: "string" }
