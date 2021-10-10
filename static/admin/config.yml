@@ -37,6 +37,7 @@ collections:
     - { label: "Cover", name: "cover", widget: "image" }
     - { label: "Description", name: "description", widget: "string" }
     - { label: "Date", name: "date", widget: "string" }
+    - { label: "Stamp (for sorting)", name: "datestamp", widget: "date", format: "MM.YYYY" }
     - { label: "Type", name: "type", widget: "string" }
     - { label: "Documentation available?", name: "documentationAvailable", widget: "boolean", default: false }
     - { label: "Link1", name: "link1", widget: "string", required: false }
@@ -54,6 +55,7 @@ collections:
     fields:
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Date", name: "date", widget: "string" }
+    - { label: "Stamp (for sorting)", name: "datestamp", widget: "date", format: "MM.YYYY" }
     - { label: "Description", name: "description", widget: "string" }
     - { label: "Link1", name: "link1", widget: "string", required: false }
     - { label: "URL1", name: "url1", widget: "string", required: false }
@@ -66,6 +68,7 @@ collections:
     fields:
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Date", name: "date", widget: "string" }
+    - { label: "Stamp (for sorting)", name: "datestamp", widget: "date", format: "MM.YYYY" }
     - { label: "Description", name: "description", widget: "string" }
     - { label: "Link1", name: "link1", widget: "string", required: false }
     - { label: "URL1", name: "url1", widget: "string", required: false }
@@ -78,6 +81,7 @@ collections:
     fields:
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Date", name: "date", widget: "string" }
+    - { label: "Stamp (for sorting)", name: "datestamp", widget: "date", format: "MM.YYYY" }
     - { label: "Description", name: "description", widget: "string" }
     - { label: "Link1", name: "link1", widget: "string", required: false }
     - { label: "URL1", name: "url1", widget: "string", required: false }
