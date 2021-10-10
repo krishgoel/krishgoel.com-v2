@@ -20,6 +20,16 @@ export function get(_, res) {
   res.writeHead(200, {
     "Content-Type": "application/json",
   });
-  const projects = getAllProjects();
-  res.end(JSON.stringify(projects));
+  let projects = getAllProjects();
+  
+  // For sorting by date
+  // Splits the date into MM and YYYY and compares the year value with preference
+  projects = projects.sort(function (a, b) {
+    return parseInt(a.datestamp.substring(3,7)) - parseInt(b.datestamp.substring(3,7)) || parseInt(a.datestamp.substring(0,2)) - parseInt(b.datestamp.substring(0,2))
+  });
+  // Reverse to arrange newest - oldest
+  projects = projects.reverse()
+
+  projects = JSON.stringify(projects);
+  res.end(projects);
 }
