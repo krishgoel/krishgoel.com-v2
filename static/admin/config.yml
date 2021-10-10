@@ -34,7 +34,7 @@ collections:
     fields:
     - { label: "Show on index", name: "showonindex", widget: "boolean", default: true }
     - { label: "Title", name: "title", widget: "string" }
-    - { label: "Cover", name: "cover", widget: "image" }
+    - { label: "Cover", name: "cover", widget: "image", required: false }
     - { label: "Description", name: "description", widget: "string" }
     - { label: "Date", name: "date", widget: "string" }
     - { label: "Stamp (for sorting)", name: "datestamp", widget: "date", format: "MM.YYYY" }
@@ -47,7 +47,7 @@ collections:
     - { label: "Link3", name: "link3", widget: "string", required: false }
     - { label: "URL3", name: "url3", widget: "string", required: false }
     - { label: "Slug", name: "slug", widget: "string" }
-    - { label: "Body", name: "body", widget: "markdown" }
+    - { label: "Body", name: "body", widget: "markdown", required: false }
   - name: "socialservice"
     label: "Social Service"
     folder: "static/data/socialservice"
