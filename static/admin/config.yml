@@ -15,8 +15,7 @@ collections:
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Description", name: "description", widget: "string" }
     - { label: "Date", name: "date", widget: "string" }
-    - { label: "Date", name: "mate", widget: "string" }
-    # - { label: "Stamp (for sorting)", name: "datestamp", widget: "date" }
+    - { label: "Stamp (for sorting)", name: "datestamp", widget: "date", format: "MM.YYYY" }
     - { label: "Read Time", name: "readtime", widget: "string" }
     - { label: "Slug", name: "slug", widget: "string" }
     - { label: "Body", name: "body", widget: "markdown" }
