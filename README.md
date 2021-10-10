@@ -1,5 +1,5 @@
 # krishgoel.com ```-v2```
-> The source code to the 2nd iteration of my personal website, hosted at [krishgoel-com-v4.vercel.app](https://krishgoel-com-v4.vercel.app) (not pushed to production yet).
+> The source code to the 2nd iteration of my personal website (not pushed to production yet).
 
 ## To-do for future upgrades
 - [ ] Find a better way to present ```/recent```
@@ -10,14 +10,17 @@
 - [ ] Switch from Last.FM to Spotify for Music fetching
 
 ## Tech stack
-Built on Svelte (with Sapper for routing) and hosted on Vercel.
-### Other Node Packages used
+Built on Svelte (with Sapper for routing) and hosted on Netlify. Uses NetlifyCMS.
+
+### Other Node Packages and JS libraries used 
 - cross-fetch
 - svelte-typewriter
 - svelte-prismjs
+- gray-matter
+- marker
+- fs and path
 
 ### APIs used
-<!-- - Potion (with Notion) -->
 - Audioscrobbler (with Last.fm)
 
 ### External libraries and snippets used
