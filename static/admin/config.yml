@@ -2,7 +2,6 @@ backend:
   name: git-gateway
   branch: main
 
-# publish_mode: editorial_workflow # Allows you to save drafts before publishing them
 media_folder: static/images/uploads # Media files will be stored in the repo under static/images/uploads
 public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
 
@@ -16,6 +15,7 @@ collections:
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Description", name: "description", widget: "string" }
     - { label: "Date", name: "date", widget: "string" }
+    - { label: "Stamp (for sorting)", name: "datestamp", widget: "date", format: "MMYYYY" }
     - { label: "Read Time", name: "readtime", widget: "string" }
     - { label: "Slug", name: "slug", widget: "string" }
     - { label: "Body", name: "body", widget: "markdown" }
