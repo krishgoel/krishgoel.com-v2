@@ -49,13 +49,13 @@
 <section>
 	<div class="row">
         <div class="col-2">
-            <h1>Experience Portfolio</h1>
+            <h2>Experience Portfolio</h2>
             <p>This page is a log of all the events and activities that I believe have helped me gain insights into various domains that would otherwise be unreachable, ranging from rural sensitization trips focused around STEM education to introducing 280+ teachers at my school to AI and its applications.</p>
         </div>
     </div>
     <Space height={"15px"}/>
 	
-    <h2>Social Service</h2>
+    <h3>Social Service</h3>
     <Space height={"25px"}/>
 
     <div class="large-view">
@@ -143,7 +143,7 @@
 
     <Space height={"25px"}/>
 
-    <h2>Victories and Participations</h2>
+    <h3>Victories and Participations</h3>
     <Space height={"25px"}/>
 
     <div class="large-view">
@@ -232,7 +232,7 @@
     
     <Space height={"25px"}/>
     
-    <h2>Leadership and Positions Held</h2>
+    <h3>Leadership and Positions Held</h3>
     <Space height={"25px"}/>
 
     <div class="large-view">

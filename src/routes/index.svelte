@@ -145,7 +145,7 @@
                                 {#if p%3 == i}
                                 <div class="card">
                                     {#if project.cover != undefined}
-                                        <img src="{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
+                                        <img src="images/{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                                     {/if}
                                     <div class="width-restriction">
                                         {#if project.cover == undefined}
@@ -188,7 +188,7 @@
                                 {#if p%2 == i}
                                 <div class="card">
                                     {#if project.cover != undefined}
-                                        <img src="{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
+                                        <img src="images/{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                                     {/if}
                                     <div class="width-restriction">
                                         {#if project.cover == undefined}
@@ -227,7 +227,7 @@
                 {#each projects as project, p}
                     <div class="card">
                         {#if project.cover != undefined}
-                            <img src="{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
+                            <img src="images/{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                         {/if}
                         <div class="width-restriction">
                             {#if project.cover == undefined}
