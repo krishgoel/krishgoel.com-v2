@@ -1,5 +1,5 @@
 ---
-showonindex: true
+showonindex: false
 title: Alexation
 cover: /uploads/alexation.png
 description: Not very original, but this project eliminated the need of a
