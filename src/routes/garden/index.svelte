@@ -1,15 +1,15 @@
-<script context="module">
+<!-- <script context="module">
 	export function preload({ params, query }) {
 		return this.fetch(`garden.json`).then(r => r.json()).then(garden => {
 			return { garden };
 		});
 	}
-</script>
+</script> -->
 
 <script>
-    export let garden
+    // export let garden
 
-    import { range } from '../../scripts/range'
+    // import { range } from '../../scripts/range'
 
     import Space from '../../components/space.svelte'
     
@@ -45,7 +45,7 @@
     </div>
     <Space height={"25px"}/>
 
-    <div class="large-view">
+    <!-- <div class="large-view">
         <div class="row">
             {#each range(0,3,1) as i, index}
                 <div class="col-3">
@@ -96,5 +96,5 @@
             </div>
         </div>
         {/each}
-    </div>
+    </div> -->
 </section>
