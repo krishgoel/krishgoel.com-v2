@@ -45,10 +45,10 @@
 
 <nav class="{appearance}">
     <div class="width-restriction">
+        {#if $page.path != "/"}
+            <h3 style="padding-right: 20px; color: #353535; margin-bottom: 0; margin-top: 0"><a rel=prefetch aria-label="Home Page" href="/" style="color: #353535">Krish Goel</a></h3>
+        {/if}
         <div class="links">
-            {#if $page.path != "/"}
-                <p><a rel=prefetch aria-label="Home Page" href="/">Home</a></p>
-            {/if}
             <p><a rel=prefetch aria-label="Blog" href="/blog">Blog</a></p>
             <p><a rel=prefetch aria-label="Garden" href="/garden">Garden</a></p>
             <p><a rel=prefetch aria-label="Projects" href="/projects">Projects</a></p>
