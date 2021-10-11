@@ -333,7 +333,7 @@
 							<h3>{data.recenttracks.track[0].name}</h3>
 							<p>by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
 							<Space height={"10px"}/>
-							<p>Here's what <a aria-label="Recent Listening" href="/recent">I been up to lately</a></p>
+							<p>Here's what <a aria-label="Recent Listening" href="/recent">I been listening to lately</a></p>
 						</div>
 					</div>
 					{:catch error}
