@@ -319,26 +319,26 @@
 		<div class="width-restriction">
 			<div class="row">
 				<div class="col-2">
-					{#await livelistening}
-					<!--  -->
-					{:then data}
 					<div class="card">
 						<div class="width-restriction">
-							{#if data.recenttracks.track[0].hasOwnProperty("@attr")}
-							<p>Currently listening to</p>
-							{:else}
-							<p>Last listened to</p>
-							{/if}
-							<Space height={"10px"}/>
-							<h3>{data.recenttracks.track[0].name}</h3>
-							<p>by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
-							<Space height={"10px"}/>
-							<p>Here's what <a aria-label="Recent Listening" href="/recent">I been listening to lately</a></p>
+                            {#await livelistening}
+                                <!--  -->
+                            {:then data}
+                                {#if data.recenttracks.track[0].hasOwnProperty("@attr")}
+                                <p>Currently listening to</p>
+                                {:else}
+                                <p>Last listened to</p>
+                                {/if}
+                                <Space height={"10px"}/>
+                                <h3>{data.recenttracks.track[0].name}</h3>
+                                <p>by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
+                                <Space height={"10px"}/>
+                            {:catch error}
+                                <!--  -->
+                            {/await}
+							<p>Here's what <a aria-label="Recent Listening" href="/listening">I been listening to lately</a></p>
 						</div>
 					</div>
-					{:catch error}
-					<!--  -->
-					{/await}
 				</div>
 				<div class="col-2 socials">
 					<Space height={"10px"}/>

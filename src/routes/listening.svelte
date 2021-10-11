@@ -12,7 +12,7 @@
 <script>
 	import fetch from 'cross-fetch'
 
-    import Space from '../../components/space.svelte'
+    import Space from '../components/space.svelte'
 
     const livelistening = (async () => {
         var response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=KrishSkywalker&api_key=faa73d570313176a337af4dea9827765&format=json&limit=1`)
