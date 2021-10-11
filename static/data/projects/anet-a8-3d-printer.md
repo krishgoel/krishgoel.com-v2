@@ -1,5 +1,5 @@
 ---
-showonindex: true
+showonindex: false
 title: Anet A8 3D Printer
 description: I designed and assembled this Anet A8 inspired 3D printer with a
   0.5mm X-Y-Z slicing precision and 22cm cube printing volume.
