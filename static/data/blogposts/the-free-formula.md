@@ -6,6 +6,6 @@ description: This is a Sunday noon tinker wherein I tried finding a way to get
 date: 27.09.2021
 datestamp: "09.2021"
 readtime: IDK Minutes
-slug: thefreeformula
+slug: the-free-formula
 ---
 t
