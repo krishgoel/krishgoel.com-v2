@@ -1,6 +1,7 @@
 ---
 showonindex: true
 title: Arduino Drumpads
+cover: images/uploads/img_7923.jpg
 description: I designed e-drums while eliminating the MIDI and laptop
   requirements that require close to none setup and make it more cost-effective.
 date: August 2017
