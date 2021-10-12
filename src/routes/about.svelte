@@ -32,8 +32,6 @@
     
     <p>I attended <a href="http://sanskritischool.edu.in">Sanskriti School, Chanakyapuri</a> for my high schooling. I was the Vice-President and then HoD AI and IoT at my school's tech and entrepreneurship club - <a href="http://projectbeta.club/">ProjectBeta</a>. My tenure at the club entailed organizing three annual tech symposiums attended by well over 300 students from the most prestigious clubs of the Delhi Tech Circuit and leading the school team to victory at various national and international events in the NCR. I also served as the Director of Technical Operations at Sanskriti Model UN for two consecutive years.</p>
 
-    <p>You can find more on my experience at <a href="/experience" aria-label="Experience">/experience</a>.</p>
-    
     <p>Welcome to <s>my website</s> the bent side of things (btw irrespective of the <span class="swag">kringe,</span> people <strong>LIKE</strong> to call me <span class="mono">KrishSkywalker</span> &macr;\(ツ)/&macr;. Yes)</p>
     
     <p>Feel free to <a href="http://krishgoel.com/contact">/contact me</a> if you wish to talk about/collaborate on anything.</p>
