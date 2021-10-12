@@ -1,7 +1,7 @@
 ---
 showonindex: true
 title: Sanskriti MUN 2020 Webapp
-cover: /uploads/smun.png
+cover: /images/uploads/smun.png
 description: I developed the webapp for Sanskriti Model UN Conference of 2020.
   The conference however was cancelled due to the Pandemic.
 date: January 2020

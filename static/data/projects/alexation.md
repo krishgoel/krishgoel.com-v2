@@ -1,7 +1,7 @@
 ---
 showonindex: false
 title: Alexation
-cover: /uploads/alexation.png
+cover: /images/uploads/alexation.png
 description: Not very original, but this project eliminated the need of a
   central Alexa hub by creating an ecosystem using NodeMCU. It brings down the
   cost of automation from $20 to $3 per device.

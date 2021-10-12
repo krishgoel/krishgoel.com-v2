@@ -1,7 +1,7 @@
 ---
 showonindex: false
 title: BinaryBox
-cover: /uploads/binary-box.png
+cover: /images/uploads/binary-box.png
 description: A subscription-based STEM Kits delivery service model that Kartik
   Gupta and I developed for an IT event.
 date: September 2019
