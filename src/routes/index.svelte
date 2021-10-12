@@ -144,11 +144,11 @@
                             {#each projects as project, p}
                                 {#if p%3 == i}
                                 <div class="card">
-                                    {#if project.cover != undefined}
+                                    {#if project.cover != undefined && project.cover != ""}
                                         <img src="{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                                     {/if}
                                     <div class="width-restriction">
-                                        {#if project.cover == undefined}
+                                        {#if project.cover == undefined || project.cover == ""}
                                             <h3 style="padding-top: 30px; margin-bottom: 0">{project.title}</h3>
                                         {:else}
                                             <h3 style="margin-bottom: 0">{project.title}</h3>
@@ -187,11 +187,11 @@
                             {#each projects as project, p}
                                 {#if p%2 == i}
                                 <div class="card">
-                                    {#if project.cover != undefined}
+                                    {#if project.cover != undefined && project.cover != ""}
                                         <img src="{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                                     {/if}
                                     <div class="width-restriction">
-                                        {#if project.cover == undefined}
+                                        {#if project.cover == undefined || project.cover == ""}
                                             <h3 style="padding-top: 30px; margin-bottom: 0">{project.title}</h3>
                                         {:else}
                                             <h3 style="margin-bottom: 0">{project.title}</h3>
@@ -226,11 +226,11 @@
             <div class="mobile-view">
                 {#each projects as project, p}
                     <div class="card">
-                        {#if project.cover != undefined}
+                        {#if project.cover != undefined && project.cover != ""}
                             <img src="{project.cover}" alt="Cover image for {project.title}" style="margin-bottom: 20px; width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; "/>
                         {/if}
                         <div class="width-restriction">
-                            {#if project.cover == undefined}
+                            {#if project.cover == undefined || project.cover == ""}
                                 <h3 style="padding-top: 30px; margin-bottom: 0">{project.title}</h3>
                             {:else}
                                 <h3 style="margin-bottom: 0">{project.title}</h3>
