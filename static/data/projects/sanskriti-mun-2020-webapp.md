@@ -1,5 +1,5 @@
 ---
-showonindex: true
+showonindex: false
 title: Sanskriti MUN 2020 Webapp
 cover: /images/uploads/smun.png
 description: I developed the webapp for Sanskriti Model UN Conference of 2020.
