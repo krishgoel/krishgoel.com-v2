@@ -11,7 +11,7 @@ collections:
     folder: "static/data/blogposts"
     create: true
     fields:
-    - { label: "Show on index", name: "showonindex", widget: "boolean", default: true }
+    - { label: "Show on index", name: "showonindex", widget: "boolean", default: false }
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Description", name: "description", widget: "string" }
     - { label: "Date", name: "date", widget: "string" }
@@ -32,7 +32,7 @@ collections:
     folder: "static/data/projects"
     create: true
     fields:
-    - { label: "Show on index", name: "showonindex", widget: "boolean", default: true }
+    - { label: "Show on index", name: "showonindex", widget: "boolean", default: false }
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Cover", name: "cover", widget: "image", required: false }
     - { label: "Description", name: "description", widget: "string" }
