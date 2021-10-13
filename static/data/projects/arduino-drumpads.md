@@ -1,5 +1,5 @@
 ---
-showonindex: true
+showonindex: false
 title: Arduino Drumpads
 cover: ""
 description: I designed e-drums while eliminating the MIDI and laptop
