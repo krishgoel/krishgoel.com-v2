@@ -9,7 +9,7 @@ date: April 2021
 datestamp: "04.2021"
 type: Emergency service
 documentationAvailable: false
-link1: DocumentationWebapp
+link1: Webapp
 url1: https://covaid.vercel.app
 link2: Certificates
 url2: https://covaid-certificates.vercel.app/
