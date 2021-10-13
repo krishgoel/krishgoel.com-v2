@@ -8,13 +8,13 @@ description: 4 friends and I co-founded CovAID to provide personally verified
 date: April 2021
 datestamp: "04.2021"
 type: Emergency service
-documentationAvailable: false
-link1: Webapp
-url1: https://covaid.vercel.app
-link2: Certificates
-url2: https://covaid-certificates.vercel.app/
-link3: Recognition
-url3: /projects/covaid
+documentationAvailable: true
+link1: Documentation
+url1: /projects/covaid
+link2: Webapp
+url2: https://covaid.vercel.app
+link3: Certificates
+url3: https://covaid-certificates.vercel.app
 slug: covaid
 ---
 # CovAID
