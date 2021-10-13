@@ -14,10 +14,14 @@ slug: vkyd
 ---
 # **VKYD** *( /ˈwɪkɪd/ )*
 
-> [vkyd-main-webapp.vercel.app](https://vkyd-main-webapp.vercel.app/) (VKYD Web App, under development)
->
-> [vkyd-lcfr.vercel.app](https://vkyd-lcfr.vercel.app/) (VKYD’s self-hosted CDN)
->
+> *[vkyd-main-webapp.vercel.app](https://vkyd-main-webapp.vercel.app/)* (VKYD Web App, under development)
+
+
+
+> *[vkyd-lcfr.vercel.app](https://vkyd-lcfr.vercel.app/)* (VKYD’s self-hosted CDN)
+
+
+
 > *[vkyd.herokuapp.com](http://vkyd.herokuapp.com/)* (Abandoned prototype web app because of a suboptimal tech-stack)
 
 ![](images/uploads/vkyd-goofy.png)
