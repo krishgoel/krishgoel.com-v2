@@ -21,9 +21,9 @@
 
     export let toptracks
 
-    let title= "Top tracks | krishgoel.com";
+    let title= "Top Tracks | krishgoel.com";
     let description = "Hi, this page reflects the recent listening activities of Krish, a technophile and maker from New Delhi.";
-    let url = "https://krishgoel.com/recent";
+    let url = "https://krishgoel.com/listening";
 </script>
 
 <svelte:head>
