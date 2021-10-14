@@ -32,7 +32,7 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section class="slim-container">
+<section class="slim-container post">
     <p>{post.date} · {post.readtime}</p>
     <Space/>
 	{@html post.html}

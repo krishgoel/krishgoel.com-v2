@@ -32,6 +32,6 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section class="slim-container">
+<section class="slim-container post">
 	{@html project.html}
 </section>
