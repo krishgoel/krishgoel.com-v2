@@ -29,6 +29,7 @@
     <h2>Development of this website</h2>
     <ul>
         <li><a href="https://ishaandas.com/" target="_blank">Ishaan Das</a> made some fantastic <a href="https://www.figma.com/file/ys6XyJryfwtPeraRADHH0R/" target="_blank">Figma mockups</a>, gratis. He's also the guy behind the grid on the index page, make sure you check out his work. </li>
+        <li><a href="https://www.mahmoudashraf.dev/" target="_blank">Mahmoud Ashraf</a> for writing <a href="https://www.mahmoudashraf.dev/blog/build-a-blog-with-svelte-and-markdown/" target="_blank">this article</a> on adding highlighting to markdown rendered Svelte.</li>
     </ul>
     <h2>General note of thanks</h2>
     <ul>
