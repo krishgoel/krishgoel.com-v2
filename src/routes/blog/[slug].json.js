@@ -2,38 +2,54 @@ import path from "path";
 import fs from "fs";
 import grayMatter from "gray-matter";
 import marked from "marked";
+import hljs from "highlight.js";
 
-const getPost = (fileName) => {
-  return fs.readFileSync(
-    path.resolve("static/data/blogposts/", `${fileName}.md`),
-    "utf-8"
-  );
-};
+const getPost = fileName =>
+	fs.readFileSync(path.resolve("static/data/blogposts/", `${fileName}.md`), "utf-8");
 
-export function get(req, res, _) {
-  const { slug } = req.params;
+export function get(req, res, next) {
+	const {
+		slug
+	} = req.params;
 
-  const post = getPost(slug);
-  const renderer = new marked.Renderer();
+	const post = getPost(slug);
 
-  const { data, content } = grayMatter(post);
-  const html = marked(content, { renderer });
+	const renderer = new marked.Renderer();
 
-  if (html) {
-    res.writeHead(200, {
-      "Content-Type": "application/json",
-    });
+	renderer.code = (source, lang) => {
+		const {
+			value: highlighted
+		} = hljs.highlight(lang, source);
+		return `<pre class='language-javascriptreact'><code>${highlighted}</code></pre>`;
+	};
 
-    res.end(JSON.stringify({ html, ...data }));
-  } else {
-    res.writeHead(404, {
-      "Content-Type": "application/json",
-    });
+	const {
+		data,
+		content
+	} = grayMatter(post);
 
-    res.end(
-      JSON.stringify({
-        message: `Not found`,
-      })
-    );
-  }
+	const html = marked(content, {
+		renderer
+	});
+
+	if (html) {
+		res.writeHead(200, {
+			"Content-Type": "application/json"
+		});
+
+		res.end(JSON.stringify({
+			html,
+			...data
+		}));
+	} else {
+		res.writeHead(404, {
+			"Content-Type": "application/json"
+		});
+
+		res.end(
+			JSON.stringify({
+				message: `Not found`
+			})
+		);
+	}
 }

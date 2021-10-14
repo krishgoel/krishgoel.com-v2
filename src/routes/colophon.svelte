@@ -23,7 +23,7 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section class="colophon slim-container">
+<section class="colophon slim-container post">
 	<h1>Colophon</h1>
 
 	<p>I built <a href="https://v0.krishgoel.com" target="_blank">my first portfolio webpage</a> in 2018, welcome to its 2nd iteration. </p>

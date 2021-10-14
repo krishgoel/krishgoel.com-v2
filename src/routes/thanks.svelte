@@ -23,13 +23,7 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section class="thanks slim-container">
-    <!-- {#await thanks}
-
-    {:then data}
-        {@html data}
-    {/await} -->
-    
+<section class="thanks slim-container post">
     <h1>Thanks</h1>
     <p>This is a page dedicated to thank everyone who's been an absolute madlad</p>
     <h2>Development of this website</h2>

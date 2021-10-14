@@ -186,6 +186,10 @@ pre {
 	border-radius: 10px;
 	padding: 20px 30px;
 }
+code {
+	font-size: 15px;
+	font-family: "SF-mono", "Ubuntu Mono", monospace;
+}
 blockquote {
 	margin-left: 0;
 	border-left: 5px solid;
@@ -271,5 +275,8 @@ li {
 	margin-bottom: 0
 }
 .post ul {
-	margin-bottom: 25px;
+	margin-bottom: 30px;
+}
+.post .pre {
+	margin-bottom: 300px;
 }

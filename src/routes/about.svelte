@@ -23,7 +23,7 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section class="slim-container">
+<section class="slim-container post">
     <img src="/images/uploads/about.jpg" alt="Krish Goel">
 
     <p>Hi there, I am Krish. I am a technophile from New Delhi, currently pursuing my BTech in Mechatronics from <a href="https://manipal.edu/mit.html">MIT, Manipal</a>. My Interest lies at the intersection of CS, cyber-physical systems, and behavioral psychology alongside startups and finances.</p>
