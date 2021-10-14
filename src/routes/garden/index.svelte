@@ -1,15 +1,24 @@
-<!-- <script context="module">
+<script context="module">
 	export function preload({ params, query }) {
 		return this.fetch(`garden.json`).then(r => r.json()).then(garden => {
 			return { garden };
 		});
 	}
-</script> -->
+</script>
 
 <script>
-    // export let garden
+    export let garden
 
-    // import { range } from '../../scripts/range'
+    // In case of switching from CMS functionality to typed-in JS Objects
+    // let garden = [
+    //     {
+    //         "title": "",
+    //         "description": "",
+    //         "url": ""
+    //     }
+    // ]
+
+    import { range } from '../../scripts/range'
 
     import Space from '../../components/space.svelte'
     
@@ -19,8 +28,16 @@
 </script>
 
 <style>
-    .card a h3 {
+    .card {
+        padding: 15px 0;
+    }
+    .card a {
         color: var(--dark-text)
+    }
+    .card a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 </style>
 
@@ -36,36 +53,12 @@
     <meta name="twitter:description" content="{description}" />
 </svelte:head>
 
-<section>
-    <div class="row">
-        <div class="col-2">
-            <h2>Thoughts Garden</h2>
-            <p>This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank"  aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, which can lie anywhere on the spectrum between behaviorism and design. <i>This will take some more time for me to fully organize. Meanwhile you can check out more furnished ideas at <a href="/blog" aria-label="Blog">/blog</a>.</i></p>
-        </div>
-    </div>
+<section class="slim-container">
+    <h2>Thoughts Garden</h2>
+    <p>This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank"  aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, which can lie anywhere on the spectrum between behaviorism and design. <i>This will take some more time for me to fully organize. Meanwhile you can check out more furnished ideas at <a href="/blog" aria-label="Blog">/blog</a>.</i></p>
     <Space height={"25px"}/>
 
-    <!-- <div class="large-view">
-        <div class="row">
-            {#each range(0,3,1) as i, index}
-                <div class="col-3">
-                    {#each garden as plant, p}
-                        {#if p%3 == i}
-                        <div class="card">
-                            <div class="width-restriction">
-                                <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">
-                                    <h3>{plant.title} &nbsp; ↗</h3>
-                                </a>
-                                <p>{plant.description}</p>
-                            </div>
-                        </div>
-                        {/if}
-                    {/each}
-                </div>
-            {/each}
-        </div>
-    </div>
-    <div class="tablet-view">
+    <div class="large-view tablet-view">
         <div class="row">
             {#each range(0,2,1) as i, index}
                 <div class="col-2">
@@ -74,7 +67,7 @@
                         <div class="card">
                             <div class="width-restriction">
                                 <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">
-                                    <h3>{plant.title} &nbsp; ↗</h3>
+                                    <h4 class="mono">{plant.title} ↗</h4>
                                 </a>
                                 <p>{plant.description}</p>
                             </div>
@@ -90,11 +83,11 @@
         <div class="card">
             <div class="width-restriction">
                 <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">
-                    <h3>{plant.title} &nbsp; ↗</h3>
+                    <h4 class="mono">{plant.title} ↗</h4>
                 </a>
                 <p>{plant.description}</p>
             </div>
         </div>
         {/each}
-    </div> -->
+    </div>
 </section>
