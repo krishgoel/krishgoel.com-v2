@@ -55,6 +55,10 @@ h3 {
 	font-size: clamp(22px, 2.7vw, 25px);
 	margin-bottom: 5px;
 }
+h4 {
+	font-size: clamp(17px, 2vw, 23px);
+	margin-bottom: 5px;
+}
 p {
 	/* font-size: clamp(14px, 0.97rem, 20px); */
 	font-size: 15px;
@@ -76,7 +80,16 @@ body {
 	font-family: "Akkurat";
 }
 
-::-moz-selection, ::selection {
+/* Selection */
+::-moz-selection {
+	color: #ffffff;
+	background: #00415f73;
+}
+::selection {
+	color: #ffffff;
+	background: #00415f73;
+} 
+::webkit-selection {
 	color: #ffffff;
 	background: #00415f73;
 }
