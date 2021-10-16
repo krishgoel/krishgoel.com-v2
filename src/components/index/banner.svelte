@@ -1,8 +1,8 @@
 <style>
     .banner {
         width: 100%;
-        /* background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%), url(/images/banner.jpeg); */
-        background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%);
+        background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%), url(/images/uploads/banner.jpg);
+        /* background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%); */
         background-position: 50% 20%;
         background-repeat: no-repeat;
         background-size: cover;
