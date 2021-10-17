@@ -54,8 +54,10 @@
 </svelte:head>
 
 <section class="slim-container">
-    <h2>Thoughts Garden</h2>
-    <p>This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank"  aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, which can lie anywhere on the spectrum between behaviorism and design. <i>This will take some more time for me to fully organize. Meanwhile you can check out more furnished ideas at <a href="/blog" aria-label="Blog">/blog</a>.</i></p>
+    <h2>Garden of Thoughts</h2>
+    <p>This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank"  aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, which can lie anywhere on the spectrum between behaviorism and design.</p>
+    
+    <p><i>This will take some more time for me to fully organize. Meanwhile you can check out more furnished ideas at <a href="/blog" aria-label="Blog">/blog</a>. </i>Inspired by <a href="https://kabirgoel.com/garden" aria-label="Kabir Goel's Digital Garden" target="_blank">Kabir Goel's Garden</a>.</p>
     <Space height={"25px"}/>
 
     <div class="large-view tablet-view">
