@@ -29,16 +29,16 @@
 
 <style>
     .card {
-        padding: 15px 0;
+        padding: 25px 0;
     }
     .card a {
         color: var(--dark-text)
     }
-    .card a {
+    /* .card a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
+    } */
 </style>
 
 <svelte:head>
@@ -51,6 +51,8 @@
     <meta name="twitter:title" content="{title}" />
     <meta name="twitter:url" content="{url}" />
     <meta name="twitter:description" content="{description}" />
+
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </svelte:head>
 
 <section class="slim-container">
@@ -68,9 +70,10 @@
                         {#if p%2 == i}
                         <div class="card">
                             <div class="width-restriction">
-                                <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">
-                                    <h4 class="mono">{plant.title} ↗</h4>
-                                </a>
+                                <h4>
+                                    <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">{plant.title}</a>
+                                    <i class='fas fa-external-link-alt' style="font-size: 12px; position: relative; bottom: 2px"></i>
+                                </h4>
                                 <p>{plant.description}</p>
                             </div>
                         </div>
@@ -84,9 +87,10 @@
         {#each garden as plant, p}
         <div class="card">
             <div class="width-restriction">
-                <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">
-                    <h4 class="mono">{plant.title} ↗</h4>
-                </a>
+                <h4>
+                    <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">{plant.title}</a>
+                    <i class='fas fa-external-link-alt' style="font-size: 12px; position: relative; bottom: 2px"></i>
+                </h4>
                 <p>{plant.description}</p>
             </div>
         </div>
