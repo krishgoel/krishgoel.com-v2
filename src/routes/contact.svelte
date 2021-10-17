@@ -80,7 +80,7 @@
 </style>
 
 <section class="contact slim-container">
-    <h1>Contact me</h1>
+    <h2>Contact me</h2>
     <Space height={"25px"}/>
 
     <p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span></p>
