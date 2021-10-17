@@ -71,8 +71,7 @@
                         <div class="card">
                             <div class="width-restriction">
                                 <h4>
-                                    <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">{plant.title}</a>
-                                    <i class='fas fa-external-link-alt' style="font-size: 12px; position: relative; bottom: 2px"></i>
+                                    <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">{plant.title} <i class='fas fa-external-link-alt' style="font-size: 12px; position: relative; bottom: 2px"></i></a>
                                 </h4>
                                 <p>{plant.description}</p>
                             </div>
@@ -88,8 +87,7 @@
         <div class="card">
             <div class="width-restriction">
                 <h4>
-                    <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">{plant.title}</a>
-                    <i class='fas fa-external-link-alt' style="font-size: 12px; position: relative; bottom: 2px"></i>
+                    <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">{plant.title} <i class='fas fa-external-link-alt' style="font-size: 12px; position: relative; bottom: 2px"></i></a>
                 </h4>
                 <p>{plant.description}</p>
             </div>
