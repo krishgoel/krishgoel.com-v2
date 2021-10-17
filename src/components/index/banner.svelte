@@ -3,7 +3,7 @@
         width: 100%;
         background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%), url(/images/uploads/banner.PNG);
         /* background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%); */
-        background-position: 75% 90%;
+        background-position: 70% 80%;
         background-repeat: no-repeat;
         background-size: cover;
         background-color: var(--dark-background);
