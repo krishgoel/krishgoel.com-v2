@@ -34,11 +34,6 @@
     .card a {
         color: var(--dark-text)
     }
-    /* .card a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    } */
 </style>
 
 <svelte:head>
