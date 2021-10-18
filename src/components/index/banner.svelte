@@ -1,8 +1,8 @@
 <style>
     .banner {
         width: 100%;
-        background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%), url(/images/uploads/banner.PNG);
-        /* background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%); */
+        /* background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%), url(/images/uploads/banner.PNG); */
+        background-image: linear-gradient(90deg, var(--dark-background) 20%, #00000000);
         background-position: 70% 80%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -27,6 +27,7 @@
     <div class="width-restriction">
 
         <div class="row">
+            <div class="col-2"></div>
             <div class="col-2">
                 <h3 style="margin-bottom: 5px 0">Hi</h3>
                 <h1>I'm Krish</h1>
