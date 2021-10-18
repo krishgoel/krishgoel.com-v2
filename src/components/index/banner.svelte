@@ -12,11 +12,6 @@
         display: flex;
         align-items: center;
     }
-    .banner mark {
-        color: var(--light-text);
-        background-color: #16161666
-    }
-
     .banner p {
         line-height: 155%;
     }
@@ -39,15 +34,15 @@
                 <Space height={"12px"}/>
                 
                 <p>
-                    <mark>I am a technophile and a full-time "flex machine" from New Delhi. I recently completed my high school from <a href="http://sanskritischool.edu.in" target="_blank" aria-label="Sanskriti School">Sanskriti School, New Delhi</a> and will be joining <a href="https://manipal.edu/mit.html" target="_blank" aria-label="MIT, Manipal">Manipal Institute of Technology</a> for pursuing every Indian dads&apos; dream for their son - <s>MBA</s>  BTech (in Mechatronics) this fall.</mark>
+                    I am a technophile and a full-time "flex machine" from New Delhi. I recently completed my high school from <a href="http://sanskritischool.edu.in" target="_blank" aria-label="Sanskriti School">Sanskriti School, New Delhi</a> and will be joining <a href="https://manipal.edu/mit.html" target="_blank" aria-label="MIT, Manipal">Manipal Institute of Technology</a> for pursuing every Indian dads&apos; dream for their son - <s>MBA</s>  BTech (in Mechatronics) this fall.
                 </p>
                 <p>
-                    <mark>Currently, my interest lies at the intersection of CS, cyber-physical systems, and behavioral psychology alongside startups and finances. During my summer breaks, I occasionally venture into introducing the beautiful intricacies of programming to younger students. Looking at the bigger picture, I aim to eliminate the redundancy of human-computer interactions and develop &quot;smarter&quot; energy sources.</mark>
+                    Currently, my interest lies at the intersection of CS, cyber-physical systems, and behavioral psychology alongside startups and finances. During my summer breaks, I occasionally venture into introducing the beautiful intricacies of programming to younger students. Looking at the bigger picture, I aim to eliminate the redundancy of human-computer interactions and develop &quot;smarter&quot; energy sources.
                 </p>
 
                 <Typewriter>
                     <p class="swag">
-                        <mark>and I am against the degenerates who price Flaming Hot Cheetos in India :)</mark>
+                        and I am against the degenerates who price Flaming Hot Cheetos in India :)
                     </p>
                 </Typewriter>
             </div>
