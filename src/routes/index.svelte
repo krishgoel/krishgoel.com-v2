@@ -37,6 +37,10 @@
         commitID = await commitID.json();
         if (commitID.object != undefined) {
             commitID = commitID.object.sha
+            console.log(commitID)
+        }
+        else {
+            console.log("Commit ID not found")
         }
 
         let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v2/git/commits/` + commitID);
@@ -353,11 +357,11 @@
 					<Space height={"10px"}/>
 					<p>
 						Last commit:  
-						{#if commit.object != undefined}
-                            <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v2/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a>
+                        <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v2/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a>
+						<!-- {#if commit.object == undefined}
 						{:else}
-						<span class="mono">Error occured, last commit not available</span>
-						{/if}
+                            <span class="mono">Error occured, last commit not available</span>
+						{/if} -->
 					</p>
 				</div>
 			</div>
