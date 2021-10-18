@@ -32,26 +32,11 @@
         let socials = await this.fetch(`/data/socials.json`);
         socials = await socials.json()
 
-        // Commit details
-        // let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v2/git/refs/heads/main`);
-        // commitID = await commitID.json();
-        // if (commitID.object != undefined) {
-        //     commitID = commitID.object.sha
-        //     console.log(commitID)
-        // }
-        // else {
-        //     console.log("Commit ID not found")
-        // }
-
-        // let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v2/git/commits/` + commitID);
-        // commit = await commit.json()
-        
         // Return values
         return {
             projects: projects,
             posts: posts,
             socials: socials
-            // commit: commit
         }
     }
 </script>
@@ -78,7 +63,6 @@
     export let projects
     export let posts
     export let socials
-    // export let commit
 
 </script>
 
@@ -345,20 +329,21 @@
 					</div>
 				</div>
 				<div class="col-2 socials">
-					<Space height={"10px"}/>
+					<Space height={"15px"}/>
 					<div class="inline">
 						<h2>Reach Me</h2>
 						<p><a href="/contact">Contact Form ></a></p>
 					</div>
-					<p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span></p>
+					<p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span>.</p>
 					{#each socials as social, i}
-					<p><a aria-label="Link to my {social.platform}" href="{social.url}" target="_blank">{social.platform}</a></p>
+                        <p><a aria-label="Link to my {social.platform}" href="{social.url}" target="_blank">{social.platform}</a></p>
 					{/each}
-					<Space height={"10px"}/>
-					<!-- <p>
-						Last commit:  
-                        <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v2/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a>
-					</p> -->
+					<Space height={"15px"}/>
+                    <div class="links">
+                        <p><a rel=prefetch href="/about" aria-label="About">About</a></p>
+                        <p><a rel=prefetch href="/colophon" aria-label="Colophon">Colophon</a></p>
+                        <p><a rel=prefetch href="/thanks" aria-label="Thanks">Thanks</a></p>
+                    </div>
 				</div>
 			</div>
 		</div>
