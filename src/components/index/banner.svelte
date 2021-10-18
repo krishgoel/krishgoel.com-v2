@@ -1,9 +1,10 @@
 <style>
     .banner {
         width: 100%;
-        /* background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%), url(/images/uploads/banner.PNG); */
-        background-image: linear-gradient(90deg, var(--dark-background) 20%, #00000000);
-        background-position: 70% 80%;
+        /* background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%), url(/images/uploads/banner.png); */
+        /* background-image: linear-gradient(90deg, var(--dark-background) 20%, #00000000); */
+        background-image: url(/images/uploads/banner.png);
+        background-position: 28% 50%;
         background-repeat: no-repeat;
         background-size: cover;
         background-color: var(--dark-background);
@@ -11,6 +12,11 @@
         padding: 20px 0;
         display: flex;
         align-items: center;
+    }
+    @media screen and (max-width: 800px) {
+        .banner {
+            background-image: linear-gradient(90deg, var(--dark-background) 10%, #00000000 90%), url(/images/uploads/banner.png);
+        }
     }
     .banner p {
         line-height: 155%;
