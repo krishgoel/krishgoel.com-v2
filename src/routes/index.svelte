@@ -33,25 +33,25 @@
         socials = await socials.json()
 
         // Commit details
-        let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v2/git/refs/heads/main`);
-        commitID = await commitID.json();
-        if (commitID.object != undefined) {
-            commitID = commitID.object.sha
-            console.log(commitID)
-        }
-        else {
-            console.log("Commit ID not found")
-        }
+        // let commitID = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v2/git/refs/heads/main`);
+        // commitID = await commitID.json();
+        // if (commitID.object != undefined) {
+        //     commitID = commitID.object.sha
+        //     console.log(commitID)
+        // }
+        // else {
+        //     console.log("Commit ID not found")
+        // }
 
-        let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v2/git/commits/` + commitID);
-        commit = await commit.json()
+        // let commit = await this.fetch(`https://api.github.com/repos/KrishSkywalker/krishgoel.com-v2/git/commits/` + commitID);
+        // commit = await commit.json()
         
         // Return values
         return {
             projects: projects,
             posts: posts,
-            socials: socials,
-            commit: commit
+            socials: socials
+            // commit: commit
         }
     }
 </script>
@@ -78,7 +78,7 @@
     export let projects
     export let posts
     export let socials
-    export let commit
+    // export let commit
 
 </script>
 
@@ -355,14 +355,10 @@
 					<p><a aria-label="Link to my {social.platform}" href="{social.url}" target="_blank">{social.platform}</a></p>
 					{/each}
 					<Space height={"10px"}/>
-					<p>
+					<!-- <p>
 						Last commit:  
                         <span class="mono">{commit.committer.date}</span> <a href="https://github.com/KrishSkywalker/krishgoel.com-v2/commit/{commit.sha}" target="_blank" aria-label="Link to the commit">"{commit.message}"</a>
-						<!-- {#if commit.object == undefined}
-						{:else}
-                            <span class="mono">Error occured, last commit not available</span>
-						{/if} -->
-					</p>
+					</p> -->
 				</div>
 			</div>
 		</div>
