@@ -32,11 +32,16 @@
         let socials = await this.fetch(`/data/socials.json`);
         socials = await socials.json()
 
+        // Last commit
+        let commit = await this.fetch(`https://api.github.com/users/KrishSkywalker/events`)
+        commit = await commit.json()
+
         // Return values
         return {
             projects: projects,
             posts: posts,
-            socials: socials
+            socials: socials,
+            commit: commit
         }
     }
 </script>
@@ -63,6 +68,7 @@
     export let projects
     export let posts
     export let socials
+    export let commit
 
 </script>
 
@@ -347,11 +353,7 @@
                         <p><a aria-label="Link to my {social.platform}" href="{social.url}" target="_blank">{social.platform}</a></p>
 					{/each}
 					<Space height={"10px"}/>
-                    <!-- <div class="links">
-                        <p><a rel=prefetch href="/about" aria-label="About">About</a></p>
-                        <p><a rel=prefetch href="/colophon" aria-label="Colophon">Colophon</a></p>
-                        <p><a rel=prefetch href="/thanks" aria-label="Thanks">Thanks</a></p>
-                    </div> -->
+                    <p>My latest commit: <a href="https://github.com/{commit[0].repo.name}/commit/{commit[0].payload.commits[0].sha}" aria-label="My latest commit" target="_blank">{commit[0].payload.commits[0].message}</a> made to <a href="https://github.com/{commit[0].repo.name}" aria-label="Repo with the latest commit" target="_blank">{commit[0].repo.name}</a> at {commit[0].created_at}</p>
 				</div>
 			</div>
 		</div>
