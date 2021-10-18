@@ -310,7 +310,11 @@
 					<div class="card">
 						<div class="width-restriction">
                             {#await livelistening}
-                                <!--  -->
+                                <p>Loading my listening habits...</p>
+                                <Space height={"10px"}/>
+                                <h3>Loading...</h3>
+                                <p>Loading...</p>
+                                <Space height={"10px"}/>
                             {:then data}
                                 {#if data.recenttracks.track[0].hasOwnProperty("@attr")}
                                 <p>Currently listening to</p>
@@ -322,14 +326,18 @@
                                 <p>by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
                                 <Space height={"10px"}/>
                             {:catch error}
-                                <!--  -->
+                                <p>This section is supposed to display my recent listening habits</p>
+                                <Space height={"10px"}/>
+                                <h3>But</h3>
+                                <p>the API it relies on crashed</p>
+                                <Space height={"10px"}/>
                             {/await}
 							<p>Here's what <a aria-label="Recent Listening" href="/listening">I been listening to lately</a></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-2 socials">
-					<Space height={"15px"}/>
+					<Space height={"10px"}/>
 					<div class="inline">
 						<h2>Reach Me</h2>
 						<p><a href="/contact">Contact Form ></a></p>
@@ -338,12 +346,12 @@
 					{#each socials as social, i}
                         <p><a aria-label="Link to my {social.platform}" href="{social.url}" target="_blank">{social.platform}</a></p>
 					{/each}
-					<Space height={"15px"}/>
-                    <div class="links">
+					<Space height={"10px"}/>
+                    <!-- <div class="links">
                         <p><a rel=prefetch href="/about" aria-label="About">About</a></p>
                         <p><a rel=prefetch href="/colophon" aria-label="Colophon">Colophon</a></p>
                         <p><a rel=prefetch href="/thanks" aria-label="Thanks">Thanks</a></p>
-                    </div>
+                    </div> -->
 				</div>
 			</div>
 		</div>

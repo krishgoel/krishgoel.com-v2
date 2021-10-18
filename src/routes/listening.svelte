@@ -65,23 +65,33 @@
         <p><a href="https://last.fm/user/KrishSkywalker" target="_blank" aria-label="My Last.fm">Last.fm ></a></p>
     </div>
     <Space height={"20px"}/> 
-    {#await livelistening}
-        <!--  -->
-    {:then data}
     <div class="card">
         <div class="width-restriction">
-            {#if data.recenttracks.track[0].hasOwnProperty("@attr")}
-                <p style="margin-bottom: 10px">Currently listening to</p>
-            {:else}
-                <p style="margin-bottom: 10px">Last listened to</p>
-            {/if}
-            <h3 style="margin-bottom: 10px">{data.recenttracks.track[0].name}</h3>
-            <p style="margin-bottom: 0px">by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
+            {#await livelistening}
+                <p>Loading my listening habits...</p>
+                <Space height={"10px"}/>
+                <h3>Loading...</h3>
+                <p>Loading...</p>
+                <Space height={"10px"}/>
+            {:then data}
+                {#if data.recenttracks.track[0].hasOwnProperty("@attr")}
+                <p>Currently listening to</p>
+                {:else}
+                <p>Last listened to</p>
+                {/if}
+                <Space height={"10px"}/>
+                <h3>{data.recenttracks.track[0].name}</h3>
+                <p>by <strong>{data.recenttracks.track[0].artist["#text"]}</strong></p>
+                <Space height={"10px"}/>
+            {:catch error}
+                <p>This section is supposed to display my recent listening habits</p>
+                <Space height={"10px"}/>
+                <h3>But</h3>
+                <p>the API it relies on crashed</p>
+                <Space height={"10px"}/>
+            {/await}
         </div>
     </div>
-    {:catch error}
-            <!--  -->
-    {/await}
     <Space height={"10px"}/>
     <div class="card">
         <div class="width-restriction">
