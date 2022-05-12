@@ -1,11 +1,11 @@
 [
     {
-        "platform": "Email",
-        "url": "mailto:krishgoel3@gmail.com"
-    },
-    {
         "platform": "Twitter",
         "url": "https://twitter.com/KrishSkywalker7"
+    },
+    {
+        "platform": "Email",
+        "url": "mailto:krishgoel3@gmail.com"
     },
     {
         "platform": "Github",
@@ -24,11 +24,7 @@
         "url": "https://www.linkedin.com/in/krishgoel"
     },
     {
-        "platform": "Clubhouse",
-        "url": "https://www.clubhouse.com/@krishskywalker"
-    },
-    {
-        "platform": "Last.FM",
-        "url": "https://www.last.fm/user/KrishSkywalker"
+        "platform": "Keybase",
+        "url": "https://keybase.io/krishskywalker"
     }
 ]

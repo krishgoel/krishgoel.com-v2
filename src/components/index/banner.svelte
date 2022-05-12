@@ -15,7 +15,7 @@
     }
     @media screen and (max-width: 800px) {
         .banner {
-            background-image: linear-gradient(90deg, var(--dark-background) 10%, #00000000 90%), url(/images/uploads/banner.png);
+            background-image: linear-gradient(90deg, var(--dark-background) 10%, #00000000 90%), url(/images/uploads/banner.webp);
         }
     }
     .banner p {
@@ -24,8 +24,6 @@
 </style>
 
 <script>
-    import Typewriter from 'svelte-typewriter/lib/Typewriter.svelte'
-
     import Space from "../space.svelte"
 </script>
 
@@ -41,17 +39,18 @@
                 <Space height={"12px"}/>
                 
                 <p>
-                    I am a technophile and a full-time "flex machine" from New Delhi. I recently completed my high school from <a href="http://sanskritischool.edu.in" target="_blank" aria-label="Sanskriti School">Sanskriti School, New Delhi</a> and will be joining <a href="https://manipal.edu/mit.html" target="_blank" aria-label="MIT, Manipal">Manipal Institute of Technology</a> for pursuing every Indian dads&apos; dream for their son - <s>MBA</s>  BTech (in Mechatronics) this fall.
+                    I am a business and philosophy double-major at heart, currently pursuing every Indian dad's dream for their son - <s>MBA</s> BTech at <a href="https://manipal.edu/mit.html" target="_blank" aria-label="MIT, Manipal">Manipal Institute of Technology</a>.
                 </p>
                 <p>
-                    Currently, my interest lies at the intersection of CS, cyber-physical systems, and behavioral psychology alongside startups and finances. During my summer breaks, I occasionally venture into introducing the beautiful intricacies of programming to younger students. Looking at the bigger picture, I aim to eliminate the redundancy of human-computer interactions and develop &quot;smarter&quot; energy sources.
+                    Presently, my curiosity lies at the intersection of CS, behavioral psychology and financial markets. During my summer breaks, I occasionally venture into introducing the beautiful intricacies of programming to younger students.
                 </p>
-
-                <Typewriter>
-                    <p class="swag">
-                        and I am against the degenerates who price Flaming Hot Cheetos in India :)
-                    </p>
-                </Typewriter>
+                <p>
+                    My vision for the near future holds making it through this semester and exploring more of <a href="https://www.principles.com" target="_blank" aria-label="Principles by Ray Dalio">Ray Dalio's content</a>. Looking at the bigger picture, I aim to recast the education sector.
+                </p>
+                <p>
+                    Welcome to <s>my website</s> the bent side of things (btw irrespective of the <span class="swag">kringe,</span> people <strong>LIKE</strong> to call me <span class="mono">KrishSkywalker</span> &macr;\(ツ)/&macr;. Yes.)
+                </p>
+                <!-- <p class="swag"><span style="font-style: italic;">"Punishable by fine" essentially translates to "legal for the right price".</span></p> -->
             </div>
         </div>
 

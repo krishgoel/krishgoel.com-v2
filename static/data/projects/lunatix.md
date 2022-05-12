@@ -1,7 +1,7 @@
 ---
 showonindex: true
 title: Lunatix
-cover: /images/uploads/lunatix.png
+cover: /images/uploads/lunatix.webp
 description: A project that Raghav Sarangi, Kartik Gupta and I worked on for an
   IT event - Exun 2019. This was an idea documentation that aimed at
   agricultural development on the lunar surface.

@@ -1,7 +1,7 @@
 ---
 showonindex: true
 title: Gyaan Academy
-cover: /images/uploads/gyaan-academy.png
+cover: /images/uploads/gyaan-academy.webp
 description: Amartya, Kataria and I built this startup idea ground up in 72
   hours for arguably, Delhi's most prestigious interschool hackathon - MINET X.
   The idea is an 'Online School' with smart features including building a
@@ -27,11 +27,11 @@ The event was judged by [Mr. Anand Chowdhary](http://anandchowdhary.com/) (Cre
 
 Gyaan Academy isn't just another Udemy, it’s the new social network. While searching for solutions, we realized that every sustainable dev goal is a subset of the bigger problem - than lack of an educated population so, targeting this root cause would essentially mean eventually minimizing the others. Mahatama Gandhi described education as the mightiest means to shake the world, gently and that's where our thoughts coincided.
 
-![](/images/uploads/1.png)
+![](/images/uploads/1.webp)
 
-![](/images/uploads/2.png)
+![](/images/uploads/2.webp)
 
-![](/images/uploads/3.png)
+![](/images/uploads/3.webp)
 
 ### Learning what matters more
 
@@ -51,27 +51,27 @@ We understand the importance of having real people in your life and the fact tha
 
 Moving on from what we aim at doing to how we accomplish it
 
-![](/images/uploads/4.png)
+![](/images/uploads/4.webp)
 
-![](/images/uploads/5.png)
+![](/images/uploads/5.webp)
 
 ### Life Skills Development
 
 First up, we have SUPW Education or Vocational Education and we don’t just restrict ourselves to SUPW, we call it life skills development. Someone said, an ounce of theory is worth a ton of action and we couldn't agree more. When the human brain learns by doing, it learns outside the “ideal-scenario” bubble, it learns where things go wrong and learn the importance of failure for Yoda said, “The greatest teacher failure is”
 
-![](/images/uploads/6.png)
+![](/images/uploads/6.webp)
 
 ### Master Classes
 
 While we don’t have much to explain here, learning from the master of your trade comes with its own set of benefits, think about it this way, would you wanna be mentored by someone who’s only well-versed with theory or someone like Stephen Hawking.
 
-![](/images/uploads/7.png)
+![](/images/uploads/7.webp)
 
 ### Curriculum designed with child psychologists and experts
 
 We work with professionals and child psychologists to make sure you learn what is needed without stressing your brains out, to make learning fun while ensuring no one gets bored. This curriculum is periodically updated to prevent any redundancy in terms of content and goes without saying, we add new careers and professions continuously.
 
-![](/images/uploads/8.png)
+![](/images/uploads/8.webp)
 
 ### Creating social connections
 
@@ -79,7 +79,7 @@ I am sure all of us would agree, school isn’t defined by the 5 subjects taught
 
 ## Making it more accessible: The Seekho-Sikhao Programme
 
-![](/images/uploads/9.png)
+![](/images/uploads/9.webp)
 
 Coming to, what about the rural, remote areas and the economically backward sections of the society? Bill Gates said that it isn’t your fault if you’re born poor, it is if you die poor, with our Seekho-Sikhao Programme, we’ll be ensuring our level best that we don’t let the poor die poor.
 
@@ -89,9 +89,9 @@ And all of this is done by volunteers from our userbase under the guidance of ou
 
 ## The Plan of Expansion: Plan 2.0
 
-![](/images/uploads/10.png)
+![](/images/uploads/10.webp)
 
-![](/images/uploads/11.png)
+![](/images/uploads/11.webp)
 
 ### AR/VR Integration
 
@@ -107,11 +107,11 @@ And after a certain period and gaining credibility, we also plan on having Gyaan
 
 ## The econ and the business model
 
-![](/images/uploads/12.png)
+![](/images/uploads/12.webp)
 
-![](/images/uploads/13.png)
+![](/images/uploads/13.webp)
 
-![](/images/uploads/14.png)
+![](/images/uploads/14.webp)
 
 Now comes the part about economics and the funds' usage. Our goal isn’t just to make a strong economy, it’s to make a beautiful, a *sundar* one. While the majority of the funds would go into making the content and development of the tech stack, we’d also need funds for advertisements and promotions. Which I'll be talking about in the coming sections.
 
@@ -137,7 +137,7 @@ Our strategies for customer acquisition would mainly revolve around social media
 
 Because kids have the attention span of a 2-year-old
 
-![](/images/uploads/15.png)
+![](/images/uploads/15.webp)
 
 Another point raised was, how do we keep the user involved, especially kids who lack the concentration required?
 
@@ -147,7 +147,7 @@ While our core strategy would to be have engaging teaching techniques but that i
 
 Because at the end of it, it's a tech startup.
 
-![](/images/uploads/16.png)
+![](/images/uploads/16.webp)
 
 While there isn't much to talk about the tech stack here since this is an ideal pitch but no harm in a briefing, so for minimal expenditure, we'll be going for a PWA initially built on Vue.JS with MongoDB and host it on Heroku for functional and smooth cross-platform support. But since nothing beats an old-fashioned mobile application so later on we'll be working on developing those.
 
@@ -163,9 +163,9 @@ While creating the user flows and UX for Gyaan Academy, we wanted to create some
 
 We went for a very simplistic look with pastel green and muted tones of blue, white, and black to exhibit the connection of learning with nature. However, we did play with some gradients to keep the design being dull, to make it more engaging.
 
-![](/images/uploads/design3.png)
+![](/images/uploads/design3.webp)
 
-![](/images/uploads/design4.png)
+![](/images/uploads/design4.webp)
 
 ### The Logo
 
@@ -173,26 +173,26 @@ Kartikay revamped our logo design from being a Banyan Tree flat icon to a geomet
 
 The green represents serenity, the container deep blue represents the unknowns of the universe and the green square gives it an illusionistic feel to convey the element of surprises. This was the result and we couldn't be more satisfied with it.
 
-![](/images/uploads/design5.png)
+![](/images/uploads/design5.webp)
 
-![](/images/uploads/design6.png)
+![](/images/uploads/design6.webp)
 
-![](/images/uploads/design7.png)
+![](/images/uploads/design7.webp)
 
 ### Gradient Icons
 
 Amartya brilliantly made over 30 icons to make the deck and pitch more appealing, these are only some of his clean and precise flat icons with make-clipped gradients that bring them to life.
 
-![](/images/uploads/design8.png)
+![](/images/uploads/design8.webp)
 
 ### The Mockups
 
 Made on Figma and Photoshop. We had to shrink to the size of the mockup screen because of some guidelines, properly rendered mockups coming soon (hopefully).
 
-![](/images/uploads/mockup1.png)
+![](/images/uploads/mockup1.webp)
 
-![](/images/uploads/mockup2.png)
+![](/images/uploads/mockup2.webp)
 
-![](/images/uploads/design10.png)
+![](/images/uploads/design10.webp)
 
-![](/images/uploads/design11.png)
+![](/images/uploads/design11.webp)

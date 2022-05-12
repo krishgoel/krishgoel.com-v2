@@ -1,7 +1,7 @@
 ---
 showonindex: false
 title: ARKAtype
-cover: images/uploads/arkatype.png
+cover: images/uploads/arkatype.webp
 description: 3 friends and I participated in a hackathon organized by
   Reply   Challenges, the goal was to redesign an airline service. We didn't
   make it to   the top 3 but the experience was a lot of fun and introduced me

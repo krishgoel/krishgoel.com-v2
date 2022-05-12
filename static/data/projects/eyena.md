@@ -1,7 +1,7 @@
 ---
 showonindex: true
 title: Eyena
-cover: /images/uploads/eyena.png
+cover: /images/uploads/eyena.webp
 description: Eyena is an IoT based smart mirror that measures your body
   temperature upon detecting your presence without any physical contact. The
   project isn't econonmically feasible with the current technology, hence I had

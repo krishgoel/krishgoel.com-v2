@@ -12,7 +12,7 @@ slug: the-free-formula
 
 > A mathematical approach to get anything of monetary value effectively for free using the stock market.
 
-![](images/uploads/thefreeformula2.png)
+![](images/uploads/thefreeformula2.webp)
 
 ## The Goal
 
@@ -33,7 +33,7 @@ Interest earned per month should be greater than/equal to the cost of each insta
 
 ### Without factoring in any down-payment
 
-![](images/uploads/thefreeformula.png)
+![](images/uploads/thefreeformula.webp)
 
 Effective cost of item after EMI = A(1+e/100)
 

@@ -20,8 +20,7 @@
     "querystring": "^0.2.1",
     "sirv": "^1.0.0",
     "svelte-markdown": "^0.1.12",
-    "svelte-prismjs": "^1.0.2",
-    "svelte-typewriter": "^2.4.5"
+    "svelte-prismjs": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

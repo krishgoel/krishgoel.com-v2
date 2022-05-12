@@ -1,7 +1,7 @@
 ---
 showonindex: true
 title: CovAID
-cover: /images/uploads/covaid.png
+cover: /images/uploads/covaid.webp
 description: 4 friends and I co-founded CovAID to provide personally verified
   leads to all COVID-19 resources in real-time through brute-force calling with
   an organised team of 40 volunteers in under 48 hours.
@@ -27,4 +27,4 @@ With the second wave of the pandemic in the NCR came a spike in the number of di
 
 We began with the goal of saving just 1 and yet, within a week, we had reached upwards of 23,000 users.  After successfully overcoming the challenges to operations in our hometown of Delhi, we collaborated and deployed our service to the city of Kanpur. Our efforts were applauded by several celebrities and newspapers alike.
 
-![](images/uploads/covaid-hindustan-times.png)
+![](images/uploads/covaid-hindustan-times.webp)

@@ -27,7 +27,7 @@
     <div class="width-restriction">
         <p>&copy; Krish Goel<p>
         <div class="links">
-            <p><a rel=prefetch href="/about" aria-label="About">About</a></p>
+            <!-- <p><a rel=prefetch href="/about" aria-label="About">About</a></p> -->
             <p><a rel=prefetch href="/colophon" aria-label="Colophon">Colophon</a></p>
             <p><a rel=prefetch href="/thanks" aria-label="Thanks">Thanks</a></p>
         </div>
