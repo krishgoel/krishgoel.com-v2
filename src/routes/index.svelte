@@ -309,7 +309,14 @@
 			</div>
 		</div>
 	</section>
-	<section class="reachme">
+
+    <!-- <section class="tweets" style="background-color: #1da1f2">
+        <div class="width-restriction">
+            <h1>Tweets</h1>
+        </div>
+    </section> -->
+	
+    <section class="reachme">
 		<div class="width-restriction">
 			<div class="row">
 				<div class="col-2">
