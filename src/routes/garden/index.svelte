@@ -55,11 +55,12 @@
     <div class="row">
         <div class="col-2">
             <h2>Garden of Thoughts</h2>
-            <p>
-                This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank"  aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, which can lie anywhere on the spectrum between behaviorism and design.
+            <p>Under maintenance, considering checking out <a href="/blog" aria-label="Blog">/blog</a> in the meanwhile.</p>
+            <!-- <p>
+                This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank" aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, which can lie anywhere on the spectrum between behaviorism and design.
             </p>
             <p>
-                <i>This will take some more time for me to fully organize. Meanwhile you can check out more furnished ideas at <a href="/blog" aria-label="Blog">/blog</a>. </i>Inspired by <a href="https://kabirgoel.com" aria-label="Kabir Goel's Digital Garden" target="_blank">Kabir Goel's Garden</a>.
+                <i>It will take me some time to fully organise this section. I tend to push more furnished ideas to <a href="/blog" target="_blank" aria-label="Blog">/blog</a>, considering checking them out in the meanwhile.</i> Inspired by <a href="https://kabirgoel.com" aria-label="Kabir Goel's Digital Garden" target="_blank">Kabir Goel's Garden</a>.
             </p>
         </div>
     </div>
@@ -68,10 +69,10 @@
 
     <div class="large-view tablet-view">
         <div class="row">
-            {#each range(0,2,1) as i, index}
+            {#each range(0,3,1) as i, index}
                 <div class="col-3">
                     {#each garden as plant, p}
-                        {#if p%2 == i}
+                        {#if p%3 == i}
                         <div class="card">
                             <div class="width-restriction">
                                 <h4>
@@ -100,5 +101,5 @@
             </div>
         </div>
         {/each}
-    </div>
+    </div> -->
 </section>
