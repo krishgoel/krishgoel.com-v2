@@ -30,6 +30,7 @@
     <ul>
         <li><a href="https://ishaandas.com/" target="_blank">Ishaan Das</a> made some fantastic <a href="https://www.figma.com/file/ys6XyJryfwtPeraRADHH0R/" target="_blank">Figma mockups</a>, gratis. He's also the guy behind the grid on the index page, make sure you check out his work. </li>
         <li><a href="https://www.mahmoudashraf.dev/" target="_blank">Mahmoud Ashraf</a> for writing <a href="https://www.mahmoudashraf.dev/blog/build-a-blog-with-svelte-and-markdown/" target="_blank">this article</a> on adding highlighting to markdown rendered Svelte.</li>
+        <li><a href="https://github.com/ayushashi11" target="_blank">Prabhakar Dev</a> writing the <a href="https://github.com/KrishSkywalker/krishgoel.com-v2/blob/main/static/images/uploads/convert-to-web.py" target="_blank">Python script to convert all image files</a> to .webp format.</li>
     </ul>
     <h2>General note of thanks</h2>
     <ul>
