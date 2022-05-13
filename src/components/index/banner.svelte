@@ -3,7 +3,7 @@
         width: 100%;
         /* background-image: linear-gradient(90deg, var(--dark-background), #00000000 70%), url(/images/uploads/banner.png); */
         /* background-image: linear-gradient(90deg, var(--dark-background) 20%, #00000000); */
-        background-image: url(/images/uploads/banner.webp);
+        background-image: url(/images/uploads/banner.png);
         background-position: 28% 50%;
         background-repeat: no-repeat;
         background-size: cover;
