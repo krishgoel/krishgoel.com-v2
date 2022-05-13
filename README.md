@@ -1,9 +1,8 @@
 # krishgoel.com ```-v2```
-> The source code to the 2nd iteration of my personal website (not pushed to production yet).
+> The source code to the 2nd iteration of my personal website.
 
 ## To-do for future upgrades
-- [ ] Find a better way to present ```/recent```
-    - [ ] Fix ```/recent/books```
+- [ ] Use [Notion NoCode API](https://nocodeapi.com/pricing) for /garden
 - [ ] GitHub repo update
 - [ ] Add the project filtering tag system as suggested by Ishaan
 - [ ] Add CMS functionality to socials.json, maybe
@@ -14,7 +13,6 @@ Built on Svelte (with Sapper for routing) and hosted on Netlify. Uses NetlifyCMS
 
 ### Other Node Packages and JS libraries used 
 - cross-fetch
-- svelte-typewriter
 - svelte-prismjs
 - gray-matter
 - marker
