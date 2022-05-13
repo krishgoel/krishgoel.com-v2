@@ -15,7 +15,7 @@
     }
     @media screen and (max-width: 800px) {
         .banner {
-            background-image: linear-gradient(90deg, var(--dark-background) 10%, #00000000 90%), url(/images/uploads/banner.webp);
+            background-image: linear-gradient(90deg, var(--dark-background) 10%, #00000000 90%), url(/images/uploads/banner.png);
         }
     }
     .banner p {
