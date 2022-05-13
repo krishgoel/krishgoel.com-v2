@@ -39,7 +39,7 @@
                 <Space height={"12px"}/>
                 
                 <p>
-                    I am a business and philosophy double-major at heart, currently pursuing every Indian dad's dream for their son - <s>MBA</s> BTech at <a href="https://manipal.edu/mit.html" target="_blank" aria-label="MIT, Manipal">Manipal Institute of Technology</a>.
+                    I am a philosophy and business double-major at heart, currently pursuing every Indian dad's dream for their son - <s>MBA</s> BTech at <a href="https://manipal.edu/mit.html" target="_blank" aria-label="MIT, Manipal">Manipal Institute of Technology</a>.
                 </p>
                 <p>
                     Presently, my curiosity lies at the intersection of CS, behavioral psychology and financial markets. During my summer breaks, I occasionally venture into introducing the beautiful intricacies of programming to younger students.

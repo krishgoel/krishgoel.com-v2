@@ -51,17 +51,25 @@
     <script src='https://kit.fontawesome.com/2fe9fae216.js' crossorigin='anonymous'></script>
 </svelte:head>
 
-<section class="slim-container">
-    <h2>Garden of Thoughts</h2>
-    <p>This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank"  aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, which can lie anywhere on the spectrum between behaviorism and design.</p>
+<section>
+    <div class="row">
+        <div class="col-2">
+            <h2>Garden of Thoughts</h2>
+            <p>
+                This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank"  aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, which can lie anywhere on the spectrum between behaviorism and design.
+            </p>
+            <p>
+                <i>This will take some more time for me to fully organize. Meanwhile you can check out more furnished ideas at <a href="/blog" aria-label="Blog">/blog</a>. </i>Inspired by <a href="https://kabirgoel.com" aria-label="Kabir Goel's Digital Garden" target="_blank">Kabir Goel's Garden</a>.
+            </p>
+        </div>
+    </div>
     
-    <p><i>This will take some more time for me to fully organize. Meanwhile you can check out more furnished ideas at <a href="/blog" aria-label="Blog">/blog</a>. </i>Inspired by <a href="https://kabirgoel.com/garden" aria-label="Kabir Goel's Digital Garden" target="_blank">Kabir Goel's Garden</a>.</p>
     <Space height={"25px"}/>
 
     <div class="large-view tablet-view">
         <div class="row">
             {#each range(0,2,1) as i, index}
-                <div class="col-2">
+                <div class="col-3">
                     {#each garden as plant, p}
                         {#if p%2 == i}
                         <div class="card">
