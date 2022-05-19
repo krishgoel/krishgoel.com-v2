@@ -38,7 +38,7 @@
 </style>
 
 <section class="slim-container">
-    <h2>thoughts.log()</h2>
+    <h2>web.log(thoughts)</h2>
     <p>Welcome to my blog. I plan on updating it periodically with any showcase worthy ideas/thoughts I have, expectedly about technology, things I am using, or about the time I went backpacking to the foothills of mount Tibidabo ;) <i>For a more recent insight into my current thoughts, check out <a rel="prefetch" href="/garden" aria-label="Digital Garden">/garden</a>.</i></p>
     <Space height={"25px"}/>
 

@@ -259,7 +259,7 @@
 			<div class="row">
 				<div class="col-2">
 					<div class="inline">
-						<h2>thoughts.log()</h2>
+						<h2>web.log(thoughts)</h2>
 						<p><a href="/blog" aria-label="See all projects">aka /blog ></a></p>
 					</div>
 					<Space height={"5px"}/>
