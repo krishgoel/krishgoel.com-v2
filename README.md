@@ -5,7 +5,6 @@
 - [ ] Use [Notion NoCode API](https://nocodeapi.com/pricing) for /garden. Fetch once/day directly into the repo to not breach the 300 reqs/month limit.
 - [ ] GitHub repo update
 - [ ] Add the project filtering tag system as suggested by Ishaan
-- [ ] Add CMS functionality to socials.json, maybe
 - [ ] Switch from Last.FM to Spotify for Music fetching
 
 ## Tech stack
