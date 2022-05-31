@@ -1,7 +1,7 @@
 ---
 showonindex: true
 title: VKYD
-cover: /images/uploads/vkydlandingpage.webp
+cover: /images/uploads/projects/vkyd/vkydlandingpage.webp
 description: VKYD was the collective effort of 3 of my friends and me fueled by
   our passion for streetwear. The goal was to make streetwear sustainable while
   keeping small businesses in the loop.
@@ -24,7 +24,7 @@ slug: vkyd
 
 > *[vkyd.herokuapp.com](http://vkyd.herokuapp.com/)* (Abandoned prototype web app because of a suboptimal tech-stack)
 
-![](images/uploads/vkyd-goofy.webp)
+![](images/uploads/projects/vkyd/vkyd-goofy.webp)
 
 The idea behind VKYD was to build a platform to empower the Indian economy by promoting small-time garment manufacturers, local tailors, and aspiring designers through production-per-piece, crowdsourced designs and custom fittings while minimizing any wastage of resources and keeping the true spirit of streetwear fashion alive - to look your best at the minimum cost.
 
@@ -101,7 +101,7 @@ Another sector VKYD could branch into would be supporting creators more directly
 
 The currently built prototypes (hosted on the aforementioned links) have a UI built around Neomorphism in tones of dark smoke indicating the coming-of-age aspect of VKYD.
 
-![](images/uploads/vkydlandingpage.webp)
+![](images/uploads/projects/vkyd/vkydlandingpage.webp)
 
 ## C**urrent status**
 

@@ -1,7 +1,7 @@
 ---
 showonindex: true
 title: BinaryBox
-cover: /images/uploads/binary-box.webp
+cover: /images/uploads/projects/binary-box.webp
 description: A subscription-based STEM Kits delivery service model that Kartik
   Gupta and I developed for an IT event.
 date: September 2019
@@ -13,7 +13,7 @@ slug: binarybox
 ---
 # BinaryBox
 
-![](images/uploads/binary-box.webp)
+![](images/uploads/projects/binary-box.webp)
 
 BinaryBox was an MVP Startup idea that Kartik Gupta and I for **[Make @ MINET X 2019](https://minet.co/)**. We placed #3 at the Pitch event judged by creative technologists like **[Anand Chowdhary.](https://anandchowdhary.com/)**
 
