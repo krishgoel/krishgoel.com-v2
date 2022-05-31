@@ -23,6 +23,9 @@
         justify-content: space-between;
         align-items: center;
     }
+    nav h3 {
+        font-size: clamp(22px, 2.7vw, 25px);
+    }
     nav .links {
         white-space: nowrap;
         overflow-x: auto;
