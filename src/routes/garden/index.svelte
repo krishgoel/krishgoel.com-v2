@@ -12,26 +12,27 @@
 
 <script>
     export let plants
+    
+    plants = plants.sort((a, b) => (new Date(a.last_edited_time) > new Date(b.last_edited_time)) ? -1 : 1)
 
     let garden = [];
     for (let i = 0; i < plants.length; i++) {
-        garden.push({
-            "title": plants[i].properties.Name.title[0].text.content,
-            "description": plants[i].properties.Description.rich_text[0].text.content,
-            "link": plants[i].url
-        });
+        plants[i].url = plants[i].url.replace("www.notion.so", "krishgoel.notion.site");
+        if (plants[i].properties.Description.rich_text[0] != undefined) {
+            garden.push({
+                "title": plants[i].properties.Name.title[0].text.content,
+                "description": plants[i].properties.Description.rich_text[0].text.content,
+                "link": plants[i].url
+            })
+        } else (
+            garden.push({
+                "title": plants[i].properties.Name.title[0].text.content,
+                "description": "",
+                "link": plants[i].url
+            })
+        )
     }
     console.log("Garden: " + JSON.stringify(garden));
-
-
-    // In case of switching from CMS functionality to typed-in JS Objects
-    // let garden = [
-    //     {
-    //         "title": "",
-    //         "description": "",
-    //         "url": ""
-    //     }
-    // ]
 
     import { range } from '../../scripts/range'
 
@@ -44,7 +45,7 @@
 
 <style>
     .card {
-        padding: 25px 0;
+        padding-top: 30px;
     }
     .card a {
         color: var(--dark-text)
@@ -82,7 +83,7 @@
     
     <Space height={"25px"}/>
 
-    <div class="large-view tablet-view">
+    <div class="large-view">
         <div class="row">
             {#each range(0,3,1) as i, index}
                 <div class="col-3">
@@ -90,13 +91,13 @@
                         {#if p%3 == i}
                         <div class="card">
                             <div class="width-restriction">
-                                <h4>
-                                    <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">
-                                        {plant.title} 
-                                        <i class='fas fa-external-link-alt' style="font-size: 12px; position: relative; bottom: 2px"></i>
-                                    </a>
-                                </h4>
-                                <p>{plant.description}</p>
+                                <h4>{plant.title}</h4>
+                                <Space height={"10px"}/>
+                                <p style="margin-bottom: 10px;">{plant.description}</p>
+                                <!-- Links -->
+                                <div class="links">
+                                    <p><a rel="prefetch" href="{plant.link}" aria-label="Read more">Read more</a></p>
+                                </div>
                             </div>
                         </div>
                         {/if}
@@ -105,14 +106,42 @@
             {/each}
         </div>
     </div>
+
+    <div class="tablet-view">
+        <div class="row">
+            {#each range(0,2,1) as i, index}
+                <div class="col-3">
+                    {#each garden as plant, p}
+                        {#if p%2 == i}
+                        <div class="card">
+                            <div class="width-restriction">
+                                <h4>{plant.title}</h4>
+                                <Space height={"10px"}/>
+                                <p style="margin-bottom: 10px;">{plant.description}</p>
+                                <!-- Links -->
+                                <div class="links">
+                                    <p><a rel="prefetch" href="{plant.link}" aria-label="Read more">Read more</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        {/if}
+                    {/each}
+                </div>
+            {/each}
+        </div>
+    </div>
+
     <div class="mobile-view">
         {#each garden as plant, p}
         <div class="card">
             <div class="width-restriction">
-                <h4>
-                    <a href="{plant.url}" target="_blank" aria-label="Link to {plant.title}">{plant.title} <i class='fas fa-external-link-alt' style="font-size: 12px; position: relative; bottom: 2px"></i></a>
-                </h4>
-                <p>{plant.description}</p>
+                <h4>{plant.title}</h4>
+                <Space height={"10px"}/>
+                <p style="margin-bottom: 10px;">{plant.description}</p>
+                <!-- Links -->
+                <div class="links">
+                    <p><a rel="prefetch" href="{plant.link}" aria-label="Read more">Read more</a></p>
+                </div>
             </div>
         </div>
         {/each}
