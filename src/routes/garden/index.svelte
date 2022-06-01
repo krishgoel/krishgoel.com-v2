@@ -1,13 +1,28 @@
 <script context="module">
-	export function preload({ params, query }) {
-		return this.fetch(`garden.json`).then(r => r.json()).then(garden => {
-			return { garden };
-		});
-	}
+    export async function preload() {
+        let plants = await this.fetch(`/data/plants.json`);
+        plants = await plants.json()
+
+        // Return values
+        return {
+            plants: plants.results
+        }
+    }
 </script>
 
 <script>
-    export let garden
+    export let plants
+
+    let garden = [];
+    for (let i = 0; i < plants.length; i++) {
+        garden.push({
+            "title": plants[i].properties.Name.title[0].text.content,
+            "description": plants[i].properties.Description.rich_text[0].text.content,
+            "link": plants[i].url
+        });
+    }
+    console.log("Garden: " + JSON.stringify(garden));
+
 
     // In case of switching from CMS functionality to typed-in JS Objects
     // let garden = [
@@ -48,15 +63,15 @@
     <meta name="twitter:description" content="{description}" />
 
     <!-- For loading FA Icons -->
-    <script src='https://kit.fontawesome.com/2fe9fae216.js' crossorigin='anonymous'></script>
+    <!-- <script src='https://kit.fontawesome.com/2fe9fae216.js' crossorigin='anonymous'></script> -->
 </svelte:head>
 
 <section>
     <div class="row">
         <div class="col-2">
             <h2>Garden of Thoughts</h2>
-            <p>Under maintenance, considering checking out <a href="/blog" aria-label="Blog">/blog</a> in the meanwhile.</p>
-            <!-- <p>
+            <!-- <p>Under maintenance, considering checking out <a href="/blog" aria-label="Blog">/blog</a> in the meanwhile.</p> -->
+            <p>
                 This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank" aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, which can lie anywhere on the spectrum between behaviorism and design.
             </p>
             <p>
@@ -101,5 +116,5 @@
             </div>
         </div>
         {/each}
-    </div> -->
+    </div>
 </section>
