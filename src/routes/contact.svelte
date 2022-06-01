@@ -5,7 +5,7 @@
 
         // Return values
         return {
-            socials: socials
+            socials
         }
     }
 </script>
