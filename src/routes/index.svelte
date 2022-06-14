@@ -33,7 +33,7 @@
         socials = await socials.json()
 
         // Last commit
-        let commit = await this.fetch(`https://api.github.com/users/KrishSkywalker/events`)
+        let commit = await this.fetch(`https://api.github.com/users/KrishGoel/events`)
         commit = await commit.json()
 
         // Return values
