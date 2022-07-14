@@ -1,5 +1,5 @@
 <script context="module">
-    export async function preload({ params, query }) {
+    export async function preload() {
         // Projects
         let projects = await this.fetch(`projects.json`);
         projects = await projects.json()
@@ -14,19 +14,9 @@
             projects.splice(eliminateProjects[i], 1)
         }
 
-        // Blog
-        let posts = await this.fetch(`blog.json`);
-        posts = await posts.json()
-        let eliminatePosts = []
-        for (let i = 0; i < posts.length; i++) {
-            if (posts[i].showonindex == false) {
-                eliminatePosts.push(i)
-            }
-        }
-        eliminatePosts = eliminatePosts.reverse()
-        for (let i = 0; i < eliminatePosts.length; i++) {
-            posts.splice(eliminatePosts[i], 1)
-        }
+        // Plants
+        let plants = await this.fetch(`/data/plants.json`);
+        plants = await plants.json()
 
         // Socials
         let socials = await this.fetch(`/data/socials.json`);
@@ -39,7 +29,7 @@
         // Return values
         return {
             projects: projects,
-            posts: posts,
+            plants: plants.results,
             socials: socials,
             commit: commit
         }
@@ -56,6 +46,28 @@
 
     import Banner from '../components/index/banner.svelte'
 
+    export let plants
+    plants = plants.sort((a, b) => (new Date(a.last_edited_time) > new Date(b.last_edited_time)) ? -1 : 1)
+    let garden = [];
+    for (let i = 0; i < Math.min(plants.length, 4); i++) {
+        plants[i].url = plants[i].url.replace("www.notion.so", "krishgoel.notion.site");
+        if (plants[i].properties.Description.rich_text[0] != undefined) {
+            garden.push({
+                "title": plants[i].properties.Name.title[0].text.content,
+                "description": plants[i].properties.Description.rich_text[0].text.content,
+                "tags": plants[i].properties.Topic.multi_select,
+                "link": plants[i].url
+            })
+        } else (
+            garden.push({
+                "title": plants[i].properties.Name.title[0].text.content,
+                "description": "",
+                "tags": plants[i].properties.Topic.multi_select,
+                "link": plants[i].url
+            })
+        )
+    }
+
     let title= "Krish Goel | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi.";
     let url = "https://krishgoel.com";
@@ -66,7 +78,6 @@
     })()
 
     export let projects
-    export let posts
     export let socials
     export let commit
 
@@ -93,6 +104,11 @@
     .projects .card {
         padding-top: 0px
     }
+    /* Garden */
+    .garden .card {
+        padding-top: 30px;
+    }
+
     /* Socials */
     .socials, .socials p {
         display: inline-block
@@ -254,16 +270,17 @@
             </div>
 		</div>
 	</section>
-	<section class="blog light">
+	<section class="garden light">
 		<div class="width-restriction">
 			<div class="row">
 				<div class="col-2">
 					<div class="inline">
-						<h2>web.log(thoughts)</h2>
-						<p><a href="/blog" aria-label="See all projects">aka /blog ></a></p>
+						<h2>web.log(💡)</h2>
+						<p><a href="/garden" aria-label="See all projects">aka /garden ></a></p>
 					</div>
 					<Space height={"5px"}/>
-					<p>This is my blog. I plan on updating it periodically with any showcase worthy ideas/thoughts I have, expectedly about technology, things I am using, or about the time I went backpacking to the foothills of mount Tibidabo ;) <i>For a more recent insight into my current thoughts, check out <a rel="prefetch" href="/garden" aria-label="Digital Garden">/garden</a>.</i></p>
+					<p>This is my digital garden. I plan on updating it periodically with any showcase worthy ideas/thoughts I have, expectedly about technology, abstract questions, or <i>about the time I went backpacking to the foothills of mount Tibidabo ;)</i></p>
+                    <p>Here are four of my most recent <i>"plants"</i>, for more; check out <a href="/garden" aria-label="Digital Garden">/garden</a>.</p>
 				</div>
 			</div>
 			<Space height={"25px"}/>
@@ -271,41 +288,51 @@
 				<div class="row">
 					{#each range(0,2,1) as i, index}
 					<div class="col-2">
-						{#each posts as post, p}
-						{#if p%2 == i}
-						<div class="card">
-							<div class="width-restriction">
-								<h3>{post.title}</h3>
-								<p>{post.readtime}</p>
-								<Space height={"10px"}/>
-								<p style="margin-bottom: 10px;">{post.description}</p>
-								<!-- Links -->
-								<div class="links">
-									<p><a rel="prefetch" href="blog/{post.slug}" aria-label="Read more">Read more</a></p>
-								</div>
-							</div>
-						</div>
-						{/if}
-						{/each}
+                        {#each garden as plant, p}
+                        {#if p%2 == i}
+                        <div class="card">
+                            <div class="width-restriction">
+                                <h4>{plant.title}</h4>
+                                <Space height={"10px"}/>
+                                <p style="margin-bottom: 10px;">{plant.description}</p>
+                                <Space height={"10px"}/>
+                                <div class="tags">
+                                    {#each plant.tags as tag}
+                                        <p class="tag {tag.name.replace(/ /g, "").toLowerCase()}">{tag.name}</p>
+                                    {/each}
+                                </div>
+                                <Space height={"6px"}/>
+                                <div class="links">
+                                    <p><a rel="prefetch" target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        {/if}
+                        {/each}
 					</div>
 					{/each}
 				</div>
 			</div>
 			<div class="mobile-view">
-				{#each posts as post, p}
-				<div class="card">
-					<div class="width-restriction">
-						<h3>{post.title}</h3>
-						<p>{post.readtime}</p>
-						<Space height={"10px"}/>
-						<p style="margin-bottom: 10px;">{post.description}</p>
-						<!-- Links -->
-						<div class="links">
-							<p><a rel="prefetch" href="blog/{post.slug}" aria-label="Read more">Read more</a></p>
-						</div>
-					</div>
-				</div>
-				{/each}
+				{#each garden as plant, p}
+                <div class="card">
+                    <div class="width-restriction">
+                        <h4>{plant.title}</h4>
+                        <Space height={"10px"}/>
+                        <p style="margin-bottom: 10px;">{plant.description}</p>
+                        <Space height={"10px"}/>
+                        <div class="tags">
+                            {#each plant.tags as tag}
+                                <p class="tag {tag.name.replace(/ /g, "").toLowerCase()}">{tag.name}</p>
+                            {/each}
+                        </div>
+                        <Space height={"6px"}/>
+                        <div class="links">
+                            <p><a rel="prefetch" target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
+                        </div>
+                    </div>
+                </div>
+                {/each}
 			</div>
 		</div>
 	</section>

@@ -36,37 +36,6 @@
     }
     // console.log("Garden: " + JSON.stringify(garden));
 
-    // let tags = [
-    //     {
-    //         "tag": "The Economic Machine",
-    //         "color": "#220022"
-    //     },
-    //     {
-    //         "tag": "Abstract",
-    //         "color": "#220022"
-    //     },
-    //     {
-    //         "tag": "Behaviorism",
-    //         "color": "#220022"
-    //     },
-    //     {
-    //         "tag": "Content Consumed",
-    //         "color": "#220022"
-    //     },
-    //     {
-    //         "tag": "Design",
-    //         "color": "#220022"
-    //     },
-    //     {
-    //         "tag": "Resources",
-    //         "color": "#220022"
-    //     },
-    //     {
-    //         "tag": "Programming",
-    //         "color": "#220022"
-    //     }
-    // ]
-
     import { range } from '../../scripts/range'
 
     import Space from '../../components/space.svelte'
@@ -82,43 +51,6 @@
     }
     .card a {
         color: var(--dark-text)
-    }
-
-    .card .tags {
-        display: inline-block;
-    }
-    .card .tag {
-        display: inline-block;
-        margin-right: 4px;
-        margin-bottom: 4px;
-        font-size: 13px;
-        padding: 3px 7px 2px 7px;
-        border-radius: 5px;
-        /* background-color: #003f00; */
-        color: var(--light-text);
-    }
-
-    /* Tags colour coding */
-    .theeconomicmachine {
-        background-color: #005300;
-    }
-    .abstract {
-        background-color: #4a4a4a;
-    }
-    .behaviorism {
-        background-color: #3c0091;
-    }
-    .programming {
-        background-color: #a3004f;
-    }
-    .design {
-        background-color: #bd5b00;
-    }
-    .resources {
-        background-color: #00448c;
-    }
-    .contentconsumed {
-        background-color: #00a048;
     }
 </style>
 
