@@ -1,11 +1,4 @@
 <script>
-	// import fetch from 'cross-fetch'
-
-    // const colophon = (async () => {
-    //     var response = await fetch(`https://potion-api.vercel.app/html?id=4a3cc84785654ec687c0c4b2559e2834`)
-    //     return await response.text()
-    // })()
-
     let title= "Colophon | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is the colophon to the 4th edition of my portfolio website.";
     let url = "https://krishgoel.com/colophon";
@@ -30,9 +23,9 @@
 
 	<h2>Tech stack</h2>
 	
-    <p>This version of the website is built using <a href="https://svelte.dev/" target="_blank">Svelte</a> (+ <a href="https://sapper.svelte.dev/" target="_blank">Sapper</a> for routing) and is hosted on <a href="https://netlify.com/">Netlify</a>. It takes advantage of <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/actions" target="_blank">Github Actions</a> for pulling ~<em>live</em> data from various APIs and updating the corresponding JSON files.</p>
+    <p>This version of the website is built using <a href="https://svelte.dev/" target="_blank">Svelte</a> (+ <a href="https://sapper.svelte.dev/" target="_blank">Sapper</a> for routing) and is hosted on <a href="https://vercel.com">Vercel</a>. It takes advantage of <a href="https://github.com/KrishSkywalker/krishgoel.com-v4/actions" target="_blank">Github Actions</a> for pulling ~<em>live</em> data from various APIs and updating the corresponding JSON files.</p>
 	
-    <p>In the backend, the website uses the <a href="https://www.netlifycms.org/" target="_blank">Netlify CMS</a> as its CMS. The projects, blog entries etc are written in markdown and parsed as HTML using <a href="https://www.npmjs.com/package/marked" target="_blank">marked</a>. Here's <a href="https://dev.to/avcohen/svelte-sapper-netlify-cms-3mn8" target="_blank">the guide</a> I used for setting up Netlify CMS with a Sapper app.</p>
+    <p>The projects, blog entries etc are written in markdown and parsed as HTML using <a href="https://www.npmjs.com/package/marked" target="_blank">marked</a>. Here's <a href="https://dev.to/avcohen/svelte-sapper-netlify-cms-3mn8" target="_blank">the guide</a> I used for setting up Netlify CMS with a Sapper app.</p>
 	
     <h2>Style Guide</h2>
 	
