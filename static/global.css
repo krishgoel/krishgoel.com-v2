@@ -235,6 +235,45 @@ li {
 	box-shadow: var(--link-background) var(--dark-link-hover-bg);
 	color: var(--dark-link-hover)
 }
+
+/* Card tags */
+.card .tags {
+	display: inline-block;
+}
+.card .tag {
+	display: inline-block;
+	margin-right: 4px;
+	margin-bottom: 4px;
+	font-size: 13px;
+	padding: 3px 7px 2px 7px;
+	border-radius: 5px;
+	/* background-color: #003f00; */
+	color: var(--light-text);
+}
+
+/* Tags colour coding */
+.theeconomicmachine {
+	background-color: #005300;
+}
+.abstract {
+	background-color: #4a4a4a;
+}
+.behaviorism {
+	background-color: #3c0091;
+}
+.programming {
+	background-color: #a3004f;
+}
+.design {
+	background-color: #bd5b00;
+}
+.resources {
+	background-color: #00448c;
+}
+.contentconsumed {
+	background-color: #00a048;
+}
+
 /* Light card styling */
 .light .card {
 	background-color: var(--dark-background);
