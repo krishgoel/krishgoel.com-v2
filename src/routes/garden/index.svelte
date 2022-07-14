@@ -143,7 +143,7 @@
             <h2>Garden of Thoughts</h2>
             <!-- <p>Under maintenance, considering checking out <a href="/blog" aria-label="Blog">/blog</a> in the meanwhile.</p> -->
             <p>
-                This is my digital garden <i>(~ dynamic blog)</i>. Essentially my published notes on things I am thinking about, updated periodically with any showcase worthy ideas/thoughts I gain on the topic.
+                This is my digital garden <i>(~ dynamic blog )</i>. These are essentialy my published notes on things I am thinking about, updated periodically with any showcase worthy ideas/thoughts I gain on the topic.
             </p>
             <p>
                 While I am still underway organising this section, it's currently hosted on Notion and I wish to make it collaborative. If you have anything you'd like to add to my notes (including falsification), feel free to do so by <a href="/contact" aria-label="Contact">reaching out to me</a>.
