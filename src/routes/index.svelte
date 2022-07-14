@@ -355,7 +355,7 @@
 						<h2>Reach Me</h2>
 						<p><a href="/contact">Contact Form ></a></p>
 					</div>
-					<p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span>.</p>
+					<p style="display: block">I can be found on most social media platforms by <span class="mono">@krishskywalker7</span>.</p>
 					{#each socials as social, i}
                         <p><a aria-label="Link to my {social.platform}" href="{social.url}" target="_blank">{social.platform}</a></p>
 					{/each}
