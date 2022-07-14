@@ -119,7 +119,7 @@
     <div class="tablet-view">
         <div class="row">
             {#each range(0,2,1) as i, index}
-                <div class="col-3">
+                <div class="col-2">
                     {#each garden as plant, p}
                         {#if p%2 == i}
                         <div class="card">
