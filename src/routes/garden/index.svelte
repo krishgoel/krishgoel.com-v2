@@ -22,17 +22,50 @@
             garden.push({
                 "title": plants[i].properties.Name.title[0].text.content,
                 "description": plants[i].properties.Description.rich_text[0].text.content,
+                "tags": plants[i].properties.Topic.multi_select,
                 "link": plants[i].url
             })
         } else (
             garden.push({
                 "title": plants[i].properties.Name.title[0].text.content,
                 "description": "",
+                "tags": plants[i].properties.Topic.multi_select,
                 "link": plants[i].url
             })
         )
     }
-    console.log("Garden: " + JSON.stringify(garden));
+    // console.log("Garden: " + JSON.stringify(garden));
+
+    // let tags = [
+    //     {
+    //         "tag": "The Economic Machine",
+    //         "color": "#220022"
+    //     },
+    //     {
+    //         "tag": "Abstract",
+    //         "color": "#220022"
+    //     },
+    //     {
+    //         "tag": "Behaviorism",
+    //         "color": "#220022"
+    //     },
+    //     {
+    //         "tag": "Content Consumed",
+    //         "color": "#220022"
+    //     },
+    //     {
+    //         "tag": "Design",
+    //         "color": "#220022"
+    //     },
+    //     {
+    //         "tag": "Resources",
+    //         "color": "#220022"
+    //     },
+    //     {
+    //         "tag": "Programming",
+    //         "color": "#220022"
+    //     }
+    // ]
 
     import { range } from '../../scripts/range'
 
@@ -49,6 +82,43 @@
     }
     .card a {
         color: var(--dark-text)
+    }
+
+    .card .tags {
+        display: inline-block;
+    }
+    .card .tag {
+        display: inline-block;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        font-size: 13px;
+        padding: 3px 7px 2px 7px;
+        border-radius: 5px;
+        /* background-color: #003f00; */
+        color: var(--light-text);
+    }
+
+    /* Tags colour coding */
+    .theeconomicmachine {
+        background-color: #005300;
+    }
+    .abstract {
+        background-color: #4a4a4a;
+    }
+    .behaviorism {
+        background-color: #3c0091;
+    }
+    .programming {
+        background-color: #a3004f;
+    }
+    .design {
+        background-color: #bd5b00;
+    }
+    .resources {
+        background-color: #00448c;
+    }
+    .contentconsumed {
+        background-color: #00a048;
     }
 </style>
 
@@ -73,10 +143,10 @@
             <h2>Garden of Thoughts</h2>
             <!-- <p>Under maintenance, considering checking out <a href="/blog" aria-label="Blog">/blog</a> in the meanwhile.</p> -->
             <p>
-                This is a digital garden (more on that <a href="https://cagrimmett.com/notes/2020/11/08/what-are-digital-gardens/" target="_blank" aria-label="Digital Garden Explanantion">here</a>). It's essentially me publishing my notes and updating them periodically with new ideas and insights I gain on the topic, which can lie anywhere on the spectrum between behaviorism and design.
+                This is my digital garden <i>(~ dynamic blog)</i>. Essentially my published notes on things I am thinking about, updated periodically with any showcase worthy ideas/thoughts I gain on the topic.
             </p>
             <p>
-                <i>It will take me some time to fully organise this section. I tend to push more furnished ideas to <a href="/blog" target="_blank" aria-label="Blog">/blog</a>, considering checking them out in the meanwhile.</i> Inspired by <a href="https://kabirgoel.com" aria-label="Kabir Goel's Digital Garden" target="_blank">Kabir Goel's Garden</a>.
+                While I am still underway organising this section, it's currently hosted on Notion and I wish to make it collaborative. If you have anything you'd like to add to my notes (including falsification), feel free to do so by <a href="/contact" aria-label="Contact">reaching out to me</a>.
             </p>
         </div>
     </div>
@@ -94,9 +164,16 @@
                                 <h4>{plant.title}</h4>
                                 <Space height={"10px"}/>
                                 <p style="margin-bottom: 10px;">{plant.description}</p>
+                                <Space height={"10px"}/>
+                                <div class="tags">
+                                    {#each plant.tags as tag}
+                                        <p class="tag {tag.name.replace(/ /g, "").toLowerCase()}">{tag.name}</p>
+                                    {/each}
+                                </div>
+                                <Space height={"6px"}/>
                                 <!-- Links -->
                                 <div class="links">
-                                    <p><a rel="prefetch" href="{plant.link}" aria-label="Read more">Read more</a></p>
+                                    <p><a rel="prefetch" target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
                                 </div>
                             </div>
                         </div>
@@ -118,9 +195,16 @@
                                 <h4>{plant.title}</h4>
                                 <Space height={"10px"}/>
                                 <p style="margin-bottom: 10px;">{plant.description}</p>
+                                <Space height={"10px"}/>
+                                <div class="tags">
+                                    {#each plant.tags as tag}
+                                        <p class="tag {tag.name.replace(/ /g, "").toLowerCase()}">{tag.name}</p>
+                                    {/each}
+                                </div>
+                                <Space height={"6px"}/>
                                 <!-- Links -->
                                 <div class="links">
-                                    <p><a rel="prefetch" href="{plant.link}" aria-label="Read more">Read more</a></p>
+                                    <p><a rel="prefetch" target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
                                 </div>
                             </div>
                         </div>
@@ -138,9 +222,16 @@
                 <h4>{plant.title}</h4>
                 <Space height={"10px"}/>
                 <p style="margin-bottom: 10px;">{plant.description}</p>
+                <Space height={"10px"}/>
+                                <div class="tags">
+                    {#each plant.tags as tag}
+                        <p class="tag {tag.name.replace(/ /g, "").toLowerCase()}">{tag.name}</p>
+                    {/each}
+                </div>
+                <Space height={"6px"}/>
                 <!-- Links -->
                 <div class="links">
-                    <p><a rel="prefetch" href="{plant.link}" aria-label="Read more">Read more</a></p>
+                    <p><a rel="prefetch" target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
                 </div>
             </div>
         </div>
