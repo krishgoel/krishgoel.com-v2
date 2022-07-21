@@ -8,7 +8,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-color: var(--dark-background);
-        min-height: calc(100vh - 40px);
+        /* min-height: calc(100vh - 40px); */
         padding: 20px 0;
         display: flex;
         align-items: center;
@@ -25,9 +25,13 @@
 
 <script>
     import Space from "../space.svelte"
+
+    $: innerHeight = 0
 </script>
 
-<section class="banner">
+<svelte:window bind:innerHeight/>
+
+<section class="banner" style="min-height: {innerHeight}px">
     <div class="width-restriction">
 
         <div class="row">
