@@ -83,7 +83,7 @@
     <h2>Contact me</h2>
     <Space height={"25px"}/>
 
-    <p>I can be found on most social media platforms by <span class="mono">@krishskywalker7</span>.</p>
+    <p>I can be found on most social media platforms by <span class="mono">@krshgl</span>.</p>
     <div class="socials">
         {#each socials as social, i}
             <p><a aria-label="Link to my {social.platform}" href="{social.url}" target="_blank">{social.platform}</a></p>
