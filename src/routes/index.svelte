@@ -280,7 +280,7 @@
 					</div>
 					<Space height={"5px"}/>
 					<p>This is my digital garden. I plan on updating it periodically with any showcase worthy ideas/thoughts I have, expectedly about technology, abstract questions, or <i>about the time I went backpacking to the foothills of mount Tibidabo ;)</i></p>
-                    <p>Here are four of my most recent <i>"plants"</i>, for more; check out <a href="/garden" aria-label="Digital Garden">/garden</a>.</p>
+                    <p>Here are four of my most recent <i>"plants"</i>; for more, check out <a href="/garden" aria-label="Digital Garden">/garden</a>.</p>
 				</div>
 			</div>
 			<Space height={"25px"}/>
