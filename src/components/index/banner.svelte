@@ -39,13 +39,13 @@
                 <Space height={"12px"}/>
                 
                 <p>
-                    I am a philosophy and business double-major at heart, currently pursuing every Indian dad's dream for their son - <s>MBA</s> BTech at <a href="https://manipal.edu/mit.html" target="_blank" aria-label="MIT, Manipal">Manipal Institute of Technology</a>.
+                    I am a philosophy and business double-major at heart, currently pursuing every Indian dad's dream for their son - <s>MBA</s> BTech (Hon.s) in Computer Science with AI & ML at <a href="https://jaipur.manipal.edu" target="_blank" aria-label="Manipal University Jaipur">Manipal University Jaipur</a>.
                 </p>
                 <p>
                     Presently, my curiosity lies at the intersection of CS, behavioral psychology and financial markets. During my summer breaks, I occasionally venture into introducing the beautiful intricacies of programming to younger students.
                 </p>
                 <p>
-                    My vision for the near future holds making it through this semester and exploring more of <a href="https://www.principles.com" target="_blank" aria-label="Principles by Ray Dalio">Ray Dalio's content</a>. Looking at the bigger picture, I aim to recast the education sector.
+                    My vision for the near future holds making it through the coming semester, exploring more of <a href="https://www.principles.com" target="_blank" aria-label="Principles by Ray Dalio">Ray Dalio's content</a>, macroeconomics and global markets. Looking at the bigger picture, I aim to recast the education sector.
                 </p>
                 <p>
                     Welcome to <s>my website</s> the bent side of things (btw irrespective of the <span class="swag">kringe,</span> people <strong>LIKE</strong> to call me <span class="mono">KrishSkywalker</span> &macr;\(ツ)/&macr;. Yes.)
