@@ -24,7 +24,8 @@
 </style>
 
 <script>
-    import Space from "../space.svelte"
+    import { component_subscribe } from "svelte/internal";
+import Space from "../space.svelte"
 </script>
 
 <section class="banner">
@@ -48,7 +49,7 @@
                     My vision for the near future holds making it through the coming semester, exploring more of <a href="https://www.principles.com" target="_blank" aria-label="Principles by Ray Dalio">Ray Dalio's content</a>, macroeconomics and global markets. Looking at the bigger picture, I aim to recast the education sector.
                 </p>
                 <p>
-                    Welcome to <s>my website</s> the bent side of things (btw irrespective of the <span class="swag">kringe,</span> people <strong>LIKE</strong> to call me <span class="mono">KrishSkywalker</span> &macr;\(ツ)/&macr;. Yes.)
+                    Welcome to <s>my website</s> the bent side of things (btw irrespective of the <span class="swag">kringe,</span> people <strong>LIKE</strong> to call me <span class="mono">KrishSkywalker</span> &macr;\(ツ)/&macr;. Yes.) Also, <a href="https://twitter.com/krshgl" target="_blank" aria-label="Krish Goel on Twitter">I tweet</a>.
                 </p>
                 <!-- <p class="swag"><span style="font-style: italic;">"Punishable by fine" essentially translates to "legal for the right price".</span></p> -->
             </div>
