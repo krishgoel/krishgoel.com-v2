@@ -78,7 +78,10 @@
                 This is my digital garden <i>(~ dynamic blog )</i>. These are essentialy my published notes on things I am thinking about, updated periodically with any showcase worthy ideas/thoughts I gain on the topic.
             </p>
             <p>
-                While I am still underway organising this section, it's currently hosted on Notion and I wish to make it collaborative. If you have anything you'd like to add to my notes (including falsification), feel free to do so by <a href="/contact" aria-label="Contact">reaching out to me</a>.
+                Some of my informally published thoughts can also be seen <a href="https://twitter.com/krshgl" target="_blank" aria-label="Twitter @krshgl">on my Twitter</a>.
+            </p>
+            <p>
+                While I am still underway organising this section, it's currently hosted on Notion and I wish to make it more collaborative. If you have anything you'd like to add to my notes (including falsification), please to do so by <a href="/contact" aria-label="Contact">reaching out to me</a>.
             </p>
         </div>
     </div>
