@@ -1,5 +1,5 @@
 ---
-showonindex: true
+showonindex: false
 title: VKYD
 cover: /images/uploads/projects/vkyd/vkydlandingpage.webp
 description: VKYD was the collective effort of 3 of my friends and me fueled by

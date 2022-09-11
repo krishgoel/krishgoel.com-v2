@@ -1,5 +1,5 @@
 ---
-showonindex: true
+showonindex: false
 title: Lunatix
 cover: /images/uploads/projects/lunatix.webp
 description: A project that Raghav Sarangi, Kartik Gupta and I worked on for an

@@ -1,5 +1,5 @@
 ---
-showonindex: true
+showonindex: false
 title: BinaryBox
 cover: /images/uploads/projects/binary-box.webp
 description: A subscription-based STEM Kits delivery service model that Kartik

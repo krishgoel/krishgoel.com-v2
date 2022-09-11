@@ -143,7 +143,7 @@
 						<p><a href="/projects" aria-label="See all projects">See all ></a></p>
 					</div>
 					<Space height={"5px"}/>
-					<p>Below are some of my favourite projects I've worked on so far, this includes my hackathon submissions, side tinkers, failed startup ideas, and non-profits</p>
+					<p>Below are 3 of my favourite projects I've worked on so far, these include a hackathon submission, a side tinker, and a non-profit</p>
 				</div>
 			</div>
 			<Space height={"25px"}/>
