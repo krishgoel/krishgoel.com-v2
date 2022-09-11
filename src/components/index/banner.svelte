@@ -51,7 +51,9 @@ import Space from "../space.svelte"
                 <p>
                     Welcome to <s>my website</s> the bent side of things (btw irrespective of the <span class="swag">kringe,</span> people <strong>LIKE</strong> to call me <span class="mono">KrishSkywalker</span> &macr;\(ツ)/&macr;). Also, <a href="https://twitter.com/krshgl" target="_blank" aria-label="Krish Goel on Twitter">I tweet sometimes</a>.
                 </p>
-                <!-- <p class="swag"><span style="font-style: italic;">"Punishable by fine" essentially translates to "legal for the right price".</span></p> -->
+                <!-- <p class="swag">
+                    <span style="font-style: italic;">"Punishable by fine" essentially translates to "legal for the right price".</span>
+                </p> -->
             </div>
         </div>
 
