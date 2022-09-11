@@ -62,8 +62,9 @@
     <div class="inline">
         <h1>Top Tracks</h1>
         <p style="margin-left: 5px">From this week</p>
-        <p><a href="https://last.fm/user/KrishSkywalker" target="_blank" aria-label="My Last.fm">Last.fm ></a></p>
     </div>
+    <Space height={"10px"}/> 
+    <p>Scrobbles sourced daily from <a href="https://last.fm/user/KrishSkywalker" target="_blank" aria-label="My Last.fm">Last.fm ></a></p>
     <Space height={"20px"}/> 
     <div class="card">
         <div class="width-restriction">
