@@ -1,5 +1,5 @@
 ---
-showonindex: false
+showonindex: true
 title: Alexation
 cover: /images/uploads/projects/alexation.webp
 description: Not very original, but this project eliminated the need of a
