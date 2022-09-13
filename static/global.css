@@ -60,11 +60,14 @@ h4 {
 	font-size: 18px;
 	margin-bottom: 5px;
 }
-p, ul {
+p, ul, li {
 	/* font-size: clamp(14px, 0.97rem, 20px); */
 	font-size: 15px;
 	line-height: 150%;
 	margin-bottom: 15px
+}
+ol {
+	margin-top: 10px
 }
 
 /* Font assignment */
