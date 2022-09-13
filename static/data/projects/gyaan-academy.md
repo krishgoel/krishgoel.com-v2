@@ -15,11 +15,11 @@ slug: gyaan-academy
 ---
 # Gyaan Academy
 
-> PS: *These notes and images are directly extracted from the speech notes and the pitch deck made for the actual pitch. The final pitch deck can be [found here](https://drive.google.com/file/d/1RbkW1ISRLA6f1JXP166z-kpxkuX-_LRr/view?usp=sharing)* 
+> PS: These descriptions and images are directly extracted from the speech notes and the pitch deck made for the actual pitch, hence the dramatic effects. The compiled pitch deck can be [found here](https://drive.google.com/file/d/1RbkW1ISRLA6f1JXP166z-kpxkuX-_LRr/view?usp=sharing)
 
 Gyaan Academy was our (Amartya, Kataria, and my) idea submission to the [Make Prompt at MINET X 2020](https://docs.google.com/document/d/1knMwl0VCeYnG0WUfCfavPYtO2b9VU1AvUCmYOuiRxLM/edit?usp=sharing) (more details to the competition can be found [here](https://docs.google.com/document/d/1XGd4g70jAkGd0brlfFQCaIP5jXi_ntrQ6oKSC1wRlJI/edit?usp=sharing)) to solve not just 1 but all 17 Sustainable Development Goals for the 5 BRICS Nations. When we set out on our 60-hour journey to build this idea ground-up, our goal wasn't to win but to create, build something novel that could be scaled to not just the 5 BRICS mentioned by the prompt but any region of the world, to make quality education more accessible.
 
-I have always been passionate about changing the education system for good, teaching what's useful, what the student wants to learn and teaching to the point of perfection. While it is one of my life goals to build a school with the best-in-class infrastructure and state-of-the-art curriculum, this competition gave me a chance to rethink all of that. Why do it then, why not now? Why only for the 3,000 kids who'll attend and not the millions who can do it online? Why only for the ones who'll be able to afford it, why not everyone who deserves it? The Gyaan Academy answered all of that.
+I have always been passionate about changing the education system for good, teaching what's useful, what the student wants to learn and teaching to the point of perfection. While it is one of my life goals to build a school with the best-in-class infrastructure and state-of-the-art curriculum, this competition gave me a chance to rethink all of that. Why do it then, why not now? Why only for the 3,000 kids who'll attend and not the millions who can do it online? Why only for the ones who'll be able to afford it, why not everyone who deserves it? Gyaan Academy answered all of that.
 
 The event was judged by [Mr. Anand Chowdhary](http://anandchowdhary.com/) (Creative technologist, Forbes 30 under 30).
 

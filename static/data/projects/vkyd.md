@@ -16,25 +16,30 @@ slug: vkyd
 
 > *[vkyd-main-webapp.vercel.app](https://vkyd-main-webapp.vercel.app/)* (VKYD Web App, under development)
 
-
-
 > *[vkyd-lcfr.vercel.app](https://vkyd-lcfr.vercel.app/)* (VKYD’s self-hosted CDN)
-
-
 
 > *[vkyd.herokuapp.com](http://vkyd.herokuapp.com/)* (Abandoned prototype web app because of a suboptimal tech-stack)
 
 ![](images/uploads/projects/vkyd/vkyd-goofy.webp)
 
+---
+### Notes
+Re-reading this, here are a couple edits I'd like to make - 
+1. Find a better promotion strategy, paid marketing and targeted ads aren't going to cut it
+2. For anyone willing to pursue anything of similar nature, this is a really competitive space. The major challenges we faced were -
+   1. Quality Control is extremely hard, the factories are severely unregulated with bare minimum industry standards. This is further aggravated by unwillingness of the factory owners to communicate (especially with startups demanding small quantities <1000 pieces of any garment)
+   2. If your product has no breakthrough-developments that benefit the customer directly (aside from the ecological benefits and sustainability), it's going to be hard sell because you'd have to steal away customers from other brands. I conducted a survey on Instagram and you'd be surprised by how less of a shit people give about ecological conciousness or just supporting small businesses in general unless they add 10X value (mostly because of convenience and habituation). Feel free to [hit me up](/contact) for the results of that survey
+
+
+---
+
+<br/>
+
 The idea behind VKYD was to build a platform to empower the Indian economy by promoting small-time garment manufacturers, local tailors, and aspiring designers through production-per-piece, crowdsourced designs and custom fittings while minimizing any wastage of resources and keeping the true spirit of streetwear fashion alive - to look your best at the minimum cost.
 
-## **The inspiration**
+## **Observations that led to the idea**
 
-In the early half of 2020, I came across a quote from Albert Einstein in my Medium weekly newsletter, "It has become appallingly obvious that our technology has exceeded our humanity." Looking up this quote again, the very ambivalence of the phrase "technology exceeding humanity" got me thinking and finding tangible examples to which I could relate.
-
-While one of my interpretations was the potential destruction that 'could' come about, an issue that I found more immediate was "Fast-fashion" and "Conspicuous-consumption": the idea of owning more things than others, faster.
-
-Upon some basic Google searches I found that in 2017 alone, our developing nation bought 6 billion articles of clothing. Taking a weighted average of the urban population (about 280 million) against the rural population (close to 740 million), the average urban-Indian bought 20 new items that year alone. This number is ever-growing.
+I found that in 2017 alone, our developing nation bought 6 billion articles of clothing. Taking a weighted average of the urban population (about 280 million) against the rural population (close to 740 million), the average urban-Indian bought 20 new items that year alone. This number is ever-growing.
 
 As the name suggests, these articles are short-lived and discarded or "donated" much faster. The emphasis on "donation" represents the flip side of looking "Poppin!" every day - the destructive impacts on ecology and humans alike.
 
@@ -43,13 +48,13 @@ As the name suggests, these articles are short-lived and discarded or "donated" 
 * Indonesia is a hub for the production of chemical dyes, the effects of which are catastrophic. The Citarum River which served as the source of livelihood for an entire community now fuels perpetual sickness.
 * 87% of the "donated" clothes end up in the dumping grounds of Africa and Kenya where they are incinerated, causing air pollution.
 
-The list of such statistics is unending and the"MVP" of this changing game is the phenomenon of Fast-Fashion, making premium-looking clothing items cheaply and widely available.
+The list of such statistics is unending and the "MVP" of this changing game is the phenomenon of Fast-Fashion, making premium-looking clothing items cheaply and widely available.
 
 Globally, the success of this concept can be accredited to a few key retailers. However, the Indian markets pose a different challenge that is seemingly insurmountable without proper technology in place.
 
-Due to the widespread economic demographic, the well-off section is targeted by the international key retailers while the middle-class is flooded with cheap clothing options from Indian and South-Asian Manufacturers which is the primary problem. VKYD aims to eliminate both of these issues by providing sustainable streetwear while empowering these manufacturers by allowing them to work in tandem rather than in competition. Hence allowing for the greater good of the Indian fashion sector.
+Due to the widespread and varying economic demographic, the well-off section is targeted by the international key retailers while the middle-class is flooded with cheap clothing options from Indian and South-Asian Manufacturers which is the primary problem. VKYD aims to eliminate both of these issues by providing sustainable streetwear while empowering these manufacturers by allowing them to work in tandem rather than competition. Hence allowing for the greater good of the Indian fashion sector.
 
-## **How it’ll work and the revenue model**
+## **The Business Model**
 
 Much like the other big players in the game, VKYD too planned to launch the products in the form of seasonal “drops” which are essentially collections with a coherent theme.
 
@@ -73,17 +78,11 @@ The collections would undergo a review by the VKYD Team and upon approval, the s
 
 VKYD would charge a small commission on each sale (factoring exclusivity, sales generation, etc.) while the manufacturer and the designer would divide the lion’s share upon mutual agreement.
 
-## **Funding**
-
-Being born out of a high-school friend group, we would have to keep the expenses low for the initial stages, this can be accomplished by paying the in-house team and network itself through profit-sharing and/or equity.
-
-A channel for funding the launch of a new collection could be the manufacturers and designers themselves.
-
 ## **Branding**
 
-Living in the modern-day, we’ll be using targeted ads and SEO to reach out to our primary audience - the youth in urban areas. A major component of our campaign would be a struggle, hard work, brotherhood, and upliftment reflected through street culture, rap music, and Boombox-Aesthetics. This would also present a great opportunity to collaborate with upcoming artists.
+Living in the modern-day, we’d be using targeted ads and SEO to reach out to our primary audience - the youth in urban areas. A major component of our campaign would be a struggle, hard work, brotherhood, and upliftment reflected through street culture, rap music, and Boombox-Aesthetics. This would also present a great opportunity to collaborate with upcoming artists.
 
-Another feature for increasing user engagement would be to include “social-commerce” by introducing “try-out” features and filters online. These features would essentially let the user try on our clothing etc electronically with simple AR technology as used by several platforms like Snapchat and Instagram, they would make the user a “celebrity” even if just for a moment hence driving curiosity to us. A great example of this can be seen in an India-based Unicorn eyewear startup whose major USP was to let the user try out the spectacles without having to make a purchase or even leaving their bed.
+Another feature for increasing user engagement would be to include “social-commerce” by introducing “try-out” features and filters online. These features would essentially let the user try on our clothing etc electronically with simple AR technology as used by several platforms like Snapchat and Instagram, they would make the user a “celebrity” even if just for a moment hence driving curiosity to us. A great example of this can be seen in [Lenskart](https://lenskart.com) (India-based Unicorn eyewear startup whose major USP was to let the user try out the spectacles without having to make a purchase or even leaving their bed).
 
 ## **Tech Stack**
 
@@ -93,18 +92,12 @@ For social media filters and AR tech, we’ll be looking at Facebook’s Spark A
 
 ## **Future aspects**
 
-Looking at the bigger picture, I believe we would be looking to expand into more fashion classes including Ethnic Indian clothing for women since that’s an upcoming sector with wide deals of wastage of resources.
+Looking at the bigger picture, I believe we would have expanded into more fashion classes including Ethnic Indian clothing for women since that’s an major sector with wide wastage of resources.
 
-Another sector VKYD could branch into would be supporting creators more directly by launching its own production houses celebrating the upcoming talent including and not limited to rappers, EDM enthusiasts, etc.
+Another sector VKYD could branch into would be supporting creators more hands-on by launching its own production houses celebrating the upcoming talent including and not limited to rappers, EDM enthusiasts, etc.
 
 ## **The Design and Aesthetic**
 
 The currently built prototypes (hosted on the aforementioned links) have a UI built around Neomorphism in tones of dark smoke indicating the coming-of-age aspect of VKYD.
 
 ![](images/uploads/projects/vkyd/vkydlandingpage.webp)
-
-## C**urrent status**
-
-Since VKYD’s conception in June of 2020, our team of 3 has been able to bring together a team of 5+ talented fashion designing enthusiasts from our school, collaborate with 4 manufacturers based in Delhi, get samples from various sources, and come up with 2 collections ready to be launched.
-
-While we had to decelerate VKYD due to our academic commitments in November and eventually call it off due to college, the thrill we experience in working and learning together is unmatched.
