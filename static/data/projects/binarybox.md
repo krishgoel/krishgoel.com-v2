@@ -13,9 +13,11 @@ slug: binarybox
 ---
 # BinaryBox
 
+> These descriptions and images are extracted directly from the speech notes and the deck from the actual pitch, hence the dramatic effects.
+
 ![](images/uploads/projects/binary-box.webp)
 
-BinaryBox was an MVP Startup idea that Kartik Gupta and I for **[Make @ MINET X 2019](https://minet.co/)**. We placed #3 at the Pitch event judged by creative technologists like **[Anand Chowdhary.](https://anandchowdhary.com/)**
+BinaryBox was an MVP Startup idea that Kartik Gupta and I for [Make @ MINET X 2019](https://minet.co/). We placed #3 at the Pitch Event judged by creative technologists like **[Anand Chowdhary.](https://anandchowdhary.com/)**
 
 BinaryBox is a subscription-based STEM Kits delivery service. We aim at developing a generation of Imagineers who can change the world for the better with technology by their side.
 

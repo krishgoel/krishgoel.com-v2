@@ -15,7 +15,7 @@ slug: gyaan-academy
 ---
 # Gyaan Academy
 
-> PS: These descriptions and images are directly extracted from the speech notes and the pitch deck made for the actual pitch, hence the dramatic effects. The compiled pitch deck can be [found here](https://drive.google.com/file/d/1RbkW1ISRLA6f1JXP166z-kpxkuX-_LRr/view?usp=sharing)
+> These descriptions and images are extracted directly from the speech notes and the deck from the actual pitch, hence the dramatic effects. The compiled pitch deck can be [found here](https://drive.google.com/file/d/1RbkW1ISRLA6f1JXP166z-kpxkuX-_LRr/view?usp=sharing)
 
 Gyaan Academy was our (Amartya, Kataria, and my) idea submission to the [Make Prompt at MINET X 2020](https://docs.google.com/document/d/1knMwl0VCeYnG0WUfCfavPYtO2b9VU1AvUCmYOuiRxLM/edit?usp=sharing) (more details to the competition can be found [here](https://docs.google.com/document/d/1XGd4g70jAkGd0brlfFQCaIP5jXi_ntrQ6oKSC1wRlJI/edit?usp=sharing)) to solve not just 1 but all 17 Sustainable Development Goals for the 5 BRICS Nations. When we set out on our 60-hour journey to build this idea ground-up, our goal wasn't to win but to create, build something novel that could be scaled to not just the 5 BRICS mentioned by the prompt but any region of the world, to make quality education more accessible.
 
