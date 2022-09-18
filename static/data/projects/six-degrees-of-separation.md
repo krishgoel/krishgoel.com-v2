@@ -1,7 +1,7 @@
 ---
 showonindex: true
 title: Six Degrees of Separation
-description: A webapp to visualise the Six Degrees of Separation Theory and help you calculate your "social distance" from Rick Astley.
+description: A webapp to visualise the Six Degrees of Separation Theory, and help you calculate your "social distance" from Rick Astley.
 date: Currently Building
 datestamp: "09.2022"
 type: Webapp
