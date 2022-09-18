@@ -40,10 +40,10 @@ import Space from "../space.svelte"
                 <Space height={"12px"}/>
                 
                 <p>
-                    I am a philosophy and business double-major at heart, currently pursuing every Indian dad's dream for their son - <s>MBA</s> BTech (Hons.) in Computer Science with AI & ML at <a href="https://jaipur.manipal.edu" target="_blank" aria-label="Manipal University Jaipur">Manipal University Jaipur</a>.
+                    I am a philosophy and business double-major at heart, currently pursuing every Indian dad's dream - <s>MBA</s> BTech (Hons.) in Computer Science with AI & ML at <a href="https://jaipur.manipal.edu" target="_blank" aria-label="Manipal University Jaipur">Manipal University Jaipur</a>.
                 </p>
                 <p>
-                    Presently, my curiosity lies at the intersection of CS, behavioral psychology and financial markets. During my summer breaks, I occasionally venture into introducing the beautiful intricacies of programming to younger students.
+                    Presently, my curiosity lies at the intersection of CS, behavioral psychology and financial markets. I spent my last 3 summers of <a href="https://www.sanskritischool.edu.in/" target="_blank" aria-label="Sanskriti School, New Delhi">high school</a> conducting pro bono programming workshops for younger students.
                 </p>
                 <p>
                     My vision for the near future holds making it through the coming semester, exploring more of <a href="https://www.principles.com" target="_blank" aria-label="Principles by Ray Dalio">Ray Dalio's content</a>, macroeconomics and global markets. Looking at the bigger picture, I aim to recast the education sector.
