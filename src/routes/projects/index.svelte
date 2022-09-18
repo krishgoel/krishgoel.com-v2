@@ -44,7 +44,6 @@
         </div>
     </div>
     <Space height={"25px"}/>
-
     <div class="large-view">
         <div class="row">
             {#each range(0,3,1) as i, index}
@@ -57,9 +56,9 @@
                             {/if}
                             <div class="width-restriction">
                                 {#if project.cover == undefined || project.cover == ""}
-                                    <h3 style="padding-top: 30px; margin-bottom: 0">{project.title}</h3>
+                                    <h3 style="padding-top: 30px; margin-bottom: 0px">{project.title}</h3>
                                 {:else}
-                                    <h3 style="margin-bottom: 0">{project.title}</h3>
+                                    <h3 style="margin-bottom: 0px">{project.title}</h3>
                                 {/if}
                                 <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.date} </p>
                                 <p style="font-weight: bold; margin-bottom: 10px">{project.type}</p>
@@ -100,9 +99,9 @@
                             {/if}
                             <div class="width-restriction">
                                 {#if project.cover == undefined || project.cover == ""}
-                                    <h3 style="padding-top: 30px; margin-bottom: 0">{project.title}</h3>
+                                    <h3 style="padding-top: 30px; margin-bottom: 5px">{project.title}</h3>
                                 {:else}
-                                    <h3 style="margin-bottom: 0">{project.title}</h3>
+                                    <h3 style="margin-bottom: 5px">{project.title}</h3>
                                 {/if}
                                 <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.date} </p>
                                 <p style="font-weight: bold; margin-bottom: 10px">{project.type}</p>
@@ -139,9 +138,9 @@
                 {/if}
                 <div class="width-restriction">
                     {#if project.cover == undefined || project.cover == ""}
-                        <h3 style="padding-top: 30px; margin-bottom: 0">{project.title}</h3>
+                        <h3 style="padding-top: 30px; margin-bottom: 5px">{project.title}</h3>
                     {:else}
-                        <h3 style="margin-bottom: 0">{project.title}</h3>
+                        <h3 style="margin-bottom: 5px">{project.title}</h3>
                     {/if}
                     <p class="mono" style="font-size: 14px; margin-bottom: 10px">{project.date} </p>
                     <p style="font-weight: bold; margin-bottom: 10px">{project.type}</p>
