@@ -1,7 +1,7 @@
 ---
 showonindex: true
 title: VKYD
-cover: /images/uploads/projects/vkyd/vkydlandingpage.webp
+cover: /images/projects/vkyd/vkydlandingpage.webp
 description: VKYD was the collective effort of 3 of my friends and me fueled by
   our passion for streetwear. The goal was to make streetwear sustainable while
   keeping small businesses in the loop.
@@ -20,7 +20,7 @@ slug: vkyd
 
 > *[vkyd.herokuapp.com](http://vkyd.herokuapp.com/)* (Abandoned prototype web app because of a suboptimal tech-stack)
 
-![](images/uploads/projects/vkyd/vkyd-goofy.webp)
+![](images/projects/vkyd/vkyd-goofy.webp)
 
 ---
 ### Notes
@@ -100,4 +100,4 @@ Another sector VKYD could branch into would be supporting creators more hands-on
 
 The currently built prototypes (hosted on the aforementioned links) have a UI built around Neomorphism in tones of dark smoke indicating the coming-of-age aspect of VKYD.
 
-![](images/uploads/projects/vkyd/vkydlandingpage.webp)
+![](images/projects/vkyd/vkydlandingpage.webp)
