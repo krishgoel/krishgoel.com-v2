@@ -247,7 +247,7 @@ li {
 .card .tag {
 	display: inline-block;
 	margin-right: 4px;
-	margin-bottom: 4px;
+	margin-bottom: 3px;
 	font-size: 13px;
 	padding: 3px 7px 2px 7px;
 	border-radius: 5px;
