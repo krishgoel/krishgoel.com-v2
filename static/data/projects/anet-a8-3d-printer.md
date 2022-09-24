@@ -7,5 +7,4 @@ date: December 2016
 datestamp: "12.2016"
 type: Microproject
 documentationAvailable: false
-slug: anet-a8
 ---

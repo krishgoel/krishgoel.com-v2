@@ -15,7 +15,6 @@ link2: Webapp
 url2: https://covaid.vercel.app
 link3: Certificates
 url3: https://covaid-certificates.vercel.app
-slug: covaid
 ---
 # CovAID
 

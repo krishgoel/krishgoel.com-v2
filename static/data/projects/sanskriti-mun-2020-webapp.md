@@ -9,5 +9,4 @@ type: Webapp
 documentationAvailable: false
 link1: Github
 url1: https://github.com/KrishSkywalker/sanskritiMUN
-slug: sanskritimun2020
 ---

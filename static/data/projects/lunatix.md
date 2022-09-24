@@ -11,5 +11,4 @@ type: Hackathon Submission
 documentationAvailable: false
 link1: Submissions
 url1: https://drive.google.com/drive/folders/1E7EJTsJhww2c5vz1DRLYnc9JRg6RynOU
-slug: lunatix
 ---

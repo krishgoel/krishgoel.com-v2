@@ -10,5 +10,4 @@ type: Microproject
 documentationAvailable: false
 link1: Github Repository
 url1: https://github.com/KrishSkywalker/arduino-drum-pads
-slug: arduino-drumpads
 ---

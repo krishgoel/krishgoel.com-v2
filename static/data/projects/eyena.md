@@ -12,5 +12,4 @@ type: Concept Documentation
 documentationAvailable: false
 link1: Documentation
 url1: https://eyena.krishgoel.com/
-slug: eyena
 ---

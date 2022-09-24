@@ -9,7 +9,6 @@ datestamp: "09.2019"
 type: Hackathon Submission
 documentationAvailable: true
 link1: Documentation
-slug: binarybox
 ---
 # BinaryBox
 

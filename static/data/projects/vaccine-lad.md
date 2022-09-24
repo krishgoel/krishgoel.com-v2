@@ -9,7 +9,6 @@ documentationAvailable: true
 link1: Documentation
 link2: Github
 url2: https://github.com/KrishGoel/vaccine-lad
-slug: vaccine-lad
 ---
 # Vaccine Lad
 > Github Repository: [github.com/KrishGoel/vaccine-lad](https://instagram.com/covaid.resources)

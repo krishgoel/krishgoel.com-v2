@@ -9,6 +9,7 @@ const getAllProjects = () => {
         path.resolve("static/data/projects", fileName),
         "utf-8"
       );
+      grayMatter(project).data.slug = fileName.replace('.md',''); // slug = filename
       return grayMatter(project).data;
     });
   } catch (e) {

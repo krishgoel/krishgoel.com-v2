@@ -10,7 +10,6 @@ datestamp: "07.2020"
 type: Failed Startup
 documentationAvailable: true
 link1: Documentation
-slug: vkyd
 ---
 # **VKYD** *( /ˈwɪkɪd/ )*
 

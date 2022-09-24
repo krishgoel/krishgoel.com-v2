@@ -12,5 +12,4 @@ type: Hackathon Submission
 documentationAvailable: false
 link1: Submission
 url1: https://drive.google.com/file/d/1kp4K7jOg5FtSeag3axv0xS6htvOzplmU/view?usp=sharing
-slug: arkatype
 ---

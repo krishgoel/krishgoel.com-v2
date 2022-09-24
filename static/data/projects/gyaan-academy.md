@@ -11,7 +11,6 @@ datestamp: "09.2020"
 type: Hackathon Submission
 documentationAvailable: true
 link1: Documentation
-slug: gyaan-academy
 ---
 # Gyaan Academy
 
