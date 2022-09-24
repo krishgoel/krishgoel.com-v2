@@ -47,11 +47,6 @@
     }
     hr {
         background-color: var(--dark-text);
-        border: none;
-        height: 1px;
-        opacity: 0.4;
-        margin-top: 15px;
-        margin-bottom: 20px
     }
     h4 {
         font-size: clamp(18px, 2.4vw, 22px);
