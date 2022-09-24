@@ -340,3 +340,9 @@ hr {
 .post .pre {
 	margin-bottom: 300px;
 }
+.tweet-container {
+	width: 80%;
+	min-width: 300px; 
+	display: block;
+	margin: 40px auto;
+}
