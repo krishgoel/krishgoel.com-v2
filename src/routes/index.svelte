@@ -15,7 +15,7 @@
         }
 
         // Plants
-        let plants = await this.fetch(`/data/plants.json`);
+        let plants = await this.fetch(`garden.json`);
         plants = await plants.json()
 
         // Socials
@@ -29,7 +29,7 @@
         // Return values
         return {
             projects: projects,
-            plants: plants.results,
+            plants: plants,
             socials: socials,
             commit: commit
         }
@@ -47,26 +47,28 @@
     import Banner from '../components/index/banner.svelte'
 
     export let plants
-    plants = plants.sort((a, b) => (new Date(a.last_edited_time) > new Date(b.last_edited_time)) ? -1 : 1)
-    let garden = [];
-    for (let i = 0; i < Math.min(plants.length, 4); i++) {
-        plants[i].url = plants[i].url.replace("www.notion.so", "krishgoel.notion.site");
-        if (plants[i].properties.Description.rich_text[0] != undefined) {
-            garden.push({
-                "title": plants[i].properties.Name.title[0].text.content,
-                "description": plants[i].properties.Description.rich_text[0].text.content,
-                "tags": plants[i].properties.Topic.multi_select,
-                "link": plants[i].url
-            })
-        } else (
-            garden.push({
-                "title": plants[i].properties.Name.title[0].text.content,
-                "description": "",
-                "tags": plants[i].properties.Topic.multi_select,
-                "link": plants[i].url
-            })
-        )
-    }
+    plants = plants.slice(0, 4); // Just 4 for display
+
+    // plants = plants.sort((a, b) => (new Date(a.last_edited_time) > new Date(b.last_edited_time)) ? -1 : 1)
+    // let garden = [];
+    // for (let i = 0; i < Math.min(plants.length, 4); i++) {
+    //     plants[i].url = plants[i].url.replace("www.notion.so", "krishgoel.notion.site");
+    //     if (plants[i].properties.Description.rich_text[0] != undefined) {
+    //         garden.push({
+    //             "title": plants[i].properties.Name.title[0].text.content,
+    //             "description": plants[i].properties.Description.rich_text[0].text.content,
+    //             "tags": plants[i].properties.Topic.multi_select,
+    //             "link": plants[i].url
+    //         })
+    //     } else (
+    //         garden.push({
+    //             "title": plants[i].properties.Name.title[0].text.content,
+    //             "description": "",
+    //             "tags": plants[i].properties.Topic.multi_select,
+    //             "link": plants[i].url
+    //         })
+    //     )
+    // }
 
     let title= "Krish Goel | krishgoel.com";
     let description = "Hi, I'm Krish, a technophile and maker from New Delhi.";
@@ -282,59 +284,67 @@
 						<p><a href="/garden" aria-label="See all projects">aka /garden ></a></p>
 					</div>
 					<Space height={"5px"}/>
-					<p>This is my digital garden. I plan on updating it periodically with any showcase worthy ideas/thoughts I have, expectedly about technology, abstract questions, or <i>about the time I went backpacking to the foothills of mount Tibidabo ;)</i></p>
-                    <p>Here are four of my most recent <i>"plants"</i>; for more, check out <a href="/garden" aria-label="Digital Garden">/garden</a>.</p>
+					<p>This is my digital garden. I plan on updating it periodically with any showcase worthy ideas/thoughts I have, expectedly about technology, abstract questions, or <i>about the time I went backpacking to the foothills of mount Tibidabo ;</i></p>
+                    <p>Here are four of my <i>"plants"</i> (chosen at random); for more, check out <a href="/garden" aria-label="Digital Garden">/garden</a>.</p>
 				</div>
 			</div>
 			<Space height={"25px"}/>
 			<div class="large-view tablet-view">
 				<div class="row">
-					{#each range(0,2,1) as i, index}
-					<div class="col-2">
-                        {#each garden as plant, p}
-                        {#if p%2 == i}
-                        <div class="card">
-                            <div class="width-restriction">
-                                <h4>{plant.title}</h4>
-                                <Space height={"10px"}/>
-                                <p style="margin-bottom: 10px;">{plant.description}</p>
-                                <Space height={"10px"}/>
-                                <div class="tags">
-                                    {#each plant.tags as tag}
-                                        <p class="tag {tag.name.replace(/ /g, "").toLowerCase()}">{tag.name}</p>
-                                    {/each}
+                    {#each range(0,2,1) as i, index}
+                        <div class="col-2">
+                            {#each plants as plant, p}
+                                {#if p%2 == i}
+                                <div class="card">
+                                    <div class="width-restriction">
+                                        <h3 style="margin-bottom: 0px;">{plant.title}</h3>
+                                        <Space height={"5px"}/>
+                                        <p style="margin-bottom: 10px;">{plant.description}</p>
+                                        <Space height={"10px"}/>
+                                        <div class="tags">
+                                            {#each plant.tags as tag}
+                                                <p class="tag {tag.replace(/ /g, "").toLowerCase()}">{tag}</p>
+                                            {/each}
+                                        </div>
+                                        <Space height={"5px"}/>
+                                        <div class="links">
+                                            {#if plant.notion == false}
+                                            <p><a rel="prefetch" href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
+                                            {:else}
+                                            <p><a rel="prefetch" target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
+                                            {/if}
+                                        </div>
+                                    </div>
                                 </div>
-                                <Space height={"6px"}/>
-                                <div class="links">
-                                    <p><a rel="prefetch" target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        {/if}
-                        {/each}
-					</div>
-					{/each}
-				</div>
-			</div>
-			<div class="mobile-view">
-				{#each garden as plant, p}
-                <div class="card">
-                    <div class="width-restriction">
-                        <h4>{plant.title}</h4>
-                        <Space height={"10px"}/>
-                        <p style="margin-bottom: 10px;">{plant.description}</p>
-                        <Space height={"10px"}/>
-                        <div class="tags">
-                            {#each plant.tags as tag}
-                                <p class="tag {tag.name.replace(/ /g, "").toLowerCase()}">{tag.name}</p>
+                                {/if}
                             {/each}
                         </div>
-                        <Space height={"6px"}/>
-                        <div class="links">
-                            <p><a rel="prefetch" target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
+                    {/each}
+                </div>
+			</div>
+			<div class="mobile-view">
+				{#each plants as plant, p}
+                    <div class="card">
+                        <div class="width-restriction">
+                            <h3 style="margin-bottom: 0px;">{plant.title}</h3>
+                            <Space height={"5px"}/>
+                            <p style="margin-bottom: 10px;">{plant.description}</p>
+                            <Space height={"10px"}/>
+                            <div class="tags">
+                                {#each plant.tags as tag}
+                                    <p class="tag {tag.replace(/ /g, "").toLowerCase()}">{tag}</p>
+                                {/each}
+                            </div>
+                            <Space height={"5px"}/>
+                            <div class="links">
+                                {#if plant.notion == false}
+                                <p><a rel="prefetch" href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
+                                {:else}
+                                <p><a rel="prefetch" target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
+                                {/if}
+                            </div>
                         </div>
                     </div>
-                </div>
                 {/each}
 			</div>
 		</div>
