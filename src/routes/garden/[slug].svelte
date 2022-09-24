@@ -16,7 +16,7 @@
 	export let plant
 
     let title= plant.title + " | krishgoel.com";
-    let description = "Digital Garden: " + plant.description;
+    let description = plant.description;
     let url = "https://krishgoel.com/garden/" + plant.slug;
 </script>
 

@@ -16,7 +16,7 @@
 	export let project
 
     let title= project.title + " | krishgoel.com";
-    let description = "Hi, I'm Krish, a technophile and maker from New Delhi and this is the documentation to my Project " + project.title;
+    let description = "Documentation to my project " + project.title;
     let url = "https://krishgoel.com/projects/" + project.slug;
 </script>
 
