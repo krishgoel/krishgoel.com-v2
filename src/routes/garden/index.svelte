@@ -77,9 +77,9 @@
                                 <Space height={"5px"}/>
                                 <div class="links">
 									{#if plant.notion == false}
-                                    <p><a rel="prefetch" href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
+                                    <p><a href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
 									{:else}
-									<p><a rel="prefetch" target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
+									<p><a target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
 									{/if}
                                 </div>
                             </div>
@@ -111,9 +111,9 @@
                                 <Space height={"5px"}/>
                                 <div class="links">
 									{#if plant.notion == false}
-                                    <p><a rel="prefetch" href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
+                                    <p><a href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
 									{:else}
-									<p><a rel="prefetch" target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
+									<p><a target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
 									{/if}
                                 </div>
                             </div>
@@ -141,9 +141,9 @@
                     <Space height={"5px"}/>
                     <div class="links">
                         {#if plant.notion == false}
-                        <p><a rel="prefetch" href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
+                        <p><a href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
                         {:else}
-                        <p><a rel="prefetch" target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
+                        <p><a target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
                         {/if}
                     </div>
                 </div>

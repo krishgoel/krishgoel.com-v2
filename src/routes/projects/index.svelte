@@ -67,7 +67,7 @@
                                 <div class="links">
                                     {#if project.link1 != undefined}
                                         {#if project.documentationAvailable == true}
-                                            <p><a rel="prefetch" href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
+                                            <p><a href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
                                         {:else}
                                             <p><a href="{project.url1}" target="_blank" aria-label="{project.link1}">{project.link1}</a></p>
                                         {/if}
@@ -110,7 +110,7 @@
                                 <div class="links">
                                     {#if project.link1 != undefined}
                                         {#if project.documentationAvailable == true}
-                                            <p><a rel="prefetch" href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
+                                            <p><a href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
                                         {:else}
                                             <p><a href="{project.url1}" target="_blank" aria-label="{project.link1}">{project.link1}</a></p>
                                         {/if}
@@ -149,7 +149,7 @@
                     <div class="links">
                         {#if project.link1 != undefined}
                             {#if project.documentationAvailable == true}
-                                <p><a rel="prefetch" href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
+                                <p><a href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
                             {:else}
                                 <p><a href="{project.url1}" target="_blank" aria-label="{project.link1}">{project.link1}</a></p>
                             {/if}

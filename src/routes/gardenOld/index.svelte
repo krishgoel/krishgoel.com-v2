@@ -108,7 +108,7 @@
                                 <Space height={"6px"}/>
                                 <!-- Links -->
                                 <div class="links">
-                                    <p><a rel="prefetch" target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
+                                    <p><a target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                                 <Space height={"6px"}/>
                                 <!-- Links -->
                                 <div class="links">
-                                    <p><a rel="prefetch" target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
+                                    <p><a target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
                                 </div>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                 <Space height={"6px"}/>
                 <!-- Links -->
                 <div class="links">
-                    <p><a rel="prefetch" target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
+                    <p><a target="_blank" href="{plant.link}"  aria-label="Read more">Read more</a></p>
                 </div>
             </div>
         </div>

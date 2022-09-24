@@ -175,7 +175,7 @@
                                         <div class="links">
                                             {#if project.link1 != undefined}
                                                 {#if project.documentationAvailable == true}
-                                                    <p><a rel="prefetch" href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
+                                                    <p><a href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
                                                 {:else}
                                                     <p><a href="{project.url1}" target="_blank" aria-label="{project.link1}">{project.link1}</a></p>
                                                 {/if}
@@ -218,7 +218,7 @@
                                         <div class="links">
                                             {#if project.link1 != undefined}
                                                 {#if project.documentationAvailable == true}
-                                                    <p><a rel="prefetch" href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
+                                                    <p><a href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
                                                 {:else}
                                                     <p><a href="{project.url1}" target="_blank" aria-label="{project.link1}">{project.link1}</a></p>
                                                 {/if}
@@ -257,7 +257,7 @@
                             <div class="links">
                                 {#if project.link1 != undefined}
                                     {#if project.documentationAvailable == true}
-                                        <p><a rel="prefetch" href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
+                                        <p><a href="projects/{project.slug}" aria-label="Project Documentation">{project.link1}</a></p>
                                     {:else}
                                         <p><a href="{project.url1}" target="_blank" aria-label="{project.link1}">{project.link1}</a></p>
                                     {/if}
@@ -309,9 +309,9 @@
                                         <Space height={"5px"}/>
                                         <div class="links">
                                             {#if plant.notion == false}
-                                            <p><a rel="prefetch" href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
+                                            <p><a href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
                                             {:else}
-                                            <p><a rel="prefetch" target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
+                                            <p><a target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
                                             {/if}
                                         </div>
                                     </div>
@@ -338,9 +338,9 @@
                             <Space height={"5px"}/>
                             <div class="links">
                                 {#if plant.notion == false}
-                                <p><a rel="prefetch" href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
+                                <p><a href="garden/{plant.slug}"  aria-label="Read more">Read more</a></p>
                                 {:else}
-                                <p><a rel="prefetch" target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
+                                <p><a target="_blank" href="{plant.notion}"  aria-label="Read more">Notion</a></p>
                                 {/if}
                             </div>
                         </div>
