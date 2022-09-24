@@ -327,12 +327,6 @@ li {
 .post h3 {
 	font-size: clamp(19px, 2vw, 22px);
 }
-.post p {
-	margin-bottom:  20px;
-}
-.post blockquote p {
-	margin-bottom: 0
-}
 .post ul {
 	margin-bottom: 30px;
 }
