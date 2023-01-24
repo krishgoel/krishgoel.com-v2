@@ -51,7 +51,7 @@
                 This is my digital garden <i>(~ dynamic blog )</i>. These are essentialy my published notes on things I am thinking about, updated periodically with any showcase worthy ideas/thoughts I gain on the topic.
             </p>
             <p>
-                Some of my informally published thoughts can also be seen <a href="https://twitter.com/krshgl" target="_blank" aria-label="Twitter @krshgl">@krshgl on Twitter</a>.
+                Some of my informally published thoughts can be seen on <a href="https://twitter.com/krshgl" target="_blank" aria-label="Twitter @krshgl">my Twitter</a>, and design boards can be found on <a href="https://instagram.com/krshgl/guides" target="_blank" aria-label="Instagram Guides @krshgl">my Instagram Guides</a>.
             </p>
         </div>
     </div>
