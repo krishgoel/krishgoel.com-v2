@@ -22,7 +22,7 @@
 	<h1>We're Hiring</h1>
 	<Space height={"20px"}/>
 	<p>
-		We are a phy-gital fashion house in the metaverse and excited to announce an opportunity to work with us! We are currently hiring for several roles, including fashion designers, curators, analysts, Blender 3D designers and managers to join our team. 
+		We are VKYD Labs - a phy-gital fashion house in the metaverse and excited to announce an opportunity to work with us! We are currently hiring for several roles, including fashion designers, curators, analysts, Blender 3D designers and managers to join our team. 
 	</p>
 	<p>
 		Please note that these positions are fully remote, and we will be conducting routine assessments to ensure optimal performance of the team. These internships and freelance jobs are fully paid positions that offer a chance to work on cutting-edge projects and gain valuable experience.
