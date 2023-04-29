@@ -55,7 +55,7 @@
             <p><a aria-label="Garden" href="/garden">Garden</a></p>
             <p><a aria-label="Projects" href="/projects">Projects</a></p>
             <p><a aria-label="Contact" href="/contact">Contact</a></p>
-            <p><a aria-label="Hiring" href="/hiring">[Hiring]</a></p>
+            <!-- <p><a aria-label="Hiring" href="/hiring">[Hiring]</a></p> -->
         </div>
     </div>
 </nav>
