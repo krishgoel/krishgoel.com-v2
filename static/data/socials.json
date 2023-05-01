@@ -22,5 +22,9 @@
     {
         "platform": "LinkedIn",
         "url": "https://www.linkedin.com/in/krishgoel"
+    },
+    {
+        "platform": "Read.CV",
+        "url": "https://read.cv/krishgoel"
     }
 ]
